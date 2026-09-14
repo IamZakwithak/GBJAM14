@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://f2o7ihmsoxc"]
+
+[ext_resource type="Script" uid="uid://dscxplkrxn817" path="res://Assets/Rooms/room.gd" id="1_hlq8c"]
+[ext_resource type="PackedScene" uid="uid://jiex14oru4b4" path="res://Scenes/cell.tscn" id="2_6idp7"]
+[ext_resource type="PackedScene" uid="uid://chf1nksskaewi" path="res://Scenes/player.tscn" id="3_rx0dc"]
+
+[node name="Room" type="Node2D" unique_id=448818566 node_paths=PackedStringArray("grid")]
+script = ExtResource("1_hlq8c")
+grid = [NodePath("Cell"), NodePath("Cell2"), NodePath("Cell3"), NodePath("Cell4")]
+grid_width = 2
+grid_height = 2
+
+[node name="Cell" parent="." unique_id=947757610 instance=ExtResource("2_6idp7")]
+position = Vector2(-6, -6)
+
+[node name="Player" parent="Cell" unique_id=386189924 instance=ExtResource("3_rx0dc")]
+
+[node name="Cell2" parent="." unique_id=1409283956 instance=ExtResource("2_6idp7")]
+position = Vector2(7, -6)
+
+[node name="Cell3" parent="." unique_id=599036953 instance=ExtResource("2_6idp7")]
+position = Vector2(-6, 7)
+
+[node name="Cell4" parent="." unique_id=210086679 instance=ExtResource("2_6idp7")]
+position = Vector2(7, 7)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1217265511]
+zoom = Vector2(1.47, 1.47)
