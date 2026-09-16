@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://jiex14oru4b4" path="res://Scenes/cell.tscn" id="2_6idp7"]
 [ext_resource type="Texture2D" uid="uid://bw33lmjwaw52x" path="res://Assets/dungeon_tileset.png" id="2_afs4w"]
 [ext_resource type="PackedScene" uid="uid://chf1nksskaewi" path="res://Scenes/player.tscn" id="3_rx0dc"]
+[ext_resource type="PackedScene" uid="uid://b5wywj5lhajbv" path="res://Scenes/blocked_space_empty.tscn" id="4_3tvqv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3tvqv"]
 texture = ExtResource("2_afs4w")
@@ -61,6 +62,8 @@ layer_0/tile_data = PackedInt32Array(65535, 0, 1, 131071, 0, 1, 262143, 0, 1, 32
 [node name="Cell" parent="." unique_id=947757610 instance=ExtResource("2_6idp7")]
 position = Vector2(12, 12)
 
+[node name="BlockedSpaceEmpty" parent="Cell" unique_id=290026369 instance=ExtResource("4_3tvqv")]
+
 [node name="Cell2" parent="." unique_id=1409283956 instance=ExtResource("2_6idp7")]
 position = Vector2(36, 12)
 
@@ -73,11 +76,18 @@ position = Vector2(84, 12)
 [node name="Cell5" parent="." unique_id=1060079539 instance=ExtResource("2_6idp7")]
 position = Vector2(108, 12)
 
+[node name="BlockedSpaceEmpty" parent="Cell5" unique_id=273925705 instance=ExtResource("4_3tvqv")]
+position = Vector2(-96, 0)
+
 [node name="Cell6" parent="." unique_id=820054054 instance=ExtResource("2_6idp7")]
 position = Vector2(12, 36)
 
+[node name="BlockedSpaceEmpty" parent="Cell6" unique_id=1431835143 instance=ExtResource("4_3tvqv")]
+
 [node name="Cell7" parent="." unique_id=1953937737 instance=ExtResource("2_6idp7")]
 position = Vector2(36, 36)
+
+[node name="BlockedSpaceEmpty" parent="Cell7" unique_id=798455177 instance=ExtResource("4_3tvqv")]
 
 [node name="Cell8" parent="." unique_id=1218550672 instance=ExtResource("2_6idp7")]
 position = Vector2(60, 36)
@@ -85,14 +95,22 @@ position = Vector2(60, 36)
 [node name="Cell9" parent="." unique_id=1948724904 instance=ExtResource("2_6idp7")]
 position = Vector2(84, 36)
 
+[node name="BlockedSpaceEmpty" parent="Cell9" unique_id=912024983 instance=ExtResource("4_3tvqv")]
+
 [node name="Cell10" parent="." unique_id=365036152 instance=ExtResource("2_6idp7")]
 position = Vector2(108, 36)
+
+[node name="BlockedSpaceEmpty" parent="Cell10" unique_id=1897879726 instance=ExtResource("4_3tvqv")]
 
 [node name="Cell11" parent="." unique_id=14415940 instance=ExtResource("2_6idp7")]
 position = Vector2(12, 60)
 
+[node name="BlockedSpaceEmpty" parent="Cell11" unique_id=1460395805 instance=ExtResource("4_3tvqv")]
+
 [node name="Cell12" parent="." unique_id=2067954930 instance=ExtResource("2_6idp7")]
 position = Vector2(36, 60)
+
+[node name="BlockedSpaceEmpty" parent="Cell12" unique_id=1611518445 instance=ExtResource("4_3tvqv")]
 
 [node name="Cell13" parent="." unique_id=49855693 instance=ExtResource("2_6idp7")]
 position = Vector2(60, 60)
@@ -102,11 +120,17 @@ position = Vector2(60, 60)
 [node name="Cell14" parent="." unique_id=576877394 instance=ExtResource("2_6idp7")]
 position = Vector2(84, 60)
 
+[node name="BlockedSpaceEmpty" parent="Cell14" unique_id=1301179980 instance=ExtResource("4_3tvqv")]
+
 [node name="Cell15" parent="." unique_id=1200068339 instance=ExtResource("2_6idp7")]
 position = Vector2(108, 60)
 
+[node name="BlockedSpaceEmpty" parent="Cell15" unique_id=1067082734 instance=ExtResource("4_3tvqv")]
+
 [node name="Cell16" parent="." unique_id=1255017437 instance=ExtResource("2_6idp7")]
 position = Vector2(12, 84)
+
+[node name="BlockedSpaceEmpty" parent="Cell16" unique_id=182565743 instance=ExtResource("4_3tvqv")]
 
 [node name="Cell17" parent="." unique_id=277786365 instance=ExtResource("2_6idp7")]
 position = Vector2(36, 84)
@@ -119,6 +143,8 @@ position = Vector2(84, 84)
 
 [node name="Cell20" parent="." unique_id=1883810666 instance=ExtResource("2_6idp7")]
 position = Vector2(108, 84)
+
+[node name="BlockedSpaceEmpty" parent="Cell20" unique_id=1231336706 instance=ExtResource("4_3tvqv")]
 
 [node name="Cell21" parent="." unique_id=1976652902 instance=ExtResource("2_6idp7")]
 position = Vector2(12, 108)
