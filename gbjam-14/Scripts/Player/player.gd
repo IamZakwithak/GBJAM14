@@ -8,33 +8,31 @@ var dig : PlayerDig = PlayerDig.new()
 var pickup : PlayerPickup = PlayerPickup.new()
 
 func _ready() -> void:
-	
+	myCell = get_parent()
 	move.performingEntity = self 
 	dig.performingEntity = self
 	pickup.performingEntity = self
+	RoomManager.current_room = get_parent().get_parent()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _input(event):
-	match event:
-		"move_up":
-			move.direction = Vector2(0,1)
-			take_action(move)
-		"move_down":
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("move_up"):
 			move.direction = Vector2(0,-1)
 			take_action(move)
-		"move_left":
+	if event.is_action_pressed("move_left"):
 			move.direction = Vector2(-1,0)
 			take_action(move)
-		"move_right":
+	if event.is_action_pressed("move_right"):
 			move.direction = Vector2(1,0)
 			take_action(move)
-		"pickup":
-			pass
-		"dig":
-			pass
-		"pause":
-			pass 
+	if event.is_action_pressed("move_down"):
+			move.direction = Vector2(0, 1)
+			take_action(move)
+	if event.is_action_pressed("pickup"):
+		pass
+	if event.is_action_pressed("dig"):
+		pass
 	
 func take_action(action : Action) -> void: 
 	
