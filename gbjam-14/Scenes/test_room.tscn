@@ -2,8 +2,45 @@
 
 [ext_resource type="Script" uid="uid://dscxplkrxn817" path="res://Assets/Rooms/room.gd" id="1_hlq8c"]
 [ext_resource type="PackedScene" uid="uid://jiex14oru4b4" path="res://Scenes/cell.tscn" id="2_6idp7"]
-[ext_resource type="Texture2D" uid="uid://c0a156fruj6u2" path="res://Assets/tile ideation5.png" id="2_afs4w"]
+[ext_resource type="Texture2D" uid="uid://bw33lmjwaw52x" path="res://Assets/dungeon_tileset.png" id="2_afs4w"]
 [ext_resource type="PackedScene" uid="uid://chf1nksskaewi" path="res://Scenes/player.tscn" id="3_rx0dc"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3tvqv"]
+texture = ExtResource("2_afs4w")
+texture_region_size = Vector2i(24, 24)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+2:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+0:4/0 = 0
+1:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+6:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:3/0 = 0
+2:4/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_cb1ub"]
+tile_size = Vector2i(24, 24)
+sources/0 = SubResource("TileSetAtlasSource_3tvqv")
 
 [node name="Room" type="Node2D" unique_id=448818566 node_paths=PackedStringArray("grid")]
 script = ExtResource("1_hlq8c")
@@ -11,14 +48,18 @@ grid = [NodePath("Cell"), NodePath("Cell2"), NodePath("Cell3"), NodePath("Cell4"
 grid_width = 5
 grid_height = 5
 
-[node name="TileIdeation5" type="Sprite2D" parent="." unique_id=1852647611]
-position = Vector2(60, 60)
-texture = ExtResource("2_afs4w")
+[node name="floorTileMap" type="TileMap" parent="." unique_id=227324882]
+tile_set = SubResource("TileSet_cb1ub")
+format = 2
+layer_0/tile_data = PackedInt32Array(0, 131072, 1, 1, 65536, 1, 2, 65536, 1, 3, 65536, 1, 4, 131072, 1, 65536, 131072, 2, 65537, 131072, 1, 65538, 65536, 1, 65539, 131072, 1, 65540, 131072, 2, 131076, 131072, 2, 131075, 131072, 2, 131074, 65536, 1, 131073, 131072, 2, 131072, 131072, 2, 196608, 131072, 2, 196609, 65536, 1, 196610, 196608, 1, 196611, 65536, 1, 196612, 131072, 2, 262148, 65536, 1, 262147, 196608, 1, 262145, 196608, 1, 262144, 65536, 1, 262146, 196608, 1)
+
+[node name="wallTileMap" type="TileMap" parent="." unique_id=329099796]
+tile_set = SubResource("TileSet_cb1ub")
+format = 2
+layer_0/tile_data = PackedInt32Array(65535, 0, 1, 131071, 0, 1, 262143, 0, 1, 327679, 0, 1, 393215, 0, 4, -1, 0, 0, -65536, 65536, 0, -65535, 65536, 0, -65534, 131072, 0, -65533, 65536, 0, -65532, 65536, 0, -65531, 262144, 0, 5, 262144, 1, 65541, 262144, 1, 196613, 262144, 1, 262149, 262144, 1, 327685, 262144, 4, 327680, 65536, 4, 327681, 65536, 4, 327682, 131072, 4, 327683, 65536, 4, 327684, 65536, 4, 131077, 262144, 1, 262146, 131072, 3, 196607, 0, 1)
 
 [node name="Cell" parent="." unique_id=947757610 instance=ExtResource("2_6idp7")]
 position = Vector2(12, 12)
-
-[node name="Player" parent="Cell" unique_id=386189924 instance=ExtResource("3_rx0dc")]
 
 [node name="Cell2" parent="." unique_id=1409283956 instance=ExtResource("2_6idp7")]
 position = Vector2(36, 12)
@@ -55,6 +96,8 @@ position = Vector2(36, 60)
 
 [node name="Cell13" parent="." unique_id=49855693 instance=ExtResource("2_6idp7")]
 position = Vector2(60, 60)
+
+[node name="Player" parent="Cell13" unique_id=386189924 instance=ExtResource("3_rx0dc")]
 
 [node name="Cell14" parent="." unique_id=576877394 instance=ExtResource("2_6idp7")]
 position = Vector2(84, 60)
@@ -93,4 +136,4 @@ position = Vector2(84, 108)
 position = Vector2(108, 108)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1217265511]
-zoom = Vector2(1.47, 1.47)
+offset = Vector2(60, 60)
