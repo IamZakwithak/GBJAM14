@@ -44,7 +44,7 @@ sources/0 = SubResource("TileSetAtlasSource_3tvqv")
 
 [node name="Room" type="Node2D" unique_id=448818566 node_paths=PackedStringArray("grid")]
 script = ExtResource("1_hlq8c")
-grid = [NodePath("Cell"), NodePath("Cell2"), NodePath("Cell3"), NodePath("Cell4")]
+grid = [NodePath("Cell"), NodePath("Cell2"), NodePath("Cell3"), NodePath("Cell4"), NodePath("Cell5"), NodePath("Cell6"), NodePath("Cell7"), NodePath("Cell8"), NodePath("Cell9"), NodePath("Cell10"), NodePath("Cell11"), NodePath("Cell12"), NodePath("Cell13"), NodePath("Cell14"), NodePath("Cell15"), NodePath("Cell16"), NodePath("Cell17"), NodePath("Cell18"), NodePath("Cell19"), NodePath("Cell20"), NodePath("Cell21"), NodePath("Cell22"), NodePath("Cell23"), NodePath("Cell24"), NodePath("Cell25")]
 grid_width = 5
 grid_height = 5
 
