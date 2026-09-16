@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://b5wywj5lhajbv"]
+
+[ext_resource type="Script" uid="uid://dmbmxu5f10v2f" path="res://Scripts/Entities/blocked_space.gd" id="1_momwp"]
+
+[node name="BlockedSpaceEmpty" type="Node2D" unique_id=290026369]
+script = ExtResource("1_momwp")

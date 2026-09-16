@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://chf1nksskaewi"]
 
-[ext_resource type="Script" uid="uid://bpdiuek5njon6" path="res://Scripts/Player/player.gd" id="1_tpd1a"]
+[ext_resource type="Script" uid="uid://bpdiuek5njon6" path="res://Scripts/Entities/Player/player.gd" id="1_tpd1a"]
 [ext_resource type="Texture2D" uid="uid://deakdk37l6bp7" path="res://Assets/goldie_shadow.png" id="2_cvnsp"]
 
 [node name="Player" type="Node2D" unique_id=386189924]
