@@ -28,7 +28,7 @@ func change_room(entering_entity: Entity) -> void:
 		entering_entity.myCell = entering_entity.get_parent()
 		entering_entity.myCell.occupyingEntity = entering_entity
 		RoomManager.camera.reparent(RoomManager.current_room)
-		RoomManager.camera.position = Vector2(60,60)
+		RoomManager.camera.position = Vector2(84,84)
 		
 
 		

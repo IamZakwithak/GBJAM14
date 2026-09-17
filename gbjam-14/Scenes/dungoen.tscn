@@ -17,10 +17,10 @@ position = Vector2(4, 7)
 [node name="Room0" parent="." unique_id=448818566 instance=ExtResource("2_jxry8")]
 
 [node name="Room1" parent="." unique_id=1448922437 instance=ExtResource("3_vrxpb")]
-position = Vector2(0, -184)
+position = Vector2(0, -192)
 
 [node name="Room2" parent="." unique_id=370649832 instance=ExtResource("4_vrxpb")]
-position = Vector2(-190, -184)
+position = Vector2(-190, -192)
 
 [node name="Room3" parent="." unique_id=607089144 instance=ExtResource("5_jms7k")]
-position = Vector2(192, -184)
+position = Vector2(192, -192)
