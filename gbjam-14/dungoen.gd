@@ -7,7 +7,7 @@ func _ready() -> void:
 	RoomManager.rooms = rooms
 	RoomManager.camera = camera
 	RoomManager.current_room = rooms[0]
-	RoomManager.camera.position = RoomManager.current_room.position + Vector2(60,60)
+	RoomManager.camera.position = RoomManager.current_room.position + Vector2(84,84)
 	
 
 	#camera.reparent(rooms[0])

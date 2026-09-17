@@ -1,19 +1,26 @@
 [gd_scene format=3 uid="uid://f1ncuswm8est"]
 
 [ext_resource type="Script" uid="uid://drisiesox8e1k" path="res://dungoen.gd" id="1_wl3w2"]
-[ext_resource type="PackedScene" uid="uid://f2o7ihmsoxc" path="res://Scenes/test_room.tscn" id="2_jxry8"]
-[ext_resource type="PackedScene" uid="uid://csyou1vwuq3ma" path="res://Scenes/test_room_no_player.tscn" id="3_vrxpb"]
+[ext_resource type="PackedScene" uid="uid://cf4ookf2875nn" path="res://Scenes/dungeon/room0.tscn" id="2_jxry8"]
+[ext_resource type="PackedScene" uid="uid://u0t2baiof7k5" path="res://Scenes/dungeon/room1.tscn" id="3_vrxpb"]
+[ext_resource type="PackedScene" uid="uid://ctxiuelty7hcd" path="res://Scenes/dungeon/room2.tscn" id="4_vrxpb"]
+[ext_resource type="PackedScene" uid="uid://b34aajr1iufll" path="res://Scenes/dungeon/room3.tscn" id="5_jms7k"]
 
 [node name="Dungoen" type="Node2D" unique_id=1313073382 node_paths=PackedStringArray("rooms", "camera")]
 script = ExtResource("1_wl3w2")
-rooms = [NodePath("Room"), NodePath("Room2")]
+rooms = [NodePath("Room0"), NodePath("Room1"), NodePath("Room2"), NodePath("Room3")]
 camera = NodePath("Camera2D")
-
-[node name="Room" parent="." unique_id=448818566 instance=ExtResource("2_jxry8")]
-position = Vector2(23, 24)
-
-[node name="Room2" parent="." unique_id=955260672 instance=ExtResource("3_vrxpb")]
-position = Vector2(25, 196)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1089095286]
 position = Vector2(4, 7)
+
+[node name="Room0" parent="." unique_id=448818566 instance=ExtResource("2_jxry8")]
+
+[node name="Room1" parent="." unique_id=1448922437 instance=ExtResource("3_vrxpb")]
+position = Vector2(0, -184)
+
+[node name="Room2" parent="." unique_id=370649832 instance=ExtResource("4_vrxpb")]
+position = Vector2(-190, -184)
+
+[node name="Room3" parent="." unique_id=607089144 instance=ExtResource("5_jms7k")]
+position = Vector2(192, -184)
