@@ -1,13 +1,12 @@
-[gd_scene format=3 uid="uid://f2o7ihmsoxc"]
+[gd_scene format=3 uid="uid://csyou1vwuq3ma"]
 
-[ext_resource type="Script" uid="uid://dscxplkrxn817" path="res://Assets/Rooms/room.gd" id="1_hlq8c"]
-[ext_resource type="PackedScene" uid="uid://jiex14oru4b4" path="res://Scenes/cell.tscn" id="2_6idp7"]
-[ext_resource type="Texture2D" uid="uid://bw33lmjwaw52x" path="res://Assets/dungeon_tileset.png" id="2_afs4w"]
-[ext_resource type="PackedScene" uid="uid://chf1nksskaewi" path="res://Scenes/player.tscn" id="3_rx0dc"]
-[ext_resource type="PackedScene" uid="uid://c6mei0oqojpna" path="res://Scenes/transition_entity.tscn" id="5_3tvqv"]
+[ext_resource type="Script" uid="uid://dscxplkrxn817" path="res://Assets/Rooms/room.gd" id="1_et6ta"]
+[ext_resource type="Texture2D" uid="uid://bw33lmjwaw52x" path="res://Assets/dungeon_tileset.png" id="2_fxfb5"]
+[ext_resource type="PackedScene" uid="uid://jiex14oru4b4" path="res://Scenes/cell.tscn" id="3_3sahr"]
+[ext_resource type="PackedScene" uid="uid://c6mei0oqojpna" path="res://Scenes/transition_entity.tscn" id="4_et6ta"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3tvqv"]
-texture = ExtResource("2_afs4w")
+texture = ExtResource("2_fxfb5")
 texture_region_size = Vector2i(24, 24)
 0:0/0 = 0
 1:0/0 = 0
@@ -44,7 +43,7 @@ tile_size = Vector2i(24, 24)
 sources/0 = SubResource("TileSetAtlasSource_3tvqv")
 
 [node name="Room" type="Node2D" unique_id=448818566 node_paths=PackedStringArray("grid")]
-script = ExtResource("1_hlq8c")
+script = ExtResource("1_et6ta")
 grid = [NodePath("Cell"), NodePath("Cell2"), NodePath("Cell3"), NodePath("Cell4"), NodePath("Cell5"), NodePath("Cell6"), NodePath("Cell7"), NodePath("Cell8"), NodePath("Cell9"), NodePath("Cell10"), NodePath("Cell11"), NodePath("Cell12"), NodePath("Cell13"), NodePath("Cell14"), NodePath("Cell15"), NodePath("Cell16"), NodePath("Cell17"), NodePath("Cell18"), NodePath("Cell19"), NodePath("Cell20"), NodePath("Cell21"), NodePath("Cell22"), NodePath("Cell23"), NodePath("Cell24"), NodePath("Cell25")]
 grid_width = 5
 grid_height = 5
@@ -59,83 +58,80 @@ tile_set = SubResource("TileSet_cb1ub")
 format = 2
 layer_0/tile_data = PackedInt32Array(65535, 0, 1, 131071, 0, 1, 262143, 0, 1, 327679, 0, 1, 393215, 0, 4, -1, 0, 0, -65536, 65536, 0, -65535, 65536, 0, -65534, 131072, 0, -65533, 65536, 0, -65532, 65536, 0, -65531, 262144, 0, 5, 262144, 1, 65541, 262144, 1, 196613, 262144, 1, 262149, 262144, 1, 327685, 262144, 4, 327680, 65536, 4, 327681, 65536, 4, 327682, 131072, 4, 327683, 65536, 4, 327684, 65536, 4, 131077, 262144, 1, 262146, 131072, 3, 196607, 0, 1)
 
-[node name="Cell" parent="." unique_id=947757610 instance=ExtResource("2_6idp7")]
+[node name="Cell" parent="." unique_id=947757610 instance=ExtResource("3_3sahr")]
 position = Vector2(12, 12)
 
-[node name="Cell2" parent="." unique_id=1409283956 instance=ExtResource("2_6idp7")]
+[node name="Cell2" parent="." unique_id=1409283956 instance=ExtResource("3_3sahr")]
 position = Vector2(36, 12)
 
-[node name="Cell3" parent="." unique_id=599036953 instance=ExtResource("2_6idp7")]
+[node name="Node2D" parent="Cell2" unique_id=1028845239 instance=ExtResource("4_et6ta")]
+connected_location = Vector2(2, 4)
+
+[node name="Cell3" parent="." unique_id=599036953 instance=ExtResource("3_3sahr")]
 position = Vector2(60, 12)
 
-[node name="Cell4" parent="." unique_id=210086679 instance=ExtResource("2_6idp7")]
+[node name="Cell4" parent="." unique_id=210086679 instance=ExtResource("3_3sahr")]
 position = Vector2(84, 12)
 
-[node name="Cell5" parent="." unique_id=1060079539 instance=ExtResource("2_6idp7")]
+[node name="Cell5" parent="." unique_id=1060079539 instance=ExtResource("3_3sahr")]
 position = Vector2(108, 12)
 
-[node name="Cell6" parent="." unique_id=820054054 instance=ExtResource("2_6idp7")]
+[node name="Cell6" parent="." unique_id=820054054 instance=ExtResource("3_3sahr")]
 position = Vector2(12, 36)
 
-[node name="Cell7" parent="." unique_id=1953937737 instance=ExtResource("2_6idp7")]
+[node name="Cell7" parent="." unique_id=1953937737 instance=ExtResource("3_3sahr")]
 position = Vector2(36, 36)
 
-[node name="Cell8" parent="." unique_id=1218550672 instance=ExtResource("2_6idp7")]
+[node name="Cell8" parent="." unique_id=1218550672 instance=ExtResource("3_3sahr")]
 position = Vector2(60, 36)
 
-[node name="Cell9" parent="." unique_id=1948724904 instance=ExtResource("2_6idp7")]
+[node name="Cell9" parent="." unique_id=1948724904 instance=ExtResource("3_3sahr")]
 position = Vector2(84, 36)
 
-[node name="Cell10" parent="." unique_id=365036152 instance=ExtResource("2_6idp7")]
+[node name="Cell10" parent="." unique_id=365036152 instance=ExtResource("3_3sahr")]
 position = Vector2(108, 36)
 
-[node name="Cell11" parent="." unique_id=14415940 instance=ExtResource("2_6idp7")]
+[node name="Cell11" parent="." unique_id=14415940 instance=ExtResource("3_3sahr")]
 position = Vector2(12, 60)
 
-[node name="Cell12" parent="." unique_id=2067954930 instance=ExtResource("2_6idp7")]
+[node name="Cell12" parent="." unique_id=2067954930 instance=ExtResource("3_3sahr")]
 position = Vector2(36, 60)
 
-[node name="Cell13" parent="." unique_id=49855693 instance=ExtResource("2_6idp7")]
+[node name="Cell13" parent="." unique_id=49855693 instance=ExtResource("3_3sahr")]
 position = Vector2(60, 60)
 
-[node name="Player" parent="Cell13" unique_id=386189924 instance=ExtResource("3_rx0dc")]
-
-[node name="Cell14" parent="." unique_id=576877394 instance=ExtResource("2_6idp7")]
+[node name="Cell14" parent="." unique_id=576877394 instance=ExtResource("3_3sahr")]
 position = Vector2(84, 60)
 
-[node name="Cell15" parent="." unique_id=1200068339 instance=ExtResource("2_6idp7")]
+[node name="Cell15" parent="." unique_id=1200068339 instance=ExtResource("3_3sahr")]
 position = Vector2(108, 60)
 
-[node name="Cell16" parent="." unique_id=1255017437 instance=ExtResource("2_6idp7")]
+[node name="Cell16" parent="." unique_id=1255017437 instance=ExtResource("3_3sahr")]
 position = Vector2(12, 84)
 
-[node name="Cell17" parent="." unique_id=277786365 instance=ExtResource("2_6idp7")]
+[node name="Cell17" parent="." unique_id=277786365 instance=ExtResource("3_3sahr")]
 position = Vector2(36, 84)
 
-[node name="Cell18" parent="." unique_id=1186138036 instance=ExtResource("2_6idp7")]
+[node name="Cell18" parent="." unique_id=1186138036 instance=ExtResource("3_3sahr")]
 position = Vector2(60, 84)
 
-[node name="Cell19" parent="." unique_id=1495143057 instance=ExtResource("2_6idp7")]
+[node name="Cell19" parent="." unique_id=1495143057 instance=ExtResource("3_3sahr")]
 position = Vector2(84, 84)
 
-[node name="Cell20" parent="." unique_id=1883810666 instance=ExtResource("2_6idp7")]
+[node name="Cell20" parent="." unique_id=1883810666 instance=ExtResource("3_3sahr")]
 position = Vector2(108, 84)
 
-[node name="Cell21" parent="." unique_id=1976652902 instance=ExtResource("2_6idp7")]
+[node name="Cell21" parent="." unique_id=1976652902 instance=ExtResource("3_3sahr")]
 position = Vector2(12, 108)
 
-[node name="Cell22" parent="." unique_id=1661378465 instance=ExtResource("2_6idp7")]
+[node name="Cell22" parent="." unique_id=1661378465 instance=ExtResource("3_3sahr")]
 position = Vector2(36, 108)
 
-[node name="Cell23" parent="." unique_id=20660574 instance=ExtResource("2_6idp7")]
+[node name="Cell23" parent="." unique_id=20660574 instance=ExtResource("3_3sahr")]
 position = Vector2(60, 108)
 
-[node name="Node2D" parent="Cell23" unique_id=1028845239 instance=ExtResource("5_3tvqv")]
-room_index = 1
-connected_location = Vector2(2, 0)
-
-[node name="Cell24" parent="." unique_id=184295922 instance=ExtResource("2_6idp7")]
+[node name="Cell24" parent="." unique_id=184295922 instance=ExtResource("3_3sahr")]
 position = Vector2(84, 108)
 
-[node name="Cell25" parent="." unique_id=69082552 instance=ExtResource("2_6idp7")]
+[node name="Cell25" parent="." unique_id=69082552 instance=ExtResource("3_3sahr")]
 position = Vector2(108, 108)

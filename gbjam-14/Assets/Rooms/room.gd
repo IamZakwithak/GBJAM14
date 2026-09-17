@@ -5,11 +5,8 @@ class_name Room extends Node2D
 @export var grid_height : int
 
 func _ready() -> void:
-	RoomManager.current_room = self
 	for i in grid.size():
-		grid[i].roomLocation = Vector2(i % grid_width, i / grid_width)
-
-		
+		grid[i].roomLocation = Vector2(i % grid_width, i / grid_width)	
 
 func set_cell(cell_to_put: Cell, x : int,y : int) -> void :
 	var index = x + (y * grid_width)
