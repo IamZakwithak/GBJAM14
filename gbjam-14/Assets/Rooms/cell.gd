@@ -8,16 +8,23 @@ var roomLocation : Vector2 #This is the x,y indexes for the cell grid spaces, so
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass
+	if get_child_count() > 0 :
+		occupyingEntity = get_child(0)
+		occupyingEntity.myCell = self
+	#if occupyingEntity != null: 
+	#	occupyingEntity.myCell = self
+
 	
 func check_can_entity_enter(entering_entity : Entity) -> bool:
 	if occupyingEntity == null || occupyingEntity.can_entity_enter(entering_entity):
+		entity_entered(entering_entity)
 		return true
 	return false
 	
 func entity_entered( entering_entity : Entity) -> void:
+	print("entity entered!")
 	occupyingEntity = entering_entity
-	occupyingEntity.myCell = self
+	#occupyingEntity.myCell = self
 	entity_enter.emit(entering_entity)
 
 func entity_exit() -> void: 
