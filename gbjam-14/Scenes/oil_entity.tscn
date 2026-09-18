@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://c5mcsceew7vc7"]
+
+[ext_resource type="Script" uid="uid://8n4pv8slrlnu" path="res://Scripts/oil_entity.gd" id="1_jqpfs"]
+
+[node name="OilEntity" type="Node2D" unique_id=1372230686]
+script = ExtResource("1_jqpfs")
