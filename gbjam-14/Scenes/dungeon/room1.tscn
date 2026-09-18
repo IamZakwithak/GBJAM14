@@ -52,7 +52,7 @@ grid_height = 7
 [node name="floorTileMap" type="TileMap" parent="." unique_id=227324882]
 tile_set = SubResource("TileSet_cb1ub")
 format = 2
-layer_0/tile_data = PackedInt32Array(65537, 131072, 2, 131073, 131072, 2, 196609, 196608, 1, 262145, 131072, 2, 65538, 131072, 2, 131074, 131072, 2, 196610, 196608, 1, 262146, 131072, 2, 65539, 196608, 1, 131075, 65536, 1, 196611, 196608, 1, 262147, 65536, 1, 65540, 131072, 2, 131076, 131072, 2, 196612, 196608, 1, 262148, 131072, 2, 327681, 131072, 2, 327682, 131072, 2, 327683, 65536, 1, 327684, 131072, 2, 65541, 131072, 2, 131077, 131072, 2, 196613, 65536, 1, 262149, 131072, 2, 327685, 131072, 2, -65533, 131072, 2, 196615, 131072, 2, 458755, 131072, 2, 262143, 131072, 2)
+layer_0/tile_data = PackedInt32Array(65537, 131072, 1, 131073, 131072, 2, 196609, 196608, 1, 262145, 131072, 1, 65538, 131072, 1, 131074, 131072, 2, 196610, 196608, 1, 262146, 131072, 1, 65539, 196608, 1, 196611, 196608, 1, 262147, 65536, 1, 65540, 131072, 1, 131076, 131072, 2, 196612, 196608, 1, 262148, 131072, 1, 327681, 131072, 2, 327682, 131072, 2, 327683, 65536, 1, 327684, 131072, 2, 65541, 131072, 1, 131077, 131072, 2, 196613, 65536, 1, 262149, 131072, 1, 327685, 131072, 2, -65533, 131072, 2, 196615, 131072, 2, 458755, 131072, 2, 262143, 131072, 2, 131075, 131072, 1)
 
 [node name="wallTileMap" type="TileMap" parent="." unique_id=329099796]
 tile_set = SubResource("TileSet_cb1ub")
@@ -78,7 +78,7 @@ position = Vector2(60, 12)
 position = Vector2(84, 12)
 
 [node name="Room1_topDoor" parent="Cell4" unique_id=1028845239 instance=ExtResource("5_68dh3")]
-room_index = 4
+room_index = 5
 connected_location = Vector2(3, 6)
 
 [node name="Cell5" parent="." unique_id=1060079539 instance=ExtResource("3_g5loc")]
@@ -147,6 +147,8 @@ position = Vector2(60, 60)
 
 [node name="Cell18" parent="." unique_id=1186138036 instance=ExtResource("3_g5loc")]
 position = Vector2(84, 60)
+
+[node name="BlockedSpaceEmpty" parent="Cell18" unique_id=1837088867 instance=ExtResource("4_0qajc")]
 
 [node name="Cell19" parent="." unique_id=1495143057 instance=ExtResource("3_g5loc")]
 position = Vector2(108, 60)

@@ -5,11 +5,15 @@
 [ext_resource type="PackedScene" uid="uid://u0t2baiof7k5" path="res://Scenes/dungeon/room1.tscn" id="3_vrxpb"]
 [ext_resource type="PackedScene" uid="uid://ctxiuelty7hcd" path="res://Scenes/dungeon/room2.tscn" id="4_vrxpb"]
 [ext_resource type="PackedScene" uid="uid://b34aajr1iufll" path="res://Scenes/dungeon/room3.tscn" id="5_jms7k"]
-[ext_resource type="PackedScene" uid="uid://dsoggemflfaye" path="res://Scenes/dungeon/room4.tscn" id="6_1oxd7"]
+[ext_resource type="PackedScene" uid="uid://lsc7x8ypq0p3" path="res://Scenes/dungeon/room4.tscn" id="6_1oxd7"]
+[ext_resource type="PackedScene" uid="uid://dsoggemflfaye" path="res://Scenes/dungeon/room5.tscn" id="7_fbvyi"]
+[ext_resource type="Texture2D" uid="uid://bi8j56utaxqtb" path="res://Assets/pot.png" id="8_kcr0d"]
+[ext_resource type="Texture2D" uid="uid://cdutca10i3yva" path="res://Assets/Rooms/goldie_outlined.png" id="9_taqc3"]
+[ext_resource type="Texture2D" uid="uid://krqp2oae4r21" path="res://Assets/skull.png" id="10_taqc3"]
 
 [node name="Dungoen" type="Node2D" unique_id=1313073382 node_paths=PackedStringArray("rooms", "camera")]
 script = ExtResource("1_wl3w2")
-rooms = [NodePath("Room0"), NodePath("Room1"), NodePath("Room2"), NodePath("Room3"), NodePath("Room4")]
+rooms = [NodePath("Room0"), NodePath("Room1"), NodePath("Room2"), NodePath("Room3"), NodePath("Room4"), NodePath("Room5")]
 camera = NodePath("Camera2D")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1089095286]
@@ -26,5 +30,36 @@ position = Vector2(-190, -192)
 [node name="Room3" parent="." unique_id=607089144 instance=ExtResource("5_jms7k")]
 position = Vector2(192, -192)
 
-[node name="Room4" parent="." unique_id=1048754420 instance=ExtResource("6_1oxd7")]
+[node name="Room4" parent="." unique_id=88341207 instance=ExtResource("6_1oxd7")]
+position = Vector2(192, -384)
+
+[node name="Room5" parent="." unique_id=1048754420 instance=ExtResource("7_fbvyi")]
 position = Vector2(0, -384)
+
+[node name="Pot" type="Sprite2D" parent="." unique_id=1711397306]
+position = Vector2(-154, -60)
+texture = ExtResource("8_kcr0d")
+
+[node name="Pot" type="Sprite2D" parent="Pot" unique_id=628446436]
+position = Vector2(0, -96)
+texture = ExtResource("8_kcr0d")
+
+[node name="GoldieOutlined" type="Sprite2D" parent="." unique_id=142579265]
+position = Vector2(-198, -112)
+texture = ExtResource("9_taqc3")
+
+[node name="Skull" type="Sprite2D" parent="." unique_id=1910757514]
+position = Vector2(-154, -132)
+texture = ExtResource("10_taqc3")
+
+[node name="Skull2" type="Sprite2D" parent="." unique_id=2029859498]
+position = Vector2(-130, -156)
+texture = ExtResource("10_taqc3")
+
+[node name="Skull3" type="Sprite2D" parent="." unique_id=1741209782]
+position = Vector2(-154, -84)
+texture = ExtResource("10_taqc3")
+
+[node name="Skull4" type="Sprite2D" parent="." unique_id=1520588148]
+position = Vector2(-130, -60)
+texture = ExtResource("10_taqc3")

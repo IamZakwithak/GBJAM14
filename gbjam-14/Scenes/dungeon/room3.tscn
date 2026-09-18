@@ -99,7 +99,9 @@ position = Vector2(60, 12)
 [node name="Cell4" parent="." unique_id=210086679 instance=ExtResource("3_5l1tn")]
 position = Vector2(84, 12)
 
-[node name="BlockedSpaceEmpty" parent="Cell4" unique_id=366850772 instance=ExtResource("4_c32rj")]
+[node name="TransitionEntity" parent="Cell4" unique_id=1028845239 instance=ExtResource("5_0vo5i")]
+room_index = 4
+connected_location = Vector2(3, 6)
 
 [node name="Cell5" parent="." unique_id=1060079539 instance=ExtResource("3_5l1tn")]
 position = Vector2(108, 12)
@@ -182,7 +184,7 @@ position = Vector2(156, 60)
 [node name="Cell22" parent="." unique_id=1661378465 instance=ExtResource("3_5l1tn")]
 position = Vector2(12, 84)
 
-[node name="TransitionEntity" parent="Cell22" unique_id=1028845239 instance=ExtResource("5_0vo5i")]
+[node name="TransitionEntity" parent="Cell22" unique_id=823577213 instance=ExtResource("5_0vo5i")]
 room_index = 1
 connected_location = Vector2(6, 3)
 

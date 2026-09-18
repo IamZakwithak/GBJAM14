@@ -5,7 +5,6 @@
 [ext_resource type="PackedScene" uid="uid://jiex14oru4b4" path="res://Scenes/cell.tscn" id="3_v6x5n"]
 [ext_resource type="PackedScene" uid="uid://b5wywj5lhajbv" path="res://Scenes/blocked_space_empty.tscn" id="4_iiabn"]
 [ext_resource type="PackedScene" uid="uid://c6mei0oqojpna" path="res://Scenes/transition_entity.tscn" id="5_7riq7"]
-[ext_resource type="Texture2D" uid="uid://krqp2oae4r21" path="res://Assets/skull.png" id="6_wju3w"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3tvqv"]
 texture = ExtResource("2_wju3w")
@@ -171,7 +170,7 @@ position = Vector2(156, 84)
 
 [node name="TransitionEntity" parent="Cell28" unique_id=1028845239 instance=ExtResource("5_7riq7")]
 room_index = 1
-connected_location = Vector2(1, 3)
+connected_location = Vector2(0, 3)
 
 [node name="Cell29" parent="." unique_id=1542226078 instance=ExtResource("3_v6x5n")]
 position = Vector2(12, 108)
@@ -259,19 +258,3 @@ position = Vector2(-132, -156)
 position = Vector2(156, 156)
 
 [node name="BlockedSpaceEmpty" parent="Cell49" unique_id=1218437304 instance=ExtResource("4_iiabn")]
-
-[node name="Skull" type="Sprite2D" parent="." unique_id=36335860]
-position = Vector2(36, 60)
-texture = ExtResource("6_wju3w")
-
-[node name="Skull2" type="Sprite2D" parent="." unique_id=1822400295]
-position = Vector2(60, 36)
-texture = ExtResource("6_wju3w")
-
-[node name="Skull3" type="Sprite2D" parent="." unique_id=667019849]
-position = Vector2(60, 132)
-texture = ExtResource("6_wju3w")
-
-[node name="Skull4" type="Sprite2D" parent="." unique_id=596312930]
-position = Vector2(36, 108)
-texture = ExtResource("6_wju3w")
