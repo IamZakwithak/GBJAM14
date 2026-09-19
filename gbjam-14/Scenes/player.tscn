@@ -3,9 +3,12 @@
 [ext_resource type="Script" uid="uid://bpdiuek5njon6" path="res://Scripts/Entities/Player/player.gd" id="1_tpd1a"]
 [ext_resource type="Texture2D" uid="uid://deakdk37l6bp7" path="res://Assets/goldie_shadow.png" id="2_cvnsp"]
 
-[node name="Player" type="Node2D" unique_id=386189924]
+[node name="Player" type="Node2D" unique_id=386189924 node_paths=PackedStringArray("inventoryParent")]
 script = ExtResource("1_tpd1a")
+inventoryParent = NodePath("Inventory")
 metadata/_custom_type_script = "uid://b7qbqqltiwhhi"
 
 [node name="GoldieShadow" type="Sprite2D" parent="." unique_id=612584575]
 texture = ExtResource("2_cvnsp")
+
+[node name="Inventory" type="Node2D" parent="." unique_id=1967917076]
