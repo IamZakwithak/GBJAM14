@@ -9,10 +9,9 @@ var cancelMove : bool
 func _ready() -> void:
 	pass # Replace with function body.
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
 	
 func can_entity_enter(entering_entity: Entity) -> bool:
 	return true;
+	
+func take_turn() -> void: 
+	pass

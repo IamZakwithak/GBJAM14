@@ -8,3 +8,6 @@ func _ready() -> void:
 
 func do_interaction() -> void :
 	pass
+	
+func resolve_turn() -> void: 
+	RoomManager.player_took_action.emit()

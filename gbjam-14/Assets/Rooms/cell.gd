@@ -33,7 +33,7 @@ func check_can_entity_enter(entering_entity : Entity) -> bool:
 	
 func entity_entered( entering_entity : Entity) -> void:
 	print("entity entered!")
-	occupyingEntity = entering_entity
+	#occupyingEntity = entering_entity
 	#occupyingEntity.myCell = self
 	entity_enter.emit(entering_entity)
 

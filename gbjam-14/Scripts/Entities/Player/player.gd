@@ -6,6 +6,8 @@ var move : PlayerMove = PlayerMove.new()
 var bark : PlayerBark = PlayerBark.new()
 var interact : PlayerInteract = PlayerInteract.new()
 
+var myTurn : bool = true
+
 var inventory_item : PickupItem
 
 func _ready() -> void:
@@ -14,10 +16,12 @@ func _ready() -> void:
 	bark.performingEntity = self
 	interact.performingPlayer = self
 	RoomManager.current_room = get_parent().get_parent()
-
+	RoomManager.return_action_to_player.connect(player_turn_again)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _unhandled_input(event: InputEvent) -> void:
+	if !myTurn:
+		return
 	if event.is_action_pressed("move_up"):
 			move.direction = Vector2(0,-1)
 			take_action(move)
@@ -36,7 +40,9 @@ func _unhandled_input(event: InputEvent) -> void:
 			take_action(bark)
 	
 func take_action(action : Action) -> void: 
-	
-	if(action.can_do_action()) : 
-		RoomManager.player_took_action.emit()
+	myTurn = false
+	if(action.can_do_action()) :  
 		action.do_action() 
+
+func player_turn_again() -> void: 
+	myTurn = true

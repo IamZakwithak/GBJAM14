@@ -24,6 +24,7 @@ func do_action() -> void:
 	
 func dig_hole() -> void: 
 	performingPlayer.myCell.diggable = false
+	RoomManager.player_took_action.emit()
 	
 
 func put_down_item() -> void: 
@@ -31,4 +32,5 @@ func put_down_item() -> void:
 	performingPlayer.inventory_item.reparent(performingPlayer.myCell.pickupableEntity)
 	performingPlayer.inventory_item.visible = true
 	performingPlayer.inventory_item = null
+	RoomManager.player_took_action.emit()
 	
