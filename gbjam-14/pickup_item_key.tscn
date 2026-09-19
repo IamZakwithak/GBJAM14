@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://20cgc88gymji"]
+
+[ext_resource type="Script" uid="uid://cxhhjyq7ijjno" path="res://Scripts/Entities/pickup_item_key.gd" id="1_ghl40"]
+[ext_resource type="Texture2D" uid="uid://fex6xsspycmp" path="res://Assets/dart.png" id="2_pp2nm"]
+
+[node name="PickupItemKey" type="Node2D" unique_id=1567157736]
+script = ExtResource("1_ghl40")
+metadata/_custom_type_script = "uid://cxhhjyq7ijjno"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2123723516]
+texture = ExtResource("2_pp2nm")

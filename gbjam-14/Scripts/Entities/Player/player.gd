@@ -1,17 +1,18 @@
 class_name Player extends Entity
 
-
-# Called when the node enters the scene tree for the first time.
+@export var inventoryParent : Node2D
 
 var move : PlayerMove = PlayerMove.new()
-var dig : PlayerDig = PlayerDig.new()
-var pickup : PlayerPickup = PlayerPickup.new()
+var bark : PlayerBark = PlayerBark.new()
+var interact : PlayerInteract = PlayerInteract.new()
+
+var inventory_item : PickupItem
 
 func _ready() -> void:
 	myCell = get_parent()
 	move.performingEntity = self 
-	dig.performingEntity = self
-	pickup.performingEntity = self
+	bark.performingEntity = self
+	interact.performingPlayer = self
 	RoomManager.current_room = get_parent().get_parent()
 
 
@@ -29,10 +30,10 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("move_down"):
 			move.direction = Vector2(0, 1)
 			take_action(move)
-	if event.is_action_pressed("pickup"):
-		pass
-	if event.is_action_pressed("dig"):
-		pass
+	if event.is_action_pressed("interact"):
+			take_action(interact)
+	if event.is_action_pressed("bark"):
+			take_action(bark)
 	
 func take_action(action : Action) -> void: 
 	

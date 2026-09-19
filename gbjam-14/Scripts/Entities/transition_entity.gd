@@ -15,12 +15,20 @@ func set_other_room() -> void:
 		myCell.entity_enter.connect(change_room)
 
 
-func transition_condition_met() -> bool:
+func transition_condition_met(entering_entity : Player) -> bool:
+	var possible_key
+	
+	if(entering_entity.inventory_item != null && entering_entity.inventory_item is PickupItemKey):
+		possible_key = entering_entity.inventory_item as PickupItemKey
+	
+	if is_locked && possible_key != null && possible_key.door_location_to_unlock == myCell.roomLocation :
+		return true
+		
 	return !is_locked
 
-func change_room(entering_entity: Entity) -> void: 
+func change_room(entering_entity: Player) -> void: 
 	
-	if transition_condition_met():
+	if transition_condition_met(entering_entity):
 		
 		RoomManager.current_room = 	 RoomManager.rooms[room_index]
 		RoomManager.room_changed.emit()
