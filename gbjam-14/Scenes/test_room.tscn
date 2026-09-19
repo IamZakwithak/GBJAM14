@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://jiex14oru4b4" path="res://Scenes/cell.tscn" id="2_6idp7"]
 [ext_resource type="Texture2D" uid="uid://bw33lmjwaw52x" path="res://Assets/dungeon_tileset.png" id="2_afs4w"]
 [ext_resource type="PackedScene" uid="uid://chf1nksskaewi" path="res://Scenes/player.tscn" id="3_rx0dc"]
+[ext_resource type="PackedScene" uid="uid://20cgc88gymji" path="res://pickup_item_key.tscn" id="4_548gw"]
 [ext_resource type="PackedScene" uid="uid://c6mei0oqojpna" path="res://Scenes/transition_entity.tscn" id="5_3tvqv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3tvqv"]
@@ -64,6 +65,11 @@ position = Vector2(12, 12)
 
 [node name="Cell2" parent="." unique_id=1409283956 instance=ExtResource("2_6idp7")]
 position = Vector2(36, 12)
+
+[node name="PickupItemKey" parent="Cell2" unique_id=1567157736 instance=ExtResource("4_548gw")]
+door_location_to_unlock = Vector2(2, 4)
+interactable = true
+pickupable = true
 
 [node name="Cell3" parent="." unique_id=599036953 instance=ExtResource("2_6idp7")]
 position = Vector2(60, 12)
@@ -133,6 +139,7 @@ position = Vector2(60, 108)
 [node name="Node2D" parent="Cell23" unique_id=1028845239 instance=ExtResource("5_3tvqv")]
 room_index = 1
 connected_location = Vector2(2, 0)
+is_locked = true
 
 [node name="Cell24" parent="." unique_id=184295922 instance=ExtResource("2_6idp7")]
 position = Vector2(84, 108)
