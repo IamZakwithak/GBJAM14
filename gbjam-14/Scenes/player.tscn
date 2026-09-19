@@ -18,6 +18,74 @@ tracks/0/keys = {
 "values": [0]
 }
 
+[sub_resource type="Animation" id="Animation_cvnsp"]
+resource_name = "bark_down"
+length = 0.4
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GoldieShadow:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [53, 54]
+}
+
+[sub_resource type="Animation" id="Animation_pu2lt"]
+resource_name = "bark_left"
+length = 0.4
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GoldieShadow:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [60, 61]
+}
+
+[sub_resource type="Animation" id="Animation_ukyrk"]
+resource_name = "bark_right"
+length = 0.4
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GoldieShadow:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [49, 48]
+}
+
+[sub_resource type="Animation" id="Animation_7dp3o"]
+resource_name = "bark_up"
+length = 0.4
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GoldieShadow:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [57, 58]
+}
+
 [sub_resource type="Animation" id="Animation_vgqql"]
 resource_name = "run_down"
 length = 0.4
@@ -165,6 +233,10 @@ tracks/0/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_pu2lt"]
 _data = {
 &"RESET": SubResource("Animation_6t5aa"),
+&"bark_down": SubResource("Animation_cvnsp"),
+&"bark_left": SubResource("Animation_pu2lt"),
+&"bark_right": SubResource("Animation_ukyrk"),
+&"bark_up": SubResource("Animation_7dp3o"),
 &"run_down": SubResource("Animation_vgqql"),
 &"run_left": SubResource("Animation_fkybt"),
 &"run_right": SubResource("Animation_x3wgy"),
@@ -174,6 +246,33 @@ _data = {
 &"stand_right": SubResource("Animation_tx1dd"),
 &"stand_up": SubResource("Animation_gymyn")
 }
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_qqcod"]
+animation = &"bark_down"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_wpjfl"]
+animation = &"bark_right"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_bi64h"]
+animation = &"bark_left"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_cvnsp"]
+animation = &"bark_up"
+
+[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_p1odr"]
+blend_mode = 1
+blend_point_0/node = SubResource("AnimationNodeAnimation_qqcod")
+blend_point_0/pos = Vector2(0, 1)
+blend_point_0/name = &"bark_down"
+blend_point_1/node = SubResource("AnimationNodeAnimation_wpjfl")
+blend_point_1/pos = Vector2(1, 0)
+blend_point_1/name = &"bark_right"
+blend_point_2/node = SubResource("AnimationNodeAnimation_bi64h")
+blend_point_2/pos = Vector2(-1, 0)
+blend_point_2/name = &"bark_left"
+blend_point_3/node = SubResource("AnimationNodeAnimation_cvnsp")
+blend_point_3/pos = Vector2(0, -1)
+blend_point_3/name = &"bark_up"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ukyrk"]
 animation = &"run_left"
@@ -240,13 +339,23 @@ advance_expression = "movement_direction.length() > 0"
 advance_mode = 0
 advance_expression = "movement_direction.length() == 0"
 
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_0gysh"]
+advance_mode = 2
+advance_expression = "isbarking"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_y6uwr"]
+advance_mode = 2
+advance_expression = "!= barking"
+
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_0gysh"]
+states/BarkState/node = SubResource("AnimationNodeBlendSpace2D_p1odr")
+states/BarkState/position = Vector2(475, -4)
 states/RunState/node = SubResource("AnimationNodeBlendSpace2D_qqcod")
 states/RunState/position = Vector2(475, 223)
 states/StandState/node = SubResource("AnimationNodeBlendSpace2D_wpjfl")
 states/StandState/position = Vector2(475, 100)
-transitions = ["Start", "StandState", SubResource("AnimationNodeStateMachineTransition_bi64h"), "StandState", "RunState", SubResource("AnimationNodeStateMachineTransition_2ijsl"), "RunState", "StandState", SubResource("AnimationNodeStateMachineTransition_p1odr")]
-graph_offset = Vector2(-151, 24)
+transitions = ["Start", "StandState", SubResource("AnimationNodeStateMachineTransition_bi64h"), "StandState", "RunState", SubResource("AnimationNodeStateMachineTransition_2ijsl"), "RunState", "StandState", SubResource("AnimationNodeStateMachineTransition_p1odr"), "StandState", "BarkState", SubResource("AnimationNodeStateMachineTransition_0gysh"), "BarkState", "StandState", SubResource("AnimationNodeStateMachineTransition_y6uwr")]
+graph_offset = Vector2(-168, -52)
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_vfarp"]
 advance_mode = 2
@@ -255,10 +364,10 @@ advance_mode = 2
 states/MoveState/node = SubResource("AnimationNodeStateMachine_0gysh")
 states/MoveState/position = Vector2(420, 100)
 transitions = ["Start", "MoveState", SubResource("AnimationNodeStateMachineTransition_vfarp")]
-graph_offset = Vector2(-39, -12)
+graph_offset = Vector2(-134, 36)
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_bj3kt"]
-graph_offset = Vector2(-232, 82)
+graph_offset = Vector2(-418.08264, 34.18181)
 nodes/StateMachine/node = SubResource("AnimationNodeStateMachine_y6uwr")
 nodes/StateMachine/position = Vector2(0, 120)
 node_connections = [&"output", 0, &"StateMachine"]
@@ -282,5 +391,6 @@ libraries/ = SubResource("AnimationLibrary_pu2lt")
 tree_root = SubResource("AnimationNodeBlendTree_bj3kt")
 advance_expression_base_node = NodePath("..")
 anim_player = NodePath("../AnimationPlayer")
+parameters/StateMachine/MoveState/BarkState/blend_position = Vector2(-0.24670762, 0.5981735)
 parameters/StateMachine/MoveState/RunState/blend_position = Vector2(-0.0008779764, -1.0091324)
 parameters/StateMachine/MoveState/StandState/blend_position = Vector2(1, 0)
