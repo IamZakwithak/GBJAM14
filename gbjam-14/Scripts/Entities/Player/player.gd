@@ -78,4 +78,3 @@ func player_turn_again() -> void:
 
 func _on_sfx_bark_finished() -> void:
 	isbarking = false
-	print("done barking")
