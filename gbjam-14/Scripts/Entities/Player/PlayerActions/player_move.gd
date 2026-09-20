@@ -33,5 +33,6 @@ func do_action() -> void:
 			do_action()
 	#direction = Vector2.ZERO
 	performingPlayer.onOil = false
+	performingPlayer.myTurn = false
 	RoomManager.player_took_action.emit()
 	

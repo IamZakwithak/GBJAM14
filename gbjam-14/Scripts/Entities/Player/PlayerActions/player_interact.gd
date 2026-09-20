@@ -31,6 +31,7 @@ func put_down_item() -> void:
 	performingPlayer.myCell.pickupableEntity = performingPlayer.inventory_item
 	performingPlayer.inventory_item.reparent(performingPlayer.myCell.pickupableEntity)
 	performingPlayer.inventory_item.visible = true
+	performingPlayer.inventory_item.drop_item_func()
 	performingPlayer.inventory_item = null
 	RoomManager.player_took_action.emit()
 	

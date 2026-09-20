@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bqrvk2mfbbx00"]
+
+[ext_resource type="Script" uid="uid://bbqw3uaf5hu41" path="res://Scripts/Entities/dart_entity.gd" id="1_v14i7"]
+[ext_resource type="Texture2D" uid="uid://fex6xsspycmp" path="res://Assets/dart.png" id="2_3cbfi"]
+
+[node name="DartEntity" type="Node2D" unique_id=182820897]
+script = ExtResource("1_v14i7")
+metadata/_custom_type_script = "uid://bbqw3uaf5hu41"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=677119538]
+texture = ExtResource("2_3cbfi")

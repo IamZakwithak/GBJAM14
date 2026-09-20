@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cacp73d807kk3"]
+
+[ext_resource type="Script" uid="uid://i2lvf0aa4u0" path="res://Scripts/Entities/pickup_item_gem.gd" id="1_i67hs"]
+[ext_resource type="Texture2D" uid="uid://df4r0c6alj38t" path="res://Assets/GoodItem.png" id="2_x0v1l"]
+
+[node name="PickupItemGem" type="Node2D" unique_id=1120500923]
+script = ExtResource("1_i67hs")
+metadata/_custom_type_script = "uid://i2lvf0aa4u0"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1897936411]
+texture = ExtResource("2_x0v1l")

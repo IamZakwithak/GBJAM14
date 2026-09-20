@@ -14,3 +14,6 @@ func do_interaction() -> void:
 		myCell.pickupableEntity = null
 		interactable = false
 		pickupable = false
+		
+func drop_item_func() -> void: 
+	pass

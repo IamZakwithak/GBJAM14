@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://56bet7cea8w7"]
+
+[ext_resource type="Script" uid="uid://chci43tw3by57" path="res://Scripts/Entities/entity_spawner.gd" id="1_uwldq"]
+[ext_resource type="PackedScene" uid="uid://bqrvk2mfbbx00" path="res://dart_entity.tscn" id="2_vminl"]
+
+[node name="EntitySpawner" type="Node2D" unique_id=10429716]
+script = ExtResource("1_uwldq")
+entity_to_spawn = ExtResource("2_vminl")
+metadata/_custom_type_script = "uid://chci43tw3by57"

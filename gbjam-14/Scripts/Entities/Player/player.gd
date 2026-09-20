@@ -17,7 +17,7 @@ var inventory_item : PickupItem
 func _ready() -> void:
 	myCell = get_parent()
 	move.performingPlayer = self 
-	bark.performingEntity = self
+	bark.performingPlayer = self
 	interact.performingPlayer = self
 	RoomManager.current_room = get_parent().get_parent()
 	RoomManager.return_action_to_player.connect(player_turn_again)
@@ -25,6 +25,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _unhandled_input(event: InputEvent) -> void:
 	if !myTurn || onOil:
+		print("not my turn")
 		return
 	if event.is_action_pressed("move_up"):
 			move.direction = Vector2(0,-1)
@@ -61,7 +62,7 @@ func update_bark_direction():
 
 	
 func take_action(action : Action) -> void: 
-	myTurn = false
+	
 	if(action.can_do_action()) :  
 		action.do_action() 
 
