@@ -2,6 +2,7 @@ class_name Entity extends Node2D
 
 var myCell : Cell
 var cancelMove : bool 
+
 @export var interactable : bool = false
 @export var pickupable : bool = false
 @export var diggable : bool = false

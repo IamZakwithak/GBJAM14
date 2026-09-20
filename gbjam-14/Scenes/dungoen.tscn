@@ -57,7 +57,7 @@ position = Vector2(0, -96)
 texture = ExtResource("8_kcr0d")
 
 [node name="GoldieOutlined" type="Sprite2D" parent="." unique_id=142579265]
-position = Vector2(-198, -112)
+position = Vector2(559, -389)
 texture = ExtResource("9_taqc3")
 
 [node name="Skull" type="Sprite2D" parent="." unique_id=1910757514]
@@ -77,9 +77,13 @@ position = Vector2(-130, -60)
 texture = ExtResource("10_taqc3")
 
 [node name="Skull5" type="Sprite2D" parent="." unique_id=86418263]
-position = Vector2(131, -321)
+position = Vector2(135, -323)
 texture = ExtResource("10_taqc3")
 
 [node name="Skull6" type="Sprite2D" parent="." unique_id=878116547]
 position = Vector2(131, -107)
+texture = ExtResource("10_taqc3")
+
+[node name="Skull7" type="Sprite2D" parent="." unique_id=1561661827]
+position = Vector2(-97, -247)
 texture = ExtResource("10_taqc3")
