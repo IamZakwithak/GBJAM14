@@ -221,7 +221,7 @@ position = Vector2(132, 84)
 position = Vector2(156, 84)
 
 [node name="TransitionEntity" parent="Cell28" unique_id=1580713583 instance=ExtResource("5_yn0oi")]
-room_index = 13
+room_index = 12
 connected_location = Vector2(0, 3)
 is_locked = true
 
