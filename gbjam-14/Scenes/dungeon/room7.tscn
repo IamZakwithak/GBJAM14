@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://jiex14oru4b4" path="res://Scenes/cell.tscn" id="3_yvpq8"]
 [ext_resource type="PackedScene" uid="uid://b5wywj5lhajbv" path="res://Scenes/blocked_space_empty.tscn" id="4_ygocg"]
 [ext_resource type="PackedScene" uid="uid://c6mei0oqojpna" path="res://Scenes/transition_entity.tscn" id="5_7u2u8"]
+[ext_resource type="PackedScene" uid="uid://3nfcc3xyjx22" path="res://oil.tscn" id="5_758h7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3tvqv"]
 texture = ExtResource("2_758h7")
@@ -100,16 +101,22 @@ grid_height = 7
 [node name="floorTileMap" type="TileMap" parent="." unique_id=227324882]
 tile_set = SubResource("TileSet_cb1ub")
 format = 2
-layer_0/tile_data = PackedInt32Array(65537, 65536, 1, 131073, 65536, 1, 196609, 65536, 1, 65538, 65536, 1, 131074, 65536, 1, 196610, 65536, 1, 262146, 65536, 1, 65539, 65536, 1, 131075, 65536, 1, 196611, 65536, 1, 262147, 65536, 1, 65540, 65536, 1, 131076, 65536, 1, 196612, 65536, 1, 262148, 65536, 1, 327683, 65536, 1, 327684, 65536, 1, 65541, 65536, 1, 131077, 65536, 1, 196613, 65536, 1, 262149, 65536, 1, 327685, 65536, 1, 262143, 131072, 2, -65533, 131072, 2, 262145, 65536, 1, 327681, 65536, 1, 327682, 65536, 1)
+layer_0/tile_data = PackedInt32Array(65537, 65536, 1, 131073, 65536, 1, 196609, 327680, 1, 65538, 65536, 1, 131074, 65536, 1, 196610, 65536, 1, 262146, 65536, 1, 65539, 65536, 1, 131075, 65536, 1, 196611, 65536, 1, 262147, 65536, 1, 65540, 65536, 1, 131076, 65536, 1, 327683, 65536, 1, 131077, 65536, 1, 262149, 65536, 1, 327685, 65536, 1, 262143, 131072, 2, -65533, 131072, 2, 262145, 65536, 1, 327681, 65536, 1, 327682, 65536, 1, 327684, 65536, 1, 262148, 65536, 1, 196612, 65536, 1, 196613, 65536, 1, 65541, 65536, 1)
 
 [node name="wallTileMap" type="TileMap" parent="." unique_id=329099796]
 tile_set = SubResource("TileSet_cb1ub")
 format = 2
 layer_0/tile_data = PackedInt32Array(327680, 0, 1, 5, 65536, 0, 0, 0, 0, 65536, 0, 1, 131072, 0, 1, 262144, 0, 1, 393216, 0, 4, 1, 65536, 0, 393217, 65536, 4, 2, 65536, 0, 393218, 65536, 4, 3, 65536, 0, 393219, 131072, 4, 4, 65536, 0, 393220, 65536, 4, 393221, 65536, 4, 6, 262144, 0, 65542, 262144, 1, 131078, 262144, 1, 262150, 262144, 1, 327686, 262144, 1, 393222, 262144, 4, 327683, 131072, 3, 196608, 0, 1, 196614, 262144, 2, 196613, 196608, 2)
 
-[node name="propTileMap" type="TileMap" parent="." unique_id=636663647]
+[node name="oilTileMap" type="TileMap" parent="." unique_id=636663647]
 tile_set = SubResource("TileSet_cb1ub")
 format = 2
+layer_0/tile_data = PackedInt32Array(196611, 655360, 3, 196610, 589824, 3, 262147, 589824, 4, 262145, 458752, 6, 131076, 720896, 3, 131075, 655360, 3, 131074, 655360, 3, 131073, 589824, 3, 262148, 720896, 4, 327684, 720896, 6, 327683, 589824, 6, 327682, 458752, 6, 196612, 720896, 3)
+
+[node name="propTileMap" type="TileMap" parent="." unique_id=1992543090]
+tile_set = SubResource("TileSet_cb1ub")
+format = 2
+layer_0/tile_data = PackedInt32Array(65537, 262144, 5, 65540, 262144, 5, 65541, 262144, 5, 131077, 262144, 5, 327685, 262144, 5, 262149, 262144, 5)
 
 [node name="Cell1" parent="." unique_id=947757610 instance=ExtResource("3_yvpq8")]
 position = Vector2(12, 12)
@@ -154,6 +161,8 @@ position = Vector2(12, 36)
 [node name="Cell9" parent="." unique_id=1948724904 instance=ExtResource("3_yvpq8")]
 position = Vector2(36, 36)
 
+[node name="BlockedSpaceEmpty" parent="Cell9" unique_id=292506208 instance=ExtResource("4_ygocg")]
+
 [node name="Cell10" parent="." unique_id=365036152 instance=ExtResource("3_yvpq8")]
 position = Vector2(60, 36)
 
@@ -163,8 +172,12 @@ position = Vector2(84, 36)
 [node name="Cell12" parent="." unique_id=2067954930 instance=ExtResource("3_yvpq8")]
 position = Vector2(108, 36)
 
+[node name="BlockedSpaceEmpty" parent="Cell12" unique_id=1759632393 instance=ExtResource("4_ygocg")]
+
 [node name="Cell13" parent="." unique_id=49855693 instance=ExtResource("3_yvpq8")]
 position = Vector2(132, 36)
+
+[node name="BlockedSpaceEmpty" parent="Cell13" unique_id=1653879759 instance=ExtResource("4_ygocg")]
 
 [node name="Cell14" parent="." unique_id=576877394 instance=ExtResource("3_yvpq8")]
 position = Vector2(156, 36)
@@ -180,17 +193,27 @@ position = Vector2(-12, -60)
 [node name="Cell16" parent="." unique_id=1255017437 instance=ExtResource("3_yvpq8")]
 position = Vector2(36, 60)
 
+[node name="Oil" parent="Cell16" unique_id=321999121 instance=ExtResource("5_758h7")]
+
 [node name="Cell17" parent="." unique_id=277786365 instance=ExtResource("3_yvpq8")]
 position = Vector2(60, 60)
+
+[node name="Oil" parent="Cell17" unique_id=212809680 instance=ExtResource("5_758h7")]
 
 [node name="Cell18" parent="." unique_id=1186138036 instance=ExtResource("3_yvpq8")]
 position = Vector2(84, 60)
 
+[node name="Oil" parent="Cell18" unique_id=1318601416 instance=ExtResource("5_758h7")]
+
 [node name="Cell19" parent="." unique_id=1495143057 instance=ExtResource("3_yvpq8")]
 position = Vector2(108, 60)
 
+[node name="Oil" parent="Cell19" unique_id=965719335 instance=ExtResource("5_758h7")]
+
 [node name="Cell20" parent="." unique_id=1883810666 instance=ExtResource("3_yvpq8")]
 position = Vector2(132, 60)
+
+[node name="BlockedSpaceEmpty" parent="Cell20" unique_id=1559917308 instance=ExtResource("4_ygocg")]
 
 [node name="Cell21" parent="." unique_id=1976652902 instance=ExtResource("3_yvpq8")]
 position = Vector2(156, 60)
@@ -208,14 +231,22 @@ position = Vector2(36, 84)
 [node name="Cell24" parent="." unique_id=184295922 instance=ExtResource("3_yvpq8")]
 position = Vector2(60, 84)
 
+[node name="Oil" parent="Cell24" unique_id=868261241 instance=ExtResource("5_758h7")]
+
 [node name="Cell25" parent="." unique_id=69082552 instance=ExtResource("3_yvpq8")]
 position = Vector2(84, 84)
+
+[node name="Oil" parent="Cell25" unique_id=1188972267 instance=ExtResource("5_758h7")]
 
 [node name="Cell26" parent="." unique_id=222471247 instance=ExtResource("3_yvpq8")]
 position = Vector2(108, 84)
 
+[node name="Oil" parent="Cell26" unique_id=159531862 instance=ExtResource("5_758h7")]
+
 [node name="Cell27" parent="." unique_id=1196367126 instance=ExtResource("3_yvpq8")]
 position = Vector2(132, 84)
+
+[node name="Oil" parent="Cell27" unique_id=701798605 instance=ExtResource("5_758h7")]
 
 [node name="Cell28" parent="." unique_id=1349596911 instance=ExtResource("3_yvpq8")]
 position = Vector2(156, 84)
@@ -233,17 +264,25 @@ position = Vector2(-12, -108)
 [node name="Cell30" parent="." unique_id=1645255929 instance=ExtResource("3_yvpq8")]
 position = Vector2(36, 108)
 
+[node name="Oil" parent="Cell30" unique_id=613798614 instance=ExtResource("5_758h7")]
+
 [node name="Cell31" parent="." unique_id=1898870118 instance=ExtResource("3_yvpq8")]
 position = Vector2(60, 108)
 
 [node name="Cell32" parent="." unique_id=1630900169 instance=ExtResource("3_yvpq8")]
 position = Vector2(84, 108)
 
+[node name="Oil" parent="Cell32" unique_id=414652284 instance=ExtResource("5_758h7")]
+
 [node name="Cell33" parent="." unique_id=1851508815 instance=ExtResource("3_yvpq8")]
 position = Vector2(108, 108)
 
+[node name="Oil" parent="Cell33" unique_id=1364833551 instance=ExtResource("5_758h7")]
+
 [node name="Cell34" parent="." unique_id=673038429 instance=ExtResource("3_yvpq8")]
 position = Vector2(132, 108)
+
+[node name="BlockedSpaceEmpty" parent="Cell34" unique_id=1330473894 instance=ExtResource("4_ygocg")]
 
 [node name="Cell35" parent="." unique_id=696004137 instance=ExtResource("3_yvpq8")]
 position = Vector2(156, 108)
@@ -261,14 +300,22 @@ position = Vector2(36, 132)
 [node name="Cell38" parent="." unique_id=430911311 instance=ExtResource("3_yvpq8")]
 position = Vector2(60, 132)
 
+[node name="Oil" parent="Cell38" unique_id=1751636511 instance=ExtResource("5_758h7")]
+
 [node name="Cell39" parent="." unique_id=1145412234 instance=ExtResource("3_yvpq8")]
 position = Vector2(84, 132)
+
+[node name="Oil" parent="Cell39" unique_id=727151237 instance=ExtResource("5_758h7")]
 
 [node name="Cell40" parent="." unique_id=2097313101 instance=ExtResource("3_yvpq8")]
 position = Vector2(108, 132)
 
+[node name="Oil" parent="Cell40" unique_id=2134100340 instance=ExtResource("5_758h7")]
+
 [node name="Cell41" parent="." unique_id=116777024 instance=ExtResource("3_yvpq8")]
 position = Vector2(132, 132)
+
+[node name="BlockedSpaceEmpty" parent="Cell41" unique_id=1285522146 instance=ExtResource("4_ygocg")]
 
 [node name="Cell42" parent="." unique_id=1905399395 instance=ExtResource("3_yvpq8")]
 position = Vector2(156, 132)
