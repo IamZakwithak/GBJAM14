@@ -8,12 +8,15 @@
 [ext_resource type="PackedScene" uid="uid://lsc7x8ypq0p3" path="res://Scenes/dungeon/room4.tscn" id="6_1oxd7"]
 [ext_resource type="PackedScene" uid="uid://dsoggemflfaye" path="res://Scenes/dungeon/room5.tscn" id="7_fbvyi"]
 [ext_resource type="Texture2D" uid="uid://bi8j56utaxqtb" path="res://Assets/pot.png" id="8_kcr0d"]
+[ext_resource type="PackedScene" uid="uid://cittc7nucbs3r" path="res://Scenes/dungeon/room6.tscn" id="8_sw4kx"]
+[ext_resource type="PackedScene" uid="uid://1fxu135icso" path="res://Scenes/dungeon/room7.tscn" id="9_0ijr4"]
 [ext_resource type="Texture2D" uid="uid://cdutca10i3yva" path="res://Assets/Rooms/goldie_outlined.png" id="9_taqc3"]
+[ext_resource type="PackedScene" uid="uid://d12yh381fa5py" path="res://Scenes/dungeon/room8.tscn" id="10_kfu0m"]
 [ext_resource type="Texture2D" uid="uid://krqp2oae4r21" path="res://Assets/skull.png" id="10_taqc3"]
 
 [node name="Dungoen" type="Node2D" unique_id=1313073382 node_paths=PackedStringArray("rooms", "camera")]
 script = ExtResource("1_wl3w2")
-rooms = [NodePath("Room0"), NodePath("Room1"), NodePath("Room2"), NodePath("Room3"), NodePath("Room4"), NodePath("Room5")]
+rooms = [NodePath("Room0"), NodePath("Room1"), NodePath("Room2"), NodePath("Room3"), NodePath("Room4"), NodePath("Room5"), NodePath("Room6"), NodePath("Room7"), NodePath("Room8")]
 camera = NodePath("Camera2D")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1089095286]
@@ -35,6 +38,15 @@ position = Vector2(192, -384)
 
 [node name="Room5" parent="." unique_id=1048754420 instance=ExtResource("7_fbvyi")]
 position = Vector2(0, -384)
+
+[node name="Room6" parent="." unique_id=1546475569 instance=ExtResource("8_sw4kx")]
+position = Vector2(0, -572)
+
+[node name="Room7" parent="." unique_id=1737158371 instance=ExtResource("9_0ijr4")]
+position = Vector2(-184, -572)
+
+[node name="Room8" parent="." unique_id=497792073 instance=ExtResource("10_kfu0m")]
+position = Vector2(-184, -384)
 
 [node name="Pot" type="Sprite2D" parent="." unique_id=1711397306]
 position = Vector2(-154, -60)
@@ -62,4 +74,12 @@ texture = ExtResource("10_taqc3")
 
 [node name="Skull4" type="Sprite2D" parent="." unique_id=1520588148]
 position = Vector2(-130, -60)
+texture = ExtResource("10_taqc3")
+
+[node name="Skull5" type="Sprite2D" parent="." unique_id=86418263]
+position = Vector2(131, -321)
+texture = ExtResource("10_taqc3")
+
+[node name="Skull6" type="Sprite2D" parent="." unique_id=878116547]
+position = Vector2(131, -107)
 texture = ExtResource("10_taqc3")

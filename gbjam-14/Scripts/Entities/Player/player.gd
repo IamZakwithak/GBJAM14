@@ -1,6 +1,9 @@
 class_name Player extends Entity
 
 @export var inventoryParent : Node2D
+@onready var animation_tree: AnimationTree = $AnimationTree
+@onready var movement_direction = move.direction
+@onready var isbarking: bool = false
 
 var move : PlayerMove = PlayerMove.new()
 var bark : PlayerBark = PlayerBark.new()
@@ -25,20 +28,37 @@ func _unhandled_input(event: InputEvent) -> void:
 		return
 	if event.is_action_pressed("move_up"):
 			move.direction = Vector2(0,-1)
+			movement_direction = move.direction
+			update_anim(movement_direction)
 			take_action(move)
 	if event.is_action_pressed("move_left"):
 			move.direction = Vector2(-1,0)
+			movement_direction = move.direction
+			update_anim(movement_direction)
 			take_action(move)
 	if event.is_action_pressed("move_right"):
 			move.direction = Vector2(1,0)
+			movement_direction = move.direction
+			update_anim(movement_direction)
 			take_action(move)
 	if event.is_action_pressed("move_down"):
 			move.direction = Vector2(0, 1)
+			movement_direction = move.direction
+			update_anim(movement_direction)
 			take_action(move)
 	if event.is_action_pressed("interact"):
 			take_action(interact)
 	if event.is_action_pressed("bark"):
+			isbarking = true
+			update_bark_direction()
 			take_action(bark)
+	
+func update_anim(vector2: Vector2):
+	animation_tree.set("parameters/StateMachine/MoveState/StandState/blend_position", vector2)
+	
+func update_bark_direction():
+	animation_tree.set("parameters/StateMachine/MoveState/BarkState/blend_position", movement_direction)
+
 	
 func take_action(action : Action) -> void: 
 	myTurn = false
