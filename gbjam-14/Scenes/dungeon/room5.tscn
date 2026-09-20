@@ -114,7 +114,6 @@ format = 2
 layer_0/tile_data = PackedInt32Array(131075, 262144, 5)
 
 [node name="oilTileMap" type="TileMap" parent="." unique_id=2063317974]
-visible = false
 position = Vector2(0, 1)
 tile_set = SubResource("TileSet_cb1ub")
 format = 2

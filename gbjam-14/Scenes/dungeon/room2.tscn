@@ -38,6 +38,7 @@ texture_region_size = Vector2i(24, 24)
 2:4/0 = 0
 3:2/0 = 0
 4:2/0 = 0
+4:5/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_cb1ub"]
 tile_size = Vector2i(24, 24)
@@ -52,12 +53,17 @@ grid_height = 7
 [node name="floorTileMap" type="TileMap" parent="." unique_id=227324882]
 tile_set = SubResource("TileSet_cb1ub")
 format = 2
-layer_0/tile_data = PackedInt32Array(65537, 65536, 1, 131073, 65536, 1, 196609, 196608, 1, 262145, 65536, 1, 65538, 65536, 1, 131074, 65536, 1, 196610, 65536, 1, 262146, 65536, 1, 65539, 65536, 1, 131075, 65536, 1, 196611, 65536, 1, 262147, 65536, 1, 65540, 65536, 1, 131076, 65536, 1, 196612, 65536, 1, 262148, 65536, 1, 327681, 65536, 1, 327682, 65536, 1, 327683, 65536, 1, 327684, 65536, 1, 65541, 65536, 1, 131077, 65536, 1, 196613, 65536, 1, 262149, 65536, 1, 327685, 65536, 1, 196615, 131072, 2)
+layer_0/tile_data = PackedInt32Array(65537, 65536, 1, 131073, 65536, 1, 196609, 196608, 1, 65538, 65536, 1, 131074, 65536, 1, 196610, 131072, 1, 262146, 131072, 2, 65539, 65536, 1, 131075, 65536, 1, 196611, 131072, 1, 262147, 131072, 2, 65540, 65536, 1, 131076, 65536, 1, 196612, 131072, 1, 262148, 131072, 2, 65541, 65536, 1, 131077, 65536, 1, 327685, 196608, 1, 196615, 131072, 2, 196613, 196608, 1, 262149, 196608, 1, 262145, 196608, 1, 327681, 196608, 1, 327682, 196608, 1, 327683, 196608, 1, 327684, 196608, 1)
 
 [node name="wallTileMap" type="TileMap" parent="." unique_id=329099796]
 tile_set = SubResource("TileSet_cb1ub")
 format = 2
-layer_0/tile_data = PackedInt32Array(327680, 0, 1, 5, 65536, 0, 0, 0, 0, 65536, 0, 1, 131072, 0, 1, 196608, 0, 1, 262144, 0, 1, 393216, 0, 4, 1, 65536, 0, 393217, 65536, 4, 2, 65536, 0, 393218, 65536, 4, 3, 65536, 0, 393219, 65536, 4, 4, 65536, 0, 393220, 65536, 4, 393221, 65536, 4, 6, 262144, 0, 393222, 262144, 4, 196614, 262144, 2, 131078, 262144, 1, 65542, 262144, 1, 262150, 262144, 1, 327686, 262144, 1, 196613, 196608, 2)
+layer_0/tile_data = PackedInt32Array(327680, 0, 1, 5, 65536, 0, 0, 0, 0, 65536, 0, 1, 131072, 0, 1, 196608, 0, 1, 262144, 0, 1, 393216, 0, 4, 1, 65536, 0, 393217, 65536, 4, 2, 65536, 0, 393218, 65536, 4, 3, 65536, 0, 393219, 65536, 4, 4, 65536, 0, 393220, 65536, 4, 393221, 65536, 4, 6, 262144, 0, 393222, 262144, 4, 196614, 262144, 2, 131078, 262144, 1, 65542, 262144, 1, 262150, 262144, 1, 327686, 262144, 1, 196613, 196608, 2, 196609, 65536, 2)
+
+[node name="propTileMap" type="TileMap" parent="." unique_id=431110697]
+tile_set = SubResource("TileSet_cb1ub")
+format = 2
+layer_0/tile_data = PackedInt32Array(131073, 262144, 5, 131077, 262144, 5)
 
 [node name="Cell1" parent="." unique_id=947757610 instance=ExtResource("3_v6x5n")]
 position = Vector2(12, 12)
@@ -128,6 +134,8 @@ position = Vector2(-12, -60)
 [node name="Cell16" parent="." unique_id=1255017437 instance=ExtResource("3_v6x5n")]
 position = Vector2(36, 60)
 
+[node name="BlockedSpaceEmpty" parent="Cell16" unique_id=273143318 instance=ExtResource("4_iiabn")]
+
 [node name="Cell17" parent="." unique_id=277786365 instance=ExtResource("3_v6x5n")]
 position = Vector2(60, 60)
 
@@ -148,7 +156,7 @@ position = Vector2(156, 60)
 [node name="Cell22" parent="." unique_id=1661378465 instance=ExtResource("3_v6x5n")]
 position = Vector2(12, 84)
 
-[node name="BlockedSpaceEmpty" parent="Cell22" unique_id=67917239 instance=ExtResource("4_iiabn")]
+[node name="BlockedSpaceEmpty" parent="Cell22" unique_id=1589806434 instance=ExtResource("4_iiabn")]
 
 [node name="Cell23" parent="." unique_id=20660574 instance=ExtResource("3_v6x5n")]
 position = Vector2(36, 84)
@@ -156,11 +164,17 @@ position = Vector2(36, 84)
 [node name="Cell24" parent="." unique_id=184295922 instance=ExtResource("3_v6x5n")]
 position = Vector2(60, 84)
 
+[node name="BlockedSpaceEmpty" parent="Cell24" unique_id=754035937 instance=ExtResource("4_iiabn")]
+
 [node name="Cell25" parent="." unique_id=69082552 instance=ExtResource("3_v6x5n")]
 position = Vector2(84, 84)
 
+[node name="BlockedSpaceEmpty" parent="Cell25" unique_id=1336485011 instance=ExtResource("4_iiabn")]
+
 [node name="Cell26" parent="." unique_id=222471247 instance=ExtResource("3_v6x5n")]
 position = Vector2(108, 84)
+
+[node name="BlockedSpaceEmpty" parent="Cell26" unique_id=697814274 instance=ExtResource("4_iiabn")]
 
 [node name="Cell27" parent="." unique_id=1196367126 instance=ExtResource("3_v6x5n")]
 position = Vector2(132, 84)
@@ -168,8 +182,8 @@ position = Vector2(132, 84)
 [node name="Cell28" parent="." unique_id=1349596911 instance=ExtResource("3_v6x5n")]
 position = Vector2(156, 84)
 
-[node name="TransitionEntity" parent="Cell28" unique_id=1028845239 instance=ExtResource("5_7riq7")]
-room_index = 1
+[node name="TransitionEntity" parent="Cell28" unique_id=535250151 instance=ExtResource("5_7riq7")]
+room_index = 9
 connected_location = Vector2(0, 3)
 
 [node name="Cell29" parent="." unique_id=1542226078 instance=ExtResource("3_v6x5n")]
@@ -184,11 +198,17 @@ position = Vector2(36, 108)
 [node name="Cell31" parent="." unique_id=1898870118 instance=ExtResource("3_v6x5n")]
 position = Vector2(60, 108)
 
+[node name="BlockedSpaceEmpty" parent="Cell31" unique_id=1790899926 instance=ExtResource("4_iiabn")]
+
 [node name="Cell32" parent="." unique_id=1630900169 instance=ExtResource("3_v6x5n")]
 position = Vector2(84, 108)
 
+[node name="BlockedSpaceEmpty" parent="Cell32" unique_id=1886791620 instance=ExtResource("4_iiabn")]
+
 [node name="Cell33" parent="." unique_id=1851508815 instance=ExtResource("3_v6x5n")]
 position = Vector2(108, 108)
+
+[node name="BlockedSpaceEmpty" parent="Cell33" unique_id=1204478055 instance=ExtResource("4_iiabn")]
 
 [node name="Cell34" parent="." unique_id=673038429 instance=ExtResource("3_v6x5n")]
 position = Vector2(132, 108)
