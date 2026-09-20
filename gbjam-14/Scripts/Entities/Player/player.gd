@@ -5,9 +5,6 @@ class_name Player extends Entity
 @onready var movement_direction = move.direction
 @onready var isbarking: bool = false
 
-@onready var sfx_footstep: AudioStreamPlayer2D = $SFX_Footstep
-@onready var sfx_bark: AudioStreamPlayer2D = $SFX_Bark
-
 var move : PlayerMove = PlayerMove.new()
 var bark : PlayerBark = PlayerBark.new()
 var interact : PlayerInteract = PlayerInteract.new()
@@ -33,31 +30,26 @@ func _unhandled_input(event: InputEvent) -> void:
 			move.direction = Vector2(0,-1)
 			movement_direction = move.direction
 			update_anim(movement_direction)
-			sfx_footstep.play()
 			take_action(move)
 	if event.is_action_pressed("move_left"):
 			move.direction = Vector2(-1,0)
 			movement_direction = move.direction
 			update_anim(movement_direction)
-			sfx_footstep.play()
 			take_action(move)
 	if event.is_action_pressed("move_right"):
 			move.direction = Vector2(1,0)
 			movement_direction = move.direction
 			update_anim(movement_direction)
-			sfx_footstep.play()
 			take_action(move)
 	if event.is_action_pressed("move_down"):
 			move.direction = Vector2(0, 1)
 			movement_direction = move.direction
 			update_anim(movement_direction)
-			sfx_footstep.play()
 			take_action(move)
 	if event.is_action_pressed("interact"):
 			take_action(interact)
 	if event.is_action_pressed("bark"):
 			isbarking = true
-			sfx_bark.play()
 			update_bark_direction()
 			take_action(bark)
 	
@@ -66,6 +58,7 @@ func update_anim(vector2: Vector2):
 	
 func update_bark_direction():
 	animation_tree.set("parameters/StateMachine/MoveState/BarkState/blend_position", movement_direction)
+
 	
 func take_action(action : Action) -> void: 
 	myTurn = false
