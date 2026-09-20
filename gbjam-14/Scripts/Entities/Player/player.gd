@@ -75,3 +75,7 @@ func take_action(action : Action) -> void:
 
 func player_turn_again() -> void: 
 	myTurn = true
+
+func _on_sfx_bark_finished() -> void:
+	isbarking = false
+	print("done barking")
