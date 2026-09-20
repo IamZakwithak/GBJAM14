@@ -367,7 +367,6 @@ transitions = ["Start", "MoveState", SubResource("AnimationNodeStateMachineTrans
 graph_offset = Vector2(-134, 36)
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_bj3kt"]
-graph_offset = Vector2(-418.08264, 34.18181)
 nodes/StateMachine/node = SubResource("AnimationNodeStateMachine_y6uwr")
 nodes/StateMachine/position = Vector2(0, 120)
 node_connections = [&"output", 0, &"StateMachine"]
@@ -378,6 +377,7 @@ inventoryParent = NodePath("Inventory")
 metadata/_custom_type_script = "uid://b7qbqqltiwhhi"
 
 [node name="GoldieShadow" type="Sprite2D" parent="." unique_id=612584575]
+position = Vector2(-1, -1)
 texture = ExtResource("2_cvnsp")
 hframes = 16
 vframes = 10
