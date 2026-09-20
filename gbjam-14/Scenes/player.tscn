@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://bpdiuek5njon6" path="res://Scripts/Entities/Player/player.gd" id="1_tpd1a"]
 [ext_resource type="Texture2D" uid="uid://beijweed02l1n" path="res://Assets/GBJam_SpriteSheet.png" id="2_cvnsp"]
+[ext_resource type="AudioStream" uid="uid://clafigjamocti" path="res://Audio/footstep2.wav" id="3_vgqql"]
+[ext_resource type="AudioStream" uid="uid://bdrvlclbqe674" path="res://Audio/bark2.wav" id="4_vgqql"]
 
 [sub_resource type="Animation" id="Animation_6t5aa"]
 length = 0.001
@@ -367,7 +369,6 @@ transitions = ["Start", "MoveState", SubResource("AnimationNodeStateMachineTrans
 graph_offset = Vector2(-134, 36)
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_bj3kt"]
-graph_offset = Vector2(-418.08264, 34.18181)
 nodes/StateMachine/node = SubResource("AnimationNodeStateMachine_y6uwr")
 nodes/StateMachine/position = Vector2(0, 120)
 node_connections = [&"output", 0, &"StateMachine"]
@@ -378,6 +379,7 @@ inventoryParent = NodePath("Inventory")
 metadata/_custom_type_script = "uid://b7qbqqltiwhhi"
 
 [node name="GoldieShadow" type="Sprite2D" parent="." unique_id=612584575]
+position = Vector2(-1, -1)
 texture = ExtResource("2_cvnsp")
 hframes = 16
 vframes = 10
@@ -394,3 +396,9 @@ anim_player = NodePath("../AnimationPlayer")
 parameters/StateMachine/MoveState/BarkState/blend_position = Vector2(-0.24670762, 0.5981735)
 parameters/StateMachine/MoveState/RunState/blend_position = Vector2(-0.0008779764, -1.0091324)
 parameters/StateMachine/MoveState/StandState/blend_position = Vector2(1, 0)
+
+[node name="SFX_Footstep" type="AudioStreamPlayer2D" parent="." unique_id=1706732541]
+stream = ExtResource("3_vgqql")
+
+[node name="SFX_Bark" type="AudioStreamPlayer2D" parent="." unique_id=1382348137]
+stream = ExtResource("4_vgqql")

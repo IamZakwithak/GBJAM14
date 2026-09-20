@@ -100,14 +100,18 @@ grid_height = 7
 [node name="floorTileMap" type="TileMap" parent="." unique_id=227324882]
 tile_set = SubResource("TileSet_cb1ub")
 format = 2
-layer_0/tile_data = PackedInt32Array(65537, 65536, 1, 131073, 65536, 1, 196609, 65536, 1, 65538, 65536, 1, 131074, 65536, 1, 196610, 65536, 1, 262146, 65536, 1, 65539, 65536, 1, 131075, 65536, 1, 196611, 65536, 1, 262147, 65536, 1, 65540, 65536, 1, 131076, 65536, 1, 196612, 65536, 1, 262148, 65536, 1, 327683, 65536, 1, 327684, 65536, 1, 65541, 65536, 1, 131077, 65536, 1, 196613, 65536, 1, 262149, 65536, 1, 327685, 65536, 1, 262143, 131072, 2, -65533, 131072, 2, 262145, 65536, 1, 327681, 65536, 1, 327682, 65536, 1)
+layer_0/tile_data = PackedInt32Array(65537, 65536, 1, 131073, 65536, 1, 196609, 65536, 1, 65538, 65536, 1, 131074, 131072, 1, 196610, 131072, 2, 65539, 786432, 1, 196611, 458752, 1, 65540, 65536, 1, 131076, 131072, 1, 196612, 131072, 2, 65541, 65536, 1, 131077, 65536, 1, 196613, 65536, 1, 327685, 65536, 1, 262143, 131072, 2, -65533, 131072, 2, 262145, 65536, 1, 327681, 65536, 1, 327682, 65536, 1, 131075, 786432, 1, 262146, 131072, 2, 262147, 65536, 1, 262148, 131072, 2, 262149, 65536, 1, 327684, 65536, 1, 327683, 65536, 1, 196614, 65536, 1, 262150, 65536, 1, 327686, 65536, 1, 393222, 65536, 1)
 
 [node name="wallTileMap" type="TileMap" parent="." unique_id=329099796]
 tile_set = SubResource("TileSet_cb1ub")
 format = 2
-layer_0/tile_data = PackedInt32Array(327680, 0, 1, 5, 65536, 0, 0, 0, 0, 65536, 0, 1, 131072, 0, 1, 262144, 0, 1, 393216, 0, 4, 1, 65536, 0, 393217, 65536, 4, 2, 65536, 0, 393218, 65536, 4, 3, 65536, 0, 393219, 131072, 4, 4, 65536, 0, 393220, 65536, 4, 393221, 65536, 4, 6, 262144, 0, 65542, 262144, 1, 131078, 262144, 1, 196614, 262144, 1, 262150, 262144, 1, 327686, 262144, 1, 393222, 262144, 4, 327683, 131072, 3, 196608, 0, 2, 196609, 65536, 2)
+layer_0/tile_data = PackedInt32Array(327680, 0, 1, 5, 65536, 0, 0, 0, 0, 65536, 0, 1, 131072, 0, 1, 262144, 0, 1, 393216, 0, 4, 1, 65536, 0, 393217, 65536, 4, 2, 65536, 0, 393218, 65536, 4, 3, 327680, 2, 393219, 131072, 4, 4, 65536, 0, 393220, 65536, 4, 393221, 65536, 4, 6, 262144, 0, 65542, 262144, 1, 131078, 262144, 1, 196614, 262144, 1, 262150, 262144, 1, 327686, 262144, 1, 393222, 262144, 4, 327683, 131072, 3, 196608, 0, 2, 196609, 65536, 2)
 
 [node name="propTileMap" type="TileMap" parent="." unique_id=636663647]
+tile_set = SubResource("TileSet_cb1ub")
+format = 2
+
+[node name="oilTileMap" type="TileMap" parent="." unique_id=1572973614]
 tile_set = SubResource("TileSet_cb1ub")
 format = 2
 
@@ -129,7 +133,9 @@ position = Vector2(60, 12)
 [node name="Cell4" parent="." unique_id=210086679 instance=ExtResource("3_b33kd")]
 position = Vector2(84, 12)
 
-[node name="BlockedSpaceEmpty" parent="Cell4" unique_id=366850772 instance=ExtResource("4_kcfa5")]
+[node name="TransitionEntity" parent="Cell4" unique_id=1028845239 instance=ExtResource("5_85f6n")]
+room_index = 10
+connected_location = Vector2(3, 6)
 
 [node name="Cell5" parent="." unique_id=1060079539 instance=ExtResource("3_b33kd")]
 position = Vector2(108, 12)
@@ -200,7 +206,7 @@ position = Vector2(156, 60)
 [node name="Cell22" parent="." unique_id=1661378465 instance=ExtResource("3_b33kd")]
 position = Vector2(12, 84)
 
-[node name="TransitionEntity" parent="Cell22" unique_id=1028845239 instance=ExtResource("5_85f6n")]
+[node name="TransitionEntity" parent="Cell22" unique_id=618881082 instance=ExtResource("5_85f6n")]
 room_index = 5
 connected_location = Vector2(6, 3)
 

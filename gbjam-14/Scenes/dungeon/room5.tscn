@@ -111,7 +111,13 @@ layer_0/tile_data = PackedInt32Array(327680, 0, 1, 5, 65536, 0, 0, 0, 0, 65536, 
 position = Vector2(0, 1)
 tile_set = SubResource("TileSet_cb1ub")
 format = 2
-layer_0/tile_data = PackedInt32Array(262146, 786432, 5, 196610, 393216, 4, 131074, 786432, 3, 196612, 720896, 3, 196611, 655360, 3, 131075, 262144, 5)
+layer_0/tile_data = PackedInt32Array(131075, 262144, 5)
+
+[node name="oilTileMap" type="TileMap" parent="." unique_id=2063317974]
+position = Vector2(0, 1)
+tile_set = SubResource("TileSet_cb1ub")
+format = 2
+layer_0/tile_data = PackedInt32Array(262146, 786432, 5, 196610, 393216, 4, 131074, 786432, 3, 196612, 720896, 3, 196611, 655360, 3)
 
 [node name="Cell1" parent="." unique_id=947757610 instance=ExtResource("3_b33kd")]
 position = Vector2(12, 12)
