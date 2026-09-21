@@ -76,7 +76,7 @@ position = Vector2(-2, -764)
 position = Vector2(383, -764)
 
 [node name="Room14" parent="." unique_id=1870958705 instance=ExtResource("18_1u6eg")]
-position = Vector2(404, -172)
+position = Vector2(575, -764)
 
 [node name="GoldieOutlined" type="Sprite2D" parent="." unique_id=142579265]
 position = Vector2(404, -792)
