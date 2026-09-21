@@ -14,17 +14,15 @@
 [ext_resource type="PackedScene" uid="uid://1fxu135icso" path="res://Scenes/dungeon/room7.tscn" id="9_0ijr4"]
 [ext_resource type="Texture2D" uid="uid://cdutca10i3yva" path="res://Assets/Rooms/goldie_outlined.png" id="9_taqc3"]
 [ext_resource type="PackedScene" uid="uid://d12yh381fa5py" path="res://Scenes/dungeon/room8.tscn" id="10_kfu0m"]
-[ext_resource type="Texture2D" uid="uid://krqp2oae4r21" path="res://Assets/skull.png" id="10_taqc3"]
-[ext_resource type="PackedScene" uid="uid://dr6k5btkk6p7c" path="res://Scenes/dungeon/room9.tscn" id="11_0ijr4"]
 [ext_resource type="PackedScene" uid="uid://d32v4mickb3ie" path="res://Scenes/dungeon/room10.tscn" id="12_5cs7y"]
 [ext_resource type="PackedScene" uid="uid://cuqstrg2u7dmp" path="res://Scenes/dungeon/room11.tscn" id="13_3msva"]
 [ext_resource type="PackedScene" uid="uid://cfnnqqsjlhsk0" path="res://Scenes/dungeon/room12.tscn" id="14_4wyi5"]
-[ext_resource type="Texture2D" uid="uid://dwwmswrn31w37" path="res://Assets/gem_sprite.png" id="15_kfu0m"]
 [ext_resource type="Texture2D" uid="uid://fex6xsspycmp" path="res://Assets/dart.png" id="16_3msva"]
+[ext_resource type="PackedScene" uid="uid://vk0jyele8jrv" path="res://Scenes/dungeon/room13.tscn" id="17_1io8o"]
 
 [node name="Dungoen" type="Node2D" unique_id=1313073382 node_paths=PackedStringArray("rooms", "camera")]
 script = ExtResource("1_wl3w2")
-rooms = [NodePath("Room0"), NodePath("Room1"), NodePath("Room2"), NodePath("Room3"), NodePath("Room4"), NodePath("Room5"), NodePath("Room6"), NodePath("Room7"), NodePath("Room8"), NodePath("Room9"), NodePath("Room10"), NodePath("Room11"), NodePath("Room12")]
+rooms = [NodePath("Room0"), NodePath("Room1"), NodePath("Room2"), NodePath("Room3"), NodePath("Room4"), NodePath("Room5"), NodePath("Room6"), NodePath("Room7"), NodePath("Room8"), null, NodePath("Room10"), NodePath("Room11"), NodePath("Room12")]
 camera = NodePath("Camera2D")
 buriedItemEntity = ExtResource("2_6qhvx")
 
@@ -44,7 +42,7 @@ autoplay = true
 position = Vector2(0, -192)
 
 [node name="Room2" parent="." unique_id=370649832 instance=ExtResource("4_vrxpb")]
-position = Vector2(-384, -191)
+position = Vector2(-191.785, -192)
 
 [node name="Room3" parent="." unique_id=607089144 instance=ExtResource("5_jms7k")]
 position = Vector2(192, -192)
@@ -64,9 +62,6 @@ position = Vector2(-184, -572)
 [node name="Room8" parent="." unique_id=497792073 instance=ExtResource("10_kfu0m")]
 position = Vector2(-184, -384)
 
-[node name="Room9" parent="." unique_id=517836983 instance=ExtResource("11_0ijr4")]
-position = Vector2(-192, -192)
-
 [node name="Room10" parent="." unique_id=1724539669 instance=ExtResource("12_5cs7y")]
 position = Vector2(191, -576)
 
@@ -76,49 +71,12 @@ position = Vector2(190, -764)
 [node name="Room12" parent="." unique_id=1372793453 instance=ExtResource("14_4wyi5")]
 position = Vector2(-2, -764)
 
+[node name="Room13" parent="." unique_id=422463341 instance=ExtResource("17_1io8o")]
+position = Vector2(383, -764)
+
 [node name="GoldieOutlined" type="Sprite2D" parent="." unique_id=142579265]
-position = Vector2(-28, -787)
+position = Vector2(468, -657)
 texture = ExtResource("9_taqc3")
-
-[node name="Skull5" type="Sprite2D" parent="." unique_id=86418263]
-position = Vector2(135, -323)
-texture = ExtResource("10_taqc3")
-
-[node name="Skull6" type="Sprite2D" parent="." unique_id=878116547]
-position = Vector2(111, -107)
-texture = ExtResource("10_taqc3")
-
-[node name="Skull7" type="Sprite2D" parent="." unique_id=1561661827]
-position = Vector2(-125, -250)
-texture = ExtResource("10_taqc3")
-
-[node name="Skull8" type="Sprite2D" parent="." unique_id=238956833]
-position = Vector2(-249, -153)
-texture = ExtResource("10_taqc3")
-
-[node name="Skull9" type="Sprite2D" parent="." unique_id=1828651917]
-position = Vector2(-278, -129)
-texture = ExtResource("10_taqc3")
-
-[node name="GemSprite2" type="Sprite2D" parent="." unique_id=1636905729]
-position = Vector2(84, -156)
-texture = ExtResource("15_kfu0m")
-
-[node name="GemSprite3" type="Sprite2D" parent="." unique_id=142495872]
-position = Vector2(107, -487)
-texture = ExtResource("15_kfu0m")
-
-[node name="GemSprite" type="Sprite2D" parent="." unique_id=764829725]
-position = Vector2(-348, -107)
-texture = ExtResource("15_kfu0m")
-
-[node name="Skull" type="Sprite2D" parent="." unique_id=1900732050]
-position = Vector2(-129, -156)
-texture = ExtResource("10_taqc3")
-
-[node name="Skull2" type="Sprite2D" parent="." unique_id=990928915]
-position = Vector2(-132, -57)
-texture = ExtResource("10_taqc3")
 
 [node name="Dart" type="Sprite2D" parent="." unique_id=551756989]
 position = Vector2(156, -708)
@@ -126,7 +84,7 @@ rotation = 1.5707964
 texture = ExtResource("16_3msva")
 
 [node name="Dart7" type="Sprite2D" parent="." unique_id=497641920]
-position = Vector2(172, -655)
+position = Vector2(488, -634)
 rotation = 1.5707964
 texture = ExtResource("16_3msva")
 
@@ -149,7 +107,7 @@ position = Vector2(108, -785)
 texture = ExtResource("16_3msva")
 
 [node name="Dart3" type="Sprite2D" parent="." unique_id=1607552486]
-position = Vector2(-12, -707)
+position = Vector2(442, -730)
 rotation = -1.5707964
 texture = ExtResource("16_3msva")
 
@@ -157,15 +115,3 @@ texture = ExtResource("16_3msva")
 position = Vector2(-5, -659)
 rotation = -1.5707964
 texture = ExtResource("16_3msva")
-
-[node name="GemSprite4" type="Sprite2D" parent="." unique_id=416596406]
-position = Vector2(275, -445)
-texture = ExtResource("15_kfu0m")
-
-[node name="Skull3" type="Sprite2D" parent="." unique_id=742036678]
-position = Vector2(127, -795)
-texture = ExtResource("10_taqc3")
-
-[node name="Skull4" type="Sprite2D" parent="." unique_id=1034842841]
-position = Vector2(181, -720)
-texture = ExtResource("10_taqc3")

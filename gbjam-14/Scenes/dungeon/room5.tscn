@@ -5,6 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://jiex14oru4b4" path="res://Scenes/cell.tscn" id="3_b33kd"]
 [ext_resource type="PackedScene" uid="uid://b5wywj5lhajbv" path="res://Scenes/blocked_space_empty.tscn" id="4_kcfa5"]
 [ext_resource type="PackedScene" uid="uid://c6mei0oqojpna" path="res://Scenes/transition_entity.tscn" id="5_85f6n"]
+[ext_resource type="PackedScene" uid="uid://3nfcc3xyjx22" path="res://Scenes/oil.tscn" id="6_u3r7r"]
+[ext_resource type="Texture2D" uid="uid://krqp2oae4r21" path="res://Assets/skull.png" id="7_fo4ed"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3tvqv"]
 texture = ExtResource("2_yebob")
@@ -117,7 +119,7 @@ layer_0/tile_data = PackedInt32Array(131075, 262144, 5)
 position = Vector2(0, 1)
 tile_set = SubResource("TileSet_cb1ub")
 format = 2
-layer_0/tile_data = PackedInt32Array(262146, 786432, 5, 196610, 393216, 4, 131074, 786432, 3, 196612, 720896, 3, 196611, 655360, 3)
+layer_0/tile_data = PackedInt32Array(196610, 393216, 4, 131074, 786432, 3, 196612, 720896, 3, 196611, 655360, 3, 262146, 786432, 5)
 
 [node name="Cell1" parent="." unique_id=947757610 instance=ExtResource("3_b33kd")]
 position = Vector2(12, 12)
@@ -193,6 +195,8 @@ position = Vector2(36, 60)
 [node name="Cell17" parent="." unique_id=277786365 instance=ExtResource("3_b33kd")]
 position = Vector2(60, 60)
 
+[node name="Oil" parent="Cell17" unique_id=321999121 instance=ExtResource("6_u3r7r")]
+
 [node name="Cell18" parent="." unique_id=1186138036 instance=ExtResource("3_b33kd")]
 position = Vector2(84, 60)
 
@@ -220,11 +224,17 @@ position = Vector2(36, 84)
 [node name="Cell24" parent="." unique_id=184295922 instance=ExtResource("3_b33kd")]
 position = Vector2(60, 84)
 
+[node name="Oil" parent="Cell24" unique_id=44794201 instance=ExtResource("6_u3r7r")]
+
 [node name="Cell25" parent="." unique_id=69082552 instance=ExtResource("3_b33kd")]
 position = Vector2(84, 84)
 
+[node name="Oil" parent="Cell25" unique_id=822348671 instance=ExtResource("6_u3r7r")]
+
 [node name="Cell26" parent="." unique_id=222471247 instance=ExtResource("3_b33kd")]
 position = Vector2(108, 84)
+
+[node name="Oil" parent="Cell26" unique_id=228436674 instance=ExtResource("6_u3r7r")]
 
 [node name="Cell27" parent="." unique_id=1196367126 instance=ExtResource("3_b33kd")]
 position = Vector2(132, 84)
@@ -247,6 +257,8 @@ position = Vector2(36, 108)
 
 [node name="Cell31" parent="." unique_id=1898870118 instance=ExtResource("3_b33kd")]
 position = Vector2(60, 108)
+
+[node name="Oil" parent="Cell31" unique_id=912032340 instance=ExtResource("6_u3r7r")]
 
 [node name="Cell32" parent="." unique_id=1630900169 instance=ExtResource("3_b33kd")]
 position = Vector2(84, 108)
@@ -324,3 +336,7 @@ position = Vector2(-132, -156)
 position = Vector2(156, 156)
 
 [node name="BlockedSpaceEmpty" parent="Cell49" unique_id=1218437304 instance=ExtResource("4_kcfa5")]
+
+[node name="Skull" type="Sprite2D" parent="." unique_id=8370968]
+position = Vector2(132, 60)
+texture = ExtResource("7_fo4ed")
