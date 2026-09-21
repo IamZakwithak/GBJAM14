@@ -5,6 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://jiex14oru4b4" path="res://Scenes/cell.tscn" id="3_v6x5n"]
 [ext_resource type="PackedScene" uid="uid://b5wywj5lhajbv" path="res://Scenes/blocked_space_empty.tscn" id="4_iiabn"]
 [ext_resource type="PackedScene" uid="uid://c6mei0oqojpna" path="res://Scenes/transition_entity.tscn" id="5_7riq7"]
+[ext_resource type="PackedScene" uid="uid://cacp73d807kk3" path="res://Scenes/pickup_item_gem.tscn" id="5_v6x5n"]
+[ext_resource type="Texture2D" uid="uid://krqp2oae4r21" path="res://Assets/skull.png" id="6_wju3w"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3tvqv"]
 texture = ExtResource("2_wju3w")
@@ -160,6 +162,9 @@ position = Vector2(12, 84)
 
 [node name="Cell23" parent="." unique_id=20660574 instance=ExtResource("3_v6x5n")]
 position = Vector2(36, 84)
+diggable = true
+
+[node name="PickupItemGem" parent="Cell23" unique_id=1120500923 instance=ExtResource("5_v6x5n")]
 
 [node name="Cell24" parent="." unique_id=184295922 instance=ExtResource("3_v6x5n")]
 position = Vector2(60, 84)
@@ -178,13 +183,22 @@ position = Vector2(108, 84)
 
 [node name="Cell27" parent="." unique_id=1196367126 instance=ExtResource("3_v6x5n")]
 position = Vector2(132, 84)
+diggable = true
 
 [node name="Cell28" parent="." unique_id=1349596911 instance=ExtResource("3_v6x5n")]
 position = Vector2(156, 84)
 
 [node name="TransitionEntity" parent="Cell28" unique_id=535250151 instance=ExtResource("5_7riq7")]
-room_index = 9
+room_index = 1
 connected_location = Vector2(0, 3)
+
+[node name="Skull" type="Sprite2D" parent="Cell28" unique_id=987003368]
+position = Vector2(-120, -48)
+texture = ExtResource("6_wju3w")
+
+[node name="Skull2" type="Sprite2D" parent="Cell28" unique_id=1835998429]
+position = Vector2(-72, -24)
+texture = ExtResource("6_wju3w")
 
 [node name="Cell29" parent="." unique_id=1542226078 instance=ExtResource("3_v6x5n")]
 position = Vector2(12, 108)
@@ -194,6 +208,7 @@ position = Vector2(-12, -108)
 
 [node name="Cell30" parent="." unique_id=1645255929 instance=ExtResource("3_v6x5n")]
 position = Vector2(36, 108)
+diggable = true
 
 [node name="Cell31" parent="." unique_id=1898870118 instance=ExtResource("3_v6x5n")]
 position = Vector2(60, 108)
@@ -212,6 +227,7 @@ position = Vector2(108, 108)
 
 [node name="Cell34" parent="." unique_id=673038429 instance=ExtResource("3_v6x5n")]
 position = Vector2(132, 108)
+diggable = true
 
 [node name="Cell35" parent="." unique_id=696004137 instance=ExtResource("3_v6x5n")]
 position = Vector2(156, 108)
@@ -225,18 +241,23 @@ position = Vector2(12, 132)
 
 [node name="Cell37" parent="." unique_id=1897837669 instance=ExtResource("3_v6x5n")]
 position = Vector2(36, 132)
+diggable = true
 
 [node name="Cell38" parent="." unique_id=430911311 instance=ExtResource("3_v6x5n")]
 position = Vector2(60, 132)
+diggable = true
 
 [node name="Cell39" parent="." unique_id=1145412234 instance=ExtResource("3_v6x5n")]
 position = Vector2(84, 132)
+diggable = true
 
 [node name="Cell40" parent="." unique_id=2097313101 instance=ExtResource("3_v6x5n")]
 position = Vector2(108, 132)
+diggable = true
 
 [node name="Cell41" parent="." unique_id=116777024 instance=ExtResource("3_v6x5n")]
 position = Vector2(132, 132)
+diggable = true
 
 [node name="Cell42" parent="." unique_id=1905399395 instance=ExtResource("3_v6x5n")]
 position = Vector2(156, 132)

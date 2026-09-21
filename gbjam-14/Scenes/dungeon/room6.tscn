@@ -4,8 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://bw33lmjwaw52x" path="res://Assets/dungeon_tileset.png" id="2_cjjrq"]
 [ext_resource type="PackedScene" uid="uid://jiex14oru4b4" path="res://Scenes/cell.tscn" id="3_rcp8h"]
 [ext_resource type="PackedScene" uid="uid://b5wywj5lhajbv" path="res://Scenes/blocked_space_empty.tscn" id="4_r6g1t"]
-[ext_resource type="PackedScene" uid="uid://3nfcc3xyjx22" path="res://oil.tscn" id="5_cjjrq"]
+[ext_resource type="PackedScene" uid="uid://3nfcc3xyjx22" path="res://Scenes/oil.tscn" id="5_cjjrq"]
 [ext_resource type="PackedScene" uid="uid://c6mei0oqojpna" path="res://Scenes/transition_entity.tscn" id="5_of0ch"]
+[ext_resource type="PackedScene" uid="uid://cacp73d807kk3" path="res://Scenes/pickup_item_gem.tscn" id="7_rcp8h"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3tvqv"]
 texture = ExtResource("2_cjjrq")
@@ -166,6 +167,7 @@ position = Vector2(60, 36)
 
 [node name="Cell11" parent="." unique_id=14415940 instance=ExtResource("3_rcp8h")]
 position = Vector2(84, 36)
+diggable = true
 
 [node name="Cell12" parent="." unique_id=2067954930 instance=ExtResource("3_rcp8h")]
 position = Vector2(108, 36)
@@ -236,6 +238,9 @@ position = Vector2(84, 84)
 
 [node name="Cell26" parent="." unique_id=222471247 instance=ExtResource("3_rcp8h")]
 position = Vector2(108, 84)
+diggable = true
+
+[node name="PickupItemGem" parent="Cell26" unique_id=1120500923 instance=ExtResource("7_rcp8h")]
 
 [node name="Cell27" parent="." unique_id=1196367126 instance=ExtResource("3_rcp8h")]
 position = Vector2(132, 84)

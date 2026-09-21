@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://b5wywj5lhajbv" path="res://Scenes/blocked_space_empty.tscn" id="4_kyph1"]
 [ext_resource type="PackedScene" uid="uid://chf1nksskaewi" path="res://Scenes/player.tscn" id="5_o3u5f"]
 [ext_resource type="PackedScene" uid="uid://c6mei0oqojpna" path="res://Scenes/transition_entity.tscn" id="5_pm3mn"]
-[ext_resource type="PackedScene" uid="uid://dxemskt0yjehy" path="res://buried_item_entity.tscn" id="6_j38w1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3tvqv"]
 texture = ExtResource("2_pm3mn")
@@ -211,9 +210,6 @@ position = Vector2(60, 108)
 
 [node name="Cell32" parent="." unique_id=1630900169 instance=ExtResource("3_j38w1")]
 position = Vector2(84, 108)
-
-[node name="BuriedItemEntity" parent="Cell32" unique_id=784111086 instance=ExtResource("6_j38w1")]
-z_index = 0
 diggable = true
 
 [node name="Cell33" parent="." unique_id=1851508815 instance=ExtResource("3_j38w1")]
@@ -239,14 +235,17 @@ position = Vector2(36, 132)
 
 [node name="Cell38" parent="." unique_id=430911311 instance=ExtResource("3_j38w1")]
 position = Vector2(60, 132)
+diggable = true
 
 [node name="Cell39" parent="." unique_id=1145412234 instance=ExtResource("3_j38w1")]
 position = Vector2(84, 132)
+diggable = true
 
 [node name="Player" parent="Cell39" unique_id=386189924 instance=ExtResource("5_o3u5f")]
 
 [node name="Cell40" parent="." unique_id=2097313101 instance=ExtResource("3_j38w1")]
 position = Vector2(108, 132)
+diggable = true
 
 [node name="Cell41" parent="." unique_id=116777024 instance=ExtResource("3_j38w1")]
 position = Vector2(132, 132)
