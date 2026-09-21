@@ -29,7 +29,6 @@ func transition_condition_met(entering_entity : Player) -> bool:
 func change_room(entering_entity: Player) -> void: 
 	
 	if transition_condition_met(entering_entity):
-		
 		RoomManager.current_room = 	 RoomManager.rooms[room_index]
 		RoomManager.room_changed.emit()
 		entering_entity.reparent(other_room.get_cell(connected_location.x, connected_location.y), false)
@@ -37,6 +36,8 @@ func change_room(entering_entity: Player) -> void:
 		entering_entity.myCell.occupyingEntity = entering_entity
 		RoomManager.camera.reparent(RoomManager.current_room)
 		RoomManager.camera.position = Vector2(84,84)
+		if(RoomManager.dungeonAlive):
+			RoomManager.dungeon_come_to_life.emit()
 		
 
 		

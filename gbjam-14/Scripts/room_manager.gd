@@ -21,6 +21,7 @@ var special_timer = 0.0
 func _ready() -> void:
 	player_took_action.connect(delay_to_dungeon_turn)
 	dungeon_come_to_life.connect(toggle_life_bool)
+	
 	for  i in rooms.size():
 		rooms[i].room_index = i
 
@@ -36,3 +37,4 @@ func delay_to_dungeon_turn () -> void:
 
 func toggle_life_bool() -> void: 
 	dungeonAlive = true
+	
