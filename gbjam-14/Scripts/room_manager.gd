@@ -5,6 +5,7 @@ signal dungeon_turn_start
 signal return_action_to_player
 signal room_changed
 signal dungeon_come_to_life
+signal dungeon_go_to_sleep
 
 var camera : Camera2D
 var current_room : Room

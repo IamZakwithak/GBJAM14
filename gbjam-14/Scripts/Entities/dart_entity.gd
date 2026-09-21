@@ -1,5 +1,5 @@
 class_name DartEntity extends Entity
-
+signal dart_died
 var move = DartMoveAction
 var direction : Vector2i = Vector2i(0,0)
 # Called when the node enters the scene tree for the first time.
@@ -18,4 +18,5 @@ func take_action() -> void:
 		move.do_action() 
 
 func destroy_self() -> void: 
+	dart_died.emit()
 	queue_free()
