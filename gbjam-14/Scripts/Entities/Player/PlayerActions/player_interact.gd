@@ -23,6 +23,7 @@ func do_action() -> void:
 func dig_hole() -> void: 
 	if(performingPlayer.myCell.buriedEntity != null):
 		performingPlayer.myCell.buriedEntity.do_interaction()
+		performingPlayer.myCell.buriedEntity = null
 		performingPlayer.myCell.buriedEntitySprite.free()
 		RoomManager.player_took_action.emit()
 		return
