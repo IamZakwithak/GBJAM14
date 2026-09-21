@@ -2,6 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://d217wteu16nw" path="res://Assets/PlayVDung_Coin_SpriteSheet.png" id="1_yyyga"]
 [ext_resource type="Script" uid="uid://cx2jgj8yq01rv" path="res://Scripts/Entities/turn_coin_sprite.gd" id="2_5yaky"]
+[ext_resource type="Texture2D" uid="uid://beijweed02l1n" path="res://Assets/GBJam_SpriteSheet.png" id="3_j0h2e"]
+[ext_resource type="Script" uid="uid://cxyuo6ati0jgn" path="res://Scripts/Entities/inventory_item_sprite.gd" id="4_jaxjc"]
 
 [sub_resource type="Animation" id="Animation_5yaky"]
 resource_name = "Dungeon_To_Player"
@@ -59,7 +61,7 @@ _data = {
 &"RESET": SubResource("Animation_j0h2e")
 }
 
-[node name="TurnCoin" type="CanvasLayer" unique_id=657259986]
+[node name="HUD" type="CanvasLayer" unique_id=657259986]
 
 [node name="Turn_Coin" type="Node2D" parent="." unique_id=858004971]
 
@@ -74,3 +76,13 @@ animation_player = NodePath("../AnimationPlayer")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Turn_Coin" unique_id=1165458254]
 root_node = NodePath("../TurnCoinSprite")
 libraries/ = SubResource("AnimationLibrary_jaxjc")
+
+[node name="Inventory_Item" type="Node2D" parent="." unique_id=1566942468]
+
+[node name="Inventory_Item_Sprite" type="Sprite2D" parent="Inventory_Item" unique_id=1129166275]
+position = Vector2(148, 132)
+texture = ExtResource("3_j0h2e")
+hframes = 16
+vframes = 10
+frame = 127
+script = ExtResource("4_jaxjc")

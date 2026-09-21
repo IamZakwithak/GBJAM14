@@ -1,11 +1,14 @@
 [gd_scene format=3 uid="uid://dv7crv6h2soai"]
 
-[ext_resource type="Script" path="res://Scripts/Entities/tennis_ball_pickup_entity.gd" id="1_5qj1x"]
-[ext_resource type="Texture2D" uid="uid://df4r0c6alj38t" path="res://Assets/GoodItem.png" id="2_jxdfh"]
+[ext_resource type="Script" uid="uid://c1w6w0uuewl1s" path="res://Scripts/pickup_item_tennisball.gd" id="1_5qj1x"]
+[ext_resource type="Texture2D" uid="uid://beijweed02l1n" path="res://Assets/GBJam_SpriteSheet.png" id="2_jxdfh"]
 
-[node name="PickupItemTennisBall" type="Node2D" unique_id=1725765251]
+[node name="PickupItemTennisBall" type="Node2D" unique_id=978163483]
 script = ExtResource("1_5qj1x")
-metadata/_custom_type_script = "uid://3ira644c35p7"
+metadata/_custom_type_script = "uid://c1w6w0uuewl1s"
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1278002379]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1870798229]
 texture = ExtResource("2_jxdfh")
+hframes = 16
+vframes = 10
+frame = 145
