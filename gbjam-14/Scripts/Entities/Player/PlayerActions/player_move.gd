@@ -19,6 +19,7 @@ func do_action() -> void:
 	var cell_to_move_to : Cell = RoomManager.get_current_room().get_cell(performingPlayer.myCell.roomLocation.x + direction[0], performingPlayer.myCell.roomLocation.y + direction[1])
 	print("Moving from ", performingPlayer.myCell.roomLocation, " to ", cell_to_move_to.roomLocation, " with direction vector ", direction)
 	print("Cell to move to is occupied by... ", cell_to_move_to.occupyingEntity)
+	RoomManager.last_player_movement_direction = direction
 	performingPlayer.myCell.entity_exited.emit()
 	performingPlayer.reparent(cell_to_move_to, false)		
 	if(cell_to_move_to.overlappedEntity == null && cell_to_move_to.occupyingEntity != null):
@@ -34,5 +35,6 @@ func do_action() -> void:
 	#direction = Vector2.ZERO
 	performingPlayer.onOil = false
 	performingPlayer.myTurn = false
+	RoomManager.player_location = performingPlayer.myCell.roomLocation
 	RoomManager.player_took_action.emit()
 	

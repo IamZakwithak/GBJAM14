@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://cspg1aypev5t6"]
+
+[ext_resource type="Script" uid="uid://bttacfvl7si80" path="res://Scripts/Entities/skeleton_entity.gd" id="1_npstv"]
+[ext_resource type="Texture2D" uid="uid://beijweed02l1n" path="res://Assets/GBJam_SpriteSheet.png" id="2_sfdrs"]
+[ext_resource type="Texture2D" uid="uid://krqp2oae4r21" path="res://Assets/skull.png" id="2_y4fxq"]
+
+[node name="SkeletonEntity" type="Node2D" unique_id=1810888900]
+script = ExtResource("1_npstv")
+interactable = true
+pickupable = true
+metadata/_custom_type_script = "uid://bttacfvl7si80"
+
+[node name="ActiveSkeletonSprite" type="Sprite2D" parent="." unique_id=902107759]
+visible = false
+texture = ExtResource("2_sfdrs")
+hframes = 16
+vframes = 10
+frame = 84
+region_rect = Rect2(3.985, 0, 0, 0)
+
+[node name="InnertSkeletonSprite" type="Sprite2D" parent="." unique_id=37908050]
+texture = ExtResource("2_y4fxq")

@@ -11,6 +11,8 @@ var current_room : Room
 var dungeonAlive : bool = false
 var rooms : Array[Room] = []
 var buried_item_entity : PackedScene
+var last_player_movement_direction : Vector2i = Vector2i.ZERO
+var player_location :Vector2i = Vector2i.ZERO
 @export var default_dungeon_time = 0.5
 var special_timer = 0.0
 # Called when the node enters the scene tree for the first time.

@@ -28,6 +28,9 @@ func dig_hole() -> void:
 		return
 	performingPlayer.myCell.buriedEntity = performingPlayer.inventory_item
 	performingPlayer.inventory_item.drop_item_func()
+	if(performingPlayer.inventory_item is SkeletonEntity):
+		var skeleton_ref = performingPlayer.inventory_item as SkeletonEntity
+		skeleton_ref.buried = true
 	performingPlayer.inventory_item.reparent(performingPlayer.myCell)
 	performingPlayer.inventory_item = null
 	var buriedDirt = RoomManager.buried_item_entity.instantiate()
@@ -41,6 +44,9 @@ func put_down_item() -> void:
 	performingPlayer.inventory_item.reparent(performingPlayer.myCell.pickupableEntity)
 	performingPlayer.inventory_item.visible = true
 	performingPlayer.inventory_item.drop_item_func()
+	if(performingPlayer.inventory_item is SkeletonEntity):
+		var skeleton_ref = performingPlayer.inventory_item as SkeletonEntity
+		skeleton_ref.buried = false
 	performingPlayer.inventory_item = null
 	RoomManager.player_took_action.emit()
 	
