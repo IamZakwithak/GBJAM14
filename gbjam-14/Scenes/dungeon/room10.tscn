@@ -139,9 +139,6 @@ position = Vector2(156, 36)
 [node name="Cell15" parent="." unique_id=1200068339 instance=ExtResource("3_7pd2j")]
 position = Vector2(12, 60)
 
-[node name="BlockedSpaceEmpty" parent="Cell15" unique_id=1640436598 instance=ExtResource("4_sqhpx")]
-position = Vector2(-12, -60)
-
 [node name="DartSpawnerEntity" parent="Cell15" unique_id=130212321 instance=ExtResource("6_7pd2j")]
 
 [node name="Cell16" parent="." unique_id=1255017437 instance=ExtResource("3_7pd2j")]
@@ -203,9 +200,6 @@ position = Vector2(156, 84)
 
 [node name="Cell29" parent="." unique_id=1542226078 instance=ExtResource("3_7pd2j")]
 position = Vector2(12, 108)
-
-[node name="BlockedSpaceEmpty" parent="Cell29" unique_id=204202115 instance=ExtResource("4_sqhpx")]
-position = Vector2(-12, -108)
 
 [node name="DartSpawnerEntity" parent="Cell29" unique_id=1646385794 instance=ExtResource("6_7pd2j")]
 

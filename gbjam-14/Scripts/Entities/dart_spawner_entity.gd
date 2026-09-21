@@ -11,3 +11,8 @@ func spawn_entity() -> void:
 		myCell.add_child(entity_ref)
 		myCell.overlappedEntity = entity_ref	
 		entity_ref.direction = dart_spawn_direction
+		
+func can_entity_enter(entering_entity: Entity) -> bool:
+	if entering_entity is DartEntity:
+		return true
+	return false

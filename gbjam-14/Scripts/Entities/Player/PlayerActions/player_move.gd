@@ -27,7 +27,8 @@ func do_action() -> void:
 	cell_to_move_to.occupyingEntity = null
 	performingPlayer.myCell = cell_to_move_to
 	performingPlayer.myCell.occupyingEntity = performingPlayer
-	if(cell_to_move_to.overlappedEntity != null && cell_to_move_to.overlappedEntity is Oil):
+	var possible_oil_ref = cell_to_move_to.overlappedEntity as Oil
+	if(possible_oil_ref != null && possible_oil_ref.activeOil):
 		performingPlayer.onOil = true
 		await cell_to_move_to.get_tree().create_timer(0.5).timeout
 		if(can_do_action()):

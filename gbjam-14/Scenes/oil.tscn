@@ -1,8 +1,22 @@
 [gd_scene format=3 uid="uid://3nfcc3xyjx22"]
 
 [ext_resource type="Script" uid="uid://8n4pv8slrlnu" path="res://Scripts/oil_entity.gd" id="1_krsem"]
+[ext_resource type="Texture2D" uid="uid://bw33lmjwaw52x" path="res://Assets/dungeon_tileset.png" id="2_r63bj"]
 
 [node name="Oil" type="Node2D" unique_id=321999121]
 script = ExtResource("1_krsem")
 interactable = true
 metadata/_custom_type_script = "uid://8n4pv8slrlnu"
+
+[node name="OilInactiveSprite" type="Sprite2D" parent="." unique_id=1456588142]
+texture = ExtResource("2_r63bj")
+hframes = 14
+vframes = 7
+frame = 84
+
+[node name="OilActiveSprite" type="Sprite2D" parent="." unique_id=379242689]
+visible = false
+texture = ExtResource("2_r63bj")
+hframes = 14
+vframes = 7
+frame = 87
