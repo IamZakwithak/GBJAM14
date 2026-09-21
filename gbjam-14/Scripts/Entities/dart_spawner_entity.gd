@@ -6,7 +6,8 @@ func _ready() -> void:
 	RoomManager.dungeon_come_to_life.connect(spawn_entity)
 
 func spawn_entity() -> void:
-	var entity_ref = entity_to_spawn.instantiate() as DartEntity
-	myCell.add_child(entity_ref)
-	myCell.overlappedEntity = entity_ref	
-	entity_ref.direction = dart_spawn_direction
+	if(myCell.myRoom.room_index == RoomManager.current_room.room_index):
+		var entity_ref = entity_to_spawn.instantiate() as DartEntity
+		myCell.add_child(entity_ref)
+		myCell.overlappedEntity = entity_ref	
+		entity_ref.direction = dart_spawn_direction

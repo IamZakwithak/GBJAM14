@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://dv7crv6h2soai"]
+
+[ext_resource type="Script" path="res://Scripts/Entities/tennis_ball_pickup_entity.gd" id="1_5qj1x"]
+[ext_resource type="Texture2D" uid="uid://df4r0c6alj38t" path="res://Assets/GoodItem.png" id="2_jxdfh"]
+
+[node name="PickupItemTennisBall" type="Node2D" unique_id=1725765251]
+script = ExtResource("1_5qj1x")
+metadata/_custom_type_script = "uid://3ira644c35p7"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1278002379]
+texture = ExtResource("2_jxdfh")

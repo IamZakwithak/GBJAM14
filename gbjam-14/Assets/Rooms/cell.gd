@@ -9,11 +9,13 @@ var overlappedEntity : Entity
 var buriedEntity : PickupItem
 var buriedEntitySprite : Entity
 var roomLocation : Vector2 #This is the x,y indexes for the cell grid spaces, so every cell knows where they are 
+var myRoom
 @export var diggable : bool = false 
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	myRoom = get_parent()
 	if get_child_count() > 0 :
 		var childEntity = get_child(0) as Entity
 		if(childEntity.pickupable):
