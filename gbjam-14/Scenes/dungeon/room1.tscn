@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b5wywj5lhajbv" path="res://Scenes/blocked_space_empty.tscn" id="4_0qajc"]
 [ext_resource type="PackedScene" uid="uid://c6mei0oqojpna" path="res://Scenes/transition_entity.tscn" id="5_68dh3"]
 [ext_resource type="Texture2D" uid="uid://krqp2oae4r21" path="res://Assets/skull.png" id="6_68dh3"]
-[ext_resource type="PackedScene" uid="uid://dxemskt0yjehy" path="res://buried_item_entity.tscn" id="6_g5loc"]
+[ext_resource type="PackedScene" uid="uid://cacp73d807kk3" path="res://Scenes/pickup_item_gem.tscn" id="6_g5loc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3tvqv"]
 texture = ExtResource("2_68dh3")
@@ -117,9 +117,7 @@ position = Vector2(60, 36)
 position = Vector2(84, 36)
 diggable = true
 
-[node name="BuriedItemEntity" parent="Cell11" unique_id=784111086 instance=ExtResource("6_g5loc")]
-pickupable = true
-diggable = true
+[node name="PickupItemGem" parent="Cell11" unique_id=1120500923 instance=ExtResource("6_g5loc")]
 
 [node name="Cell12" parent="." unique_id=2067954930 instance=ExtResource("3_g5loc")]
 position = Vector2(108, 36)

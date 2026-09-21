@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bw33lmjwaw52x" path="res://Assets/dungeon_tileset.png" id="2_c62aj"]
 [ext_resource type="PackedScene" uid="uid://jiex14oru4b4" path="res://Scenes/cell.tscn" id="4_4u7w5"]
 [ext_resource type="PackedScene" uid="uid://b5wywj5lhajbv" path="res://Scenes/blocked_space_empty.tscn" id="5_kt7h1"]
-[ext_resource type="PackedScene" uid="uid://dxemskt0yjehy" path="res://buried_item_entity.tscn" id="5_lllpq"]
+[ext_resource type="PackedScene" uid="uid://cacp73d807kk3" path="res://Scenes/pickup_item_gem.tscn" id="5_lllpq"]
 [ext_resource type="PackedScene" uid="uid://c6mei0oqojpna" path="res://Scenes/transition_entity.tscn" id="7_cr3b2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3tvqv"]
@@ -162,9 +162,7 @@ position = Vector2(12, 36)
 position = Vector2(36, 36)
 diggable = true
 
-[node name="BuriedItemEntity" parent="Cell9" unique_id=784111086 instance=ExtResource("5_lllpq")]
-pickupable = true
-diggable = true
+[node name="PickupItemGem" parent="Cell9" unique_id=1120500923 instance=ExtResource("5_lllpq")]
 
 [node name="Cell10" parent="." unique_id=365036152 instance=ExtResource("4_4u7w5")]
 position = Vector2(60, 36)

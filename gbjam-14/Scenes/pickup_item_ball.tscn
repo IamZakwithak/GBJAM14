@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://bjid8s4680ja7"]
+
+[ext_resource type="Script" uid="uid://i2lvf0aa4u0" path="res://Scripts/Entities/pickup_item_gem.gd" id="1_gry5n"]
+[ext_resource type="Texture2D" uid="uid://b45hyp6hymubt" path="res://Assets/ball_sprite.png" id="2_gry5n"]
+
+[node name="PickupItemGem" type="Node2D" unique_id=1120500923]
+script = ExtResource("1_gry5n")
+interactable = true
+pickupable = true
+metadata/_custom_type_script = "uid://i2lvf0aa4u0"
+
+[node name="BallSprite" type="Sprite2D" parent="." unique_id=1856816466]
+texture = ExtResource("2_gry5n")

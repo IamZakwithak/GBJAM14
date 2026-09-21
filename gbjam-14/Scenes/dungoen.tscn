@@ -19,10 +19,11 @@
 [ext_resource type="PackedScene" uid="uid://cfnnqqsjlhsk0" path="res://Scenes/dungeon/room12.tscn" id="14_4wyi5"]
 [ext_resource type="Texture2D" uid="uid://fex6xsspycmp" path="res://Assets/dart.png" id="16_3msva"]
 [ext_resource type="PackedScene" uid="uid://vk0jyele8jrv" path="res://Scenes/dungeon/room13.tscn" id="17_1io8o"]
+[ext_resource type="PackedScene" uid="uid://c6wd4rtttpxux" path="res://Scenes/dungeon/room14.tscn" id="18_1u6eg"]
 
 [node name="Dungoen" type="Node2D" unique_id=1313073382 node_paths=PackedStringArray("rooms", "camera")]
 script = ExtResource("1_wl3w2")
-rooms = [NodePath("Room0"), NodePath("Room1"), NodePath("Room2"), NodePath("Room3"), NodePath("Room4"), NodePath("Room5"), NodePath("Room6"), NodePath("Room7"), NodePath("Room8"), null, NodePath("Room10"), NodePath("Room11"), NodePath("Room12")]
+rooms = [NodePath("Room0"), NodePath("Room1"), NodePath("Room2"), NodePath("Room3"), NodePath("Room4"), NodePath("Room5"), NodePath("Room6"), NodePath("Room7"), NodePath("Room8"), null, NodePath("Room10"), NodePath("Room11"), NodePath("Room12"), NodePath("Room14")]
 camera = NodePath("Camera2D")
 buriedItemEntity = ExtResource("2_6qhvx")
 
@@ -74,17 +75,15 @@ position = Vector2(-2, -764)
 [node name="Room13" parent="." unique_id=422463341 instance=ExtResource("17_1io8o")]
 position = Vector2(383, -764)
 
+[node name="Room14" parent="." unique_id=1870958705 instance=ExtResource("18_1u6eg")]
+position = Vector2(404, -172)
+
 [node name="GoldieOutlined" type="Sprite2D" parent="." unique_id=142579265]
-position = Vector2(468, -657)
+position = Vector2(404, -792)
 texture = ExtResource("9_taqc3")
 
 [node name="Dart" type="Sprite2D" parent="." unique_id=551756989]
 position = Vector2(156, -708)
-rotation = 1.5707964
-texture = ExtResource("16_3msva")
-
-[node name="Dart7" type="Sprite2D" parent="." unique_id=497641920]
-position = Vector2(488, -634)
 rotation = 1.5707964
 texture = ExtResource("16_3msva")
 
@@ -104,11 +103,6 @@ texture = ExtResource("16_3msva")
 
 [node name="Dart5" type="Sprite2D" parent="." unique_id=1029118986]
 position = Vector2(108, -785)
-texture = ExtResource("16_3msva")
-
-[node name="Dart3" type="Sprite2D" parent="." unique_id=1607552486]
-position = Vector2(442, -730)
-rotation = -1.5707964
 texture = ExtResource("16_3msva")
 
 [node name="Dart6" type="Sprite2D" parent="." unique_id=154910290]

@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://jiex14oru4b4" path="res://Scenes/cell.tscn" id="3_7pd2j"]
 [ext_resource type="PackedScene" uid="uid://b5wywj5lhajbv" path="res://Scenes/blocked_space_empty.tscn" id="4_sqhpx"]
 [ext_resource type="PackedScene" uid="uid://c6mei0oqojpna" path="res://Scenes/transition_entity.tscn" id="5_jegn0"]
+[ext_resource type="PackedScene" uid="uid://cpba6iyv7m1co" path="res://dart_spawner_entity.tscn" id="6_7pd2j"]
 [ext_resource type="PackedScene" uid="uid://dxemskt0yjehy" path="res://buried_item_entity.tscn" id="6_dejgb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3tvqv"]
@@ -113,6 +114,7 @@ position = Vector2(12, 36)
 position = Vector2(36, 36)
 
 [node name="BlockedSpaceEmpty" parent="Cell9" unique_id=643532771 instance=ExtResource("4_sqhpx")]
+blocksProjectiles = false
 
 [node name="Cell10" parent="." unique_id=365036152 instance=ExtResource("3_7pd2j")]
 position = Vector2(60, 36)
@@ -127,6 +129,7 @@ position = Vector2(108, 36)
 position = Vector2(132, 36)
 
 [node name="BlockedSpaceEmpty" parent="Cell13" unique_id=1822608307 instance=ExtResource("4_sqhpx")]
+blocksProjectiles = false
 
 [node name="Cell14" parent="." unique_id=576877394 instance=ExtResource("3_7pd2j")]
 position = Vector2(156, 36)
@@ -139,10 +142,13 @@ position = Vector2(12, 60)
 [node name="BlockedSpaceEmpty" parent="Cell15" unique_id=1640436598 instance=ExtResource("4_sqhpx")]
 position = Vector2(-12, -60)
 
+[node name="DartSpawnerEntity" parent="Cell15" unique_id=130212321 instance=ExtResource("6_7pd2j")]
+
 [node name="Cell16" parent="." unique_id=1255017437 instance=ExtResource("3_7pd2j")]
 position = Vector2(36, 60)
 
 [node name="BlockedSpaceEmpty" parent="Cell16" unique_id=138812882 instance=ExtResource("4_sqhpx")]
+blocksProjectiles = false
 
 [node name="Cell17" parent="." unique_id=277786365 instance=ExtResource("3_7pd2j")]
 position = Vector2(60, 60)
@@ -157,6 +163,7 @@ position = Vector2(108, 60)
 position = Vector2(132, 60)
 
 [node name="BlockedSpaceEmpty" parent="Cell20" unique_id=104693432 instance=ExtResource("4_sqhpx")]
+blocksProjectiles = false
 
 [node name="Cell21" parent="." unique_id=1976652902 instance=ExtResource("3_7pd2j")]
 position = Vector2(156, 60)
@@ -172,6 +179,7 @@ position = Vector2(12, 84)
 position = Vector2(36, 84)
 
 [node name="BlockedSpaceEmpty" parent="Cell23" unique_id=1860844847 instance=ExtResource("4_sqhpx")]
+blocksProjectiles = false
 
 [node name="Cell24" parent="." unique_id=184295922 instance=ExtResource("3_7pd2j")]
 position = Vector2(60, 84)
@@ -186,6 +194,7 @@ position = Vector2(108, 84)
 position = Vector2(132, 84)
 
 [node name="BlockedSpaceEmpty" parent="Cell27" unique_id=803070270 instance=ExtResource("4_sqhpx")]
+blocksProjectiles = false
 
 [node name="Cell28" parent="." unique_id=1349596911 instance=ExtResource("3_7pd2j")]
 position = Vector2(156, 84)
@@ -198,10 +207,13 @@ position = Vector2(12, 108)
 [node name="BlockedSpaceEmpty" parent="Cell29" unique_id=204202115 instance=ExtResource("4_sqhpx")]
 position = Vector2(-12, -108)
 
+[node name="DartSpawnerEntity" parent="Cell29" unique_id=1646385794 instance=ExtResource("6_7pd2j")]
+
 [node name="Cell30" parent="." unique_id=1645255929 instance=ExtResource("3_7pd2j")]
 position = Vector2(36, 108)
 
 [node name="BlockedSpaceEmpty" parent="Cell30" unique_id=1752830546 instance=ExtResource("4_sqhpx")]
+blocksProjectiles = false
 
 [node name="Cell31" parent="." unique_id=1898870118 instance=ExtResource("3_7pd2j")]
 position = Vector2(60, 108)
@@ -216,6 +228,7 @@ position = Vector2(108, 108)
 position = Vector2(132, 108)
 
 [node name="BlockedSpaceEmpty" parent="Cell34" unique_id=1284849434 instance=ExtResource("4_sqhpx")]
+blocksProjectiles = false
 
 [node name="Cell35" parent="." unique_id=696004137 instance=ExtResource("3_7pd2j")]
 position = Vector2(156, 108)
@@ -231,11 +244,13 @@ position = Vector2(12, 132)
 position = Vector2(36, 132)
 
 [node name="BlockedSpaceEmpty" parent="Cell37" unique_id=1023510785 instance=ExtResource("4_sqhpx")]
+blocksProjectiles = false
 
 [node name="Cell38" parent="." unique_id=430911311 instance=ExtResource("3_7pd2j")]
 position = Vector2(60, 132)
 
 [node name="BlockedSpaceEmpty" parent="Cell38" unique_id=1592002454 instance=ExtResource("4_sqhpx")]
+blocksProjectiles = false
 
 [node name="Cell39" parent="." unique_id=1145412234 instance=ExtResource("3_7pd2j")]
 position = Vector2(84, 132)
@@ -247,11 +262,13 @@ diggable = true
 position = Vector2(108, 132)
 
 [node name="BlockedSpaceEmpty" parent="Cell40" unique_id=1621147127 instance=ExtResource("4_sqhpx")]
+blocksProjectiles = false
 
 [node name="Cell41" parent="." unique_id=116777024 instance=ExtResource("3_7pd2j")]
 position = Vector2(132, 132)
 
 [node name="BlockedSpaceEmpty" parent="Cell41" unique_id=215444084 instance=ExtResource("4_sqhpx")]
+blocksProjectiles = false
 
 [node name="Cell42" parent="." unique_id=1905399395 instance=ExtResource("3_7pd2j")]
 position = Vector2(156, 132)
