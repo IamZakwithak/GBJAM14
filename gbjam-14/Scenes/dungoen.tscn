@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://drisiesox8e1k" path="res://dungoen.gd" id="1_wl3w2"]
 [ext_resource type="AudioStream" uid="uid://ce3486ry6cm5t" path="res://Audio/Dungeon_Quiet.wav" id="2_1u6eg"]
+[ext_resource type="PackedScene" uid="uid://dxemskt0yjehy" path="res://buried_item_entity.tscn" id="2_6qhvx"]
 [ext_resource type="PackedScene" uid="uid://cf4ookf2875nn" path="res://Scenes/dungeon/room0.tscn" id="2_jxry8"]
 [ext_resource type="PackedScene" uid="uid://b88ru0uhw0rx0" path="res://Scenes/Turn_Coin.tscn" id="3_6qhvx"]
 [ext_resource type="PackedScene" uid="uid://u0t2baiof7k5" path="res://Scenes/dungeon/room1.tscn" id="3_vrxpb"]
@@ -25,6 +26,7 @@
 script = ExtResource("1_wl3w2")
 rooms = [NodePath("Room0"), NodePath("Room1"), NodePath("Room2"), NodePath("Room3"), NodePath("Room4"), NodePath("Room5"), NodePath("Room6"), NodePath("Room7"), NodePath("Room8"), NodePath("Room9"), NodePath("Room10"), NodePath("Room11"), NodePath("Room12")]
 camera = NodePath("Camera2D")
+buriedItemEntity = ExtResource("2_6qhvx")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1089095286]
 position = Vector2(4, 7)

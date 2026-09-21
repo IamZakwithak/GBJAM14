@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://dxemskt0yjehy"]
+
+[ext_resource type="Script" uid="uid://du31tfcg8k84k" path="res://Scripts/buried_item_entity.gd" id="1_0hw0s"]
+[ext_resource type="Texture2D" uid="uid://df4r0c6alj38t" path="res://Assets/GoodItem.png" id="2_5pimi"]
+
+[node name="BuriedItemEntity" type="Node2D" unique_id=784111086]
+script = ExtResource("1_0hw0s")
+metadata/_custom_type_script = "uid://du31tfcg8k84k"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1273019194]
+texture = ExtResource("2_5pimi")

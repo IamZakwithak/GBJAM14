@@ -6,8 +6,11 @@ signal entity_exited(exiting_entity: Entity)
 var occupyingEntity : Entity #Entity that is currently in this cell 
 var pickupableEntity : PickupItem
 var overlappedEntity : Entity
+var buriedEntity : PickupItem
+var buriedEntitySprite : Entity
 var roomLocation : Vector2 #This is the x,y indexes for the cell grid spaces, so every cell knows where they are 
 @export var diggable : bool = false 
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

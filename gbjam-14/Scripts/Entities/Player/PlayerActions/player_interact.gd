@@ -1,29 +1,38 @@
 class_name PlayerInteract extends PlayerAction
 
 func can_do_action() -> bool:
-	print("should we do this?")
+	if((performingPlayer.myCell.diggable && performingPlayer.inventory_item != null && performingPlayer.myCell.buriedEntity == null) 
+	|| performingPlayer.myCell.diggable && performingPlayer.inventory_item == null && performingPlayer.myCell.buriedEntity != null):
+		return true
 	if performingPlayer.myCell.pickupableEntity != null && performingPlayer.inventory_item == null : 
 		return true
-	return performingPlayer.myCell.overlappedEntity.interactable
+	return false
 
 func do_action() -> void:
 	print("let's do this!")
-	if(performingPlayer.myCell.diggable):
+	if performingPlayer.myCell.pickupableEntity != null:
+		performingPlayer.myCell.pickupableEntity.do_interaction()
+	elif(performingPlayer.myCell.diggable):
 		print("oh we diggin")
 		dig_hole()
 		return
-	if(performingPlayer.inventory_item != null) : 
-		print("oh we puttin our shiz down")
-		put_down_item()
-		return
-	if performingPlayer.myCell.pickupableEntity != null:
-		performingPlayer.myCell.pickupableEntity.do_interaction()
 	else :
 		var interactableEntityRef = performingPlayer.myCell.overlappedEntity as InteractableEntity
 		interactableEntityRef.do_interaction()
 	
 func dig_hole() -> void: 
-	performingPlayer.myCell.diggable = false
+	if(performingPlayer.myCell.buriedEntity != null):
+		performingPlayer.myCell.buriedEntity.do_interaction()
+		performingPlayer.myCell.buriedEntitySprite.free()
+		RoomManager.player_took_action.emit()
+		return
+	performingPlayer.myCell.buriedEntity = performingPlayer.inventory_item
+	performingPlayer.inventory_item.drop_item_func()
+	performingPlayer.inventory_item.reparent(performingPlayer.myCell)
+	performingPlayer.inventory_item = null
+	var buriedDirt = RoomManager.buried_item_entity.instantiate()
+	performingPlayer.myCell.add_child(buriedDirt)
+	performingPlayer.myCell.buriedEntitySprite = buriedDirt
 	RoomManager.player_took_action.emit()
 	
 
