@@ -1,6 +1,6 @@
 class_name BuriedItemEntity extends Entity
 
+@onready var animation_player: AnimationPlayer = $Sprite2D/AnimationPlayer
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+func _ready():
+	animation_player.play("Item_Buried")

@@ -1,11 +1,56 @@
 [gd_scene format=3 uid="uid://dxemskt0yjehy"]
 
 [ext_resource type="Script" uid="uid://du31tfcg8k84k" path="res://Scripts/buried_item_entity.gd" id="1_0hw0s"]
-[ext_resource type="Texture2D" uid="uid://df4r0c6alj38t" path="res://Assets/GoodItem.png" id="2_5pimi"]
+[ext_resource type="Texture2D" uid="uid://8i7rwv5gv42a" path="res://Assets/Buried_Sprites.png" id="2_0hw0s"]
+
+[sub_resource type="Animation" id="Animation_5pimi"]
+resource_name = "Item_Buried"
+length = 0.4
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [1, 2, 3, 4]
+}
+
+[sub_resource type="Animation" id="Animation_ylwjg"]
+length = 0.001
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xld5g"]
+_data = {
+&"Item_Buried": SubResource("Animation_5pimi"),
+&"RESET": SubResource("Animation_ylwjg")
+}
 
 [node name="BuriedItemEntity" type="Node2D" unique_id=784111086]
+z_index = 2
 script = ExtResource("1_0hw0s")
 metadata/_custom_type_script = "uid://du31tfcg8k84k"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1273019194]
-texture = ExtResource("2_5pimi")
+texture = ExtResource("2_0hw0s")
+hframes = 6
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D" unique_id=1608500841]
+libraries/ = SubResource("AnimationLibrary_xld5g")

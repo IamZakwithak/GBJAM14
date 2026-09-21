@@ -72,6 +72,7 @@ position = Vector2(36, 12)
 
 [node name="Cell3" parent="." unique_id=599036953 instance=ExtResource("3_j38w1")]
 position = Vector2(60, 12)
+diggable = true
 
 [node name="BlockedSpaceEmpty" parent="Cell3" unique_id=612096340 instance=ExtResource("4_kyph1")]
 
