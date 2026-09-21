@@ -374,7 +374,7 @@ nodes/StateMachine/node = SubResource("AnimationNodeStateMachine_y6uwr")
 nodes/StateMachine/position = Vector2(0, 120)
 node_connections = [&"output", 0, &"StateMachine"]
 
-[node name="Player" type="Node2D" unique_id=386189924 node_paths=PackedStringArray("inventoryParent")]
+[node name="Player" type="Node2D" unique_id=386189924 node_paths=PackedStringArray("inventoryParent") groups=["Player"]]
 script = ExtResource("1_tpd1a")
 inventoryParent = NodePath("Inventory")
 metadata/_custom_type_script = "uid://b7qbqqltiwhhi"

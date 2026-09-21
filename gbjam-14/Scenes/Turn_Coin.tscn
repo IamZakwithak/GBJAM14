@@ -1,11 +1,12 @@
 [gd_scene format=3 uid="uid://b88ru0uhw0rx0"]
 
 [ext_resource type="Texture2D" uid="uid://d217wteu16nw" path="res://Assets/PlayVDung_Coin_SpriteSheet.png" id="1_yyyga"]
+[ext_resource type="Script" uid="uid://cx2jgj8yq01rv" path="res://Scripts/Entities/turn_coin_sprite.gd" id="2_5yaky"]
 
 [sub_resource type="Animation" id="Animation_5yaky"]
 resource_name = "Dungeon_To_Player"
-length = 0.8
-step = 0.1
+length = 0.1
+step = 0.01
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -13,7 +14,7 @@ tracks/0/path = NodePath(".:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8),
+"times": PackedFloat32Array(0, 0.01, 0.02, 0.030000001, 0.040000007, 0.049999997, 0.06, 0.06999999, 0.08000001),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [8, 9, 10, 11, 12, 13, 14, 15, 0]
@@ -21,8 +22,8 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_8h4kl"]
 resource_name = "Player_To_Dungeon"
-length = 0.8
-step = 0.1
+length = 0.1
+step = 0.01
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -30,7 +31,7 @@ tracks/0/path = NodePath(".:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8),
+"times": PackedFloat32Array(0, 0.010000002, 0.020000003, 0.030000001, 0.040000007, 0.049999997, 0.060000002, 0.06999999, 0.08000001),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 2, 3, 4, 5, 6, 7, 8]
@@ -58,12 +59,18 @@ _data = {
 &"RESET": SubResource("Animation_j0h2e")
 }
 
-[node name="Turn_Coin" type="Node2D" unique_id=858004971]
+[node name="TurnCoin" type="CanvasLayer" unique_id=657259986]
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1542476398]
+[node name="Turn_Coin" type="Node2D" parent="." unique_id=858004971]
+
+[node name="TurnCoinSprite" type="Sprite2D" parent="Turn_Coin" unique_id=1542476398 node_paths=PackedStringArray("animation_player")]
+z_index = 6
+position = Vector2(13, 131)
 texture = ExtResource("1_yyyga")
 hframes = 16
+script = ExtResource("2_5yaky")
+animation_player = NodePath("../AnimationPlayer")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1165458254]
-root_node = NodePath("../Sprite2D")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Turn_Coin" unique_id=1165458254]
+root_node = NodePath("../TurnCoinSprite")
 libraries/ = SubResource("AnimationLibrary_jaxjc")
