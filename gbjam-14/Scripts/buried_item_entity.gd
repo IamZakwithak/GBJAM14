@@ -1,6 +1,12 @@
 class_name BuriedItemEntity extends Entity
 
+@onready var previous_state: bool = false
+@onready var animation_player: AnimationPlayer = $Sprite2D/AnimationPlayer
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+func _process(_delta: float) -> void:
+	if self.diggable != previous_state:
+		previous_state = self.diggable
+		if previous_state:
+			animation_player.play("Item_Buried")
+		else:
+			animation_player.play("RESET")
