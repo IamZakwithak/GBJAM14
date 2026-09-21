@@ -1,6 +1,6 @@
 class_name SkeletonMove extends Action
 
-var direction : Vector2i
+var direction : Vector2
 # Called when the node enters the scene tree for the first time.
 func can_do_action() -> bool:
 	if (!RoomManager.get_current_room().validate_index(performingEntity.myCell.roomLocation.x + direction[0], performingEntity.myCell.roomLocation.y + direction[1]) 

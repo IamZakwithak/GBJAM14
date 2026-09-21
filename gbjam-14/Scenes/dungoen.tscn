@@ -23,7 +23,7 @@
 
 [node name="Dungoen" type="Node2D" unique_id=1313073382 node_paths=PackedStringArray("rooms", "camera")]
 script = ExtResource("1_wl3w2")
-rooms = [NodePath("Room0"), NodePath("Room1"), NodePath("Room2"), NodePath("Room3"), NodePath("Room4"), NodePath("Room5"), NodePath("Room6"), NodePath("Room7"), NodePath("Room8"), null, NodePath("Room10"), NodePath("Room11"), NodePath("Room12"), NodePath("Room14")]
+rooms = [NodePath("Room0"), NodePath("Room1"), NodePath("Room2"), NodePath("Room3"), NodePath("Room4"), NodePath("Room5"), NodePath("Room6"), NodePath("Room7"), NodePath("Room8"), NodePath("Room10"), NodePath("Room11"), NodePath("Room12"), NodePath("Room13"), NodePath("Room14")]
 camera = NodePath("Camera2D")
 buriedItemEntity = ExtResource("2_6qhvx")
 

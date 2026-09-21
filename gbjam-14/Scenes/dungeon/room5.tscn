@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b5wywj5lhajbv" path="res://Scenes/blocked_space_empty.tscn" id="4_kcfa5"]
 [ext_resource type="PackedScene" uid="uid://c6mei0oqojpna" path="res://Scenes/transition_entity.tscn" id="5_85f6n"]
 [ext_resource type="PackedScene" uid="uid://3nfcc3xyjx22" path="res://Scenes/oil.tscn" id="6_u3r7r"]
-[ext_resource type="Texture2D" uid="uid://krqp2oae4r21" path="res://Assets/skull.png" id="7_fo4ed"]
+[ext_resource type="PackedScene" uid="uid://cspg1aypev5t6" path="res://Scenes/skeleton_entity.tscn" id="7_fo4ed"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3tvqv"]
 texture = ExtResource("2_yebob")
@@ -206,6 +206,8 @@ position = Vector2(108, 60)
 [node name="Cell20" parent="." unique_id=1883810666 instance=ExtResource("3_b33kd")]
 position = Vector2(132, 60)
 
+[node name="SkeletonEntity" parent="Cell20" unique_id=1810888900 instance=ExtResource("7_fo4ed")]
+
 [node name="Cell21" parent="." unique_id=1976652902 instance=ExtResource("3_b33kd")]
 position = Vector2(156, 60)
 
@@ -336,7 +338,3 @@ position = Vector2(-132, -156)
 position = Vector2(156, 156)
 
 [node name="BlockedSpaceEmpty" parent="Cell49" unique_id=1218437304 instance=ExtResource("4_kcfa5")]
-
-[node name="Skull" type="Sprite2D" parent="." unique_id=8370968]
-position = Vector2(132, 60)
-texture = ExtResource("7_fo4ed")

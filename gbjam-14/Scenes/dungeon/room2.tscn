@@ -5,8 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://jiex14oru4b4" path="res://Scenes/cell.tscn" id="3_v6x5n"]
 [ext_resource type="PackedScene" uid="uid://b5wywj5lhajbv" path="res://Scenes/blocked_space_empty.tscn" id="4_iiabn"]
 [ext_resource type="PackedScene" uid="uid://c6mei0oqojpna" path="res://Scenes/transition_entity.tscn" id="5_7riq7"]
+[ext_resource type="PackedScene" uid="uid://cspg1aypev5t6" path="res://Scenes/skeleton_entity.tscn" id="5_iiabn"]
 [ext_resource type="PackedScene" uid="uid://cacp73d807kk3" path="res://Scenes/pickup_item_gem.tscn" id="5_v6x5n"]
-[ext_resource type="Texture2D" uid="uid://krqp2oae4r21" path="res://Assets/skull.png" id="6_wju3w"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3tvqv"]
 texture = ExtResource("2_wju3w")
@@ -110,6 +110,8 @@ position = Vector2(12, 36)
 [node name="Cell9" parent="." unique_id=1948724904 instance=ExtResource("3_v6x5n")]
 position = Vector2(36, 36)
 
+[node name="SkeletonEntity" parent="Cell9" unique_id=1810888900 instance=ExtResource("5_iiabn")]
+
 [node name="Cell10" parent="." unique_id=365036152 instance=ExtResource("3_v6x5n")]
 position = Vector2(60, 36)
 
@@ -143,6 +145,8 @@ position = Vector2(60, 60)
 
 [node name="Cell18" parent="." unique_id=1186138036 instance=ExtResource("3_v6x5n")]
 position = Vector2(84, 60)
+
+[node name="SkeletonEntity" parent="Cell18" unique_id=1482974173 instance=ExtResource("5_iiabn")]
 
 [node name="Cell19" parent="." unique_id=1495143057 instance=ExtResource("3_v6x5n")]
 position = Vector2(108, 60)
@@ -191,14 +195,6 @@ position = Vector2(156, 84)
 [node name="TransitionEntity" parent="Cell28" unique_id=535250151 instance=ExtResource("5_7riq7")]
 room_index = 1
 connected_location = Vector2(0, 3)
-
-[node name="Skull" type="Sprite2D" parent="Cell28" unique_id=987003368]
-position = Vector2(-120, -48)
-texture = ExtResource("6_wju3w")
-
-[node name="Skull2" type="Sprite2D" parent="Cell28" unique_id=1835998429]
-position = Vector2(-72, -24)
-texture = ExtResource("6_wju3w")
 
 [node name="Cell29" parent="." unique_id=1542226078 instance=ExtResource("3_v6x5n")]
 position = Vector2(12, 108)

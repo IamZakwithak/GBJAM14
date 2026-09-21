@@ -13,7 +13,7 @@ var dungeonAlive : bool = false
 var rooms : Array[Room] = []
 var buried_item_entity : PackedScene
 var last_player_movement_direction : Vector2i = Vector2i.ZERO
-var player_location :Vector2i = Vector2i.ZERO
+var player_location :Vector2 = Vector2.ZERO
 @export var default_dungeon_time = 0.5
 var special_timer = 0.0
 # Called when the node enters the scene tree for the first time.
@@ -22,8 +22,6 @@ func _ready() -> void:
 	player_took_action.connect(delay_to_dungeon_turn)
 	dungeon_come_to_life.connect(toggle_life_bool)
 	
-	for  i in rooms.size():
-		rooms[i].room_index = i
 
 func get_current_room() -> Room: 
 	return current_room

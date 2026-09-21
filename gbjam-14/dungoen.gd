@@ -10,7 +10,12 @@ func _ready() -> void:
 	RoomManager.current_room = rooms[0]
 	RoomManager.camera.position = RoomManager.current_room.position + Vector2(84,84)
 	RoomManager.buried_item_entity = buriedItemEntity
-	
+	init_room_indexes.call_deferred()
+
+func init_room_indexes() -> void: 
+	for  i in RoomManager.rooms.size():
+		print("Adding room ", i)
+		RoomManager.rooms[i].room_index = i
 
 	#camera.reparent(rooms[0])
 	#camera.position = rooms[0].position + Vector2(35,40)
