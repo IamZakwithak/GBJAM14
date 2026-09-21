@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cpba6iyv7m1co"]
+
+[ext_resource type="Script" uid="uid://1msjrn5wlsh5" path="res://Scripts/Entities/dart_spawner_entity.gd" id="1_o3cbg"]
+[ext_resource type="PackedScene" uid="uid://bqrvk2mfbbx00" path="res://dart_entity.tscn" id="2_8ootk"]
+
+[node name="DartSpawnerEntity" type="Node2D" unique_id=130212321]
+script = ExtResource("1_o3cbg")
+dart_spawn_direction = Vector2i(1, 0)
+entity_to_spawn = ExtResource("2_8ootk")
+metadata/_custom_type_script = "uid://1msjrn5wlsh5"
