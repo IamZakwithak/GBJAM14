@@ -151,7 +151,7 @@ position = Vector2(60, 36)
 position = Vector2(84, 36)
 
 [node name="button_entity" parent="Cell11" unique_id=827013727 instance=ExtResource("6_c77bo")]
-connected_cell = 21
+connected_cell = 22
 
 [node name="Cell12" parent="." unique_id=2067954930 instance=ExtResource("3_c77bo")]
 position = Vector2(108, 36)
@@ -270,7 +270,7 @@ position = Vector2(60, 132)
 position = Vector2(84, 132)
 
 [node name="button_entity" parent="Cell39" unique_id=1278557831 instance=ExtResource("6_c77bo")]
-connected_cell = 27
+connected_cell = 28
 
 [node name="Cell40" parent="." unique_id=2097313101 instance=ExtResource("3_c77bo")]
 position = Vector2(108, 132)
