@@ -12,4 +12,5 @@ func do_interaction() -> void:
 
 func drop_item_func() -> void:
 	RoomManager.dungeonAlive = false
+	RoomManager.dungeon_go_to_sleep.emit()
 	

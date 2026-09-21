@@ -9,11 +9,12 @@ func _ready() -> void:
 	move.performingEntity = self
 	RoomManager.dungeon_come_to_life.connect(toggle_skeleton_alive)
 	RoomManager.player_took_action.connect(choose_direction_and_move)
+	RoomManager.dungeon_go_to_sleep.connect(toggle_skeleton_alive)
 
 func toggle_skeleton_alive() -> void: 
 	if(myCell.myRoom.room_index == RoomManager.current_room.room_index):
 		if(!buried):
-			alive = !alive
+			alive = RoomManager.dungeonAlive
 			if(alive):
 				$ActiveSkeletonSprite.visible = true
 				$InnertSkeletonSprite.visible = false

@@ -135,8 +135,6 @@ position = Vector2(156, 12)
 [node name="Cell8" parent="." unique_id=1218550672 instance=ExtResource("3_pxqxu")]
 position = Vector2(12, 36)
 
-[node name="BlockedSpaceEmpty" parent="Cell8" unique_id=989287111 instance=ExtResource("4_tjj7i")]
-
 [node name="DartSpawnerEntity" parent="Cell8" unique_id=130212321 instance=ExtResource("6_pxqxu")]
 position = Vector2(200.51836, 67.288956)
 
@@ -297,8 +295,6 @@ position = Vector2(132, 132)
 
 [node name="Cell42" parent="." unique_id=1905399395 instance=ExtResource("3_pxqxu")]
 position = Vector2(156, 132)
-
-[node name="BlockedSpaceEmpty" parent="Cell42" unique_id=1644624671 instance=ExtResource("4_tjj7i")]
 
 [node name="DartSpawnerEntity" parent="Cell42" unique_id=326978148 instance=ExtResource("6_pxqxu")]
 dart_spawn_direction = Vector2i(-1, 0)
