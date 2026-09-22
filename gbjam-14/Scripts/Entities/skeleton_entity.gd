@@ -33,7 +33,7 @@ func choose_direction_and_move() -> void:
 				
 				
 				
-				move.direction =  Vector2i(1,0) if potential_cell_right.roomLocation.x - RoomManager.player_location.x <= potential_cell_left.roomLocation.x - RoomManager.player_location.x else Vector2i(-1,0)
+				move.direction =  Vector2i(1,0) if abs(potential_cell_right.roomLocation.x - RoomManager.player_location.x) <= abs(potential_cell_left.roomLocation.x - RoomManager.player_location.x) else Vector2i(-1,0)
 				var cell_to_move_to = RoomManager.get_current_room().get_cell(myCell.roomLocation.x + move.direction.x, myCell.roomLocation.y + move.direction.y )
 				print("Skeleton location is ", myCell.roomLocation, " and Player location is ", RoomManager.player_location)
 				print("Distance 1 to right is ", potential_cell_right.roomLocation.x - RoomManager.player_location.x, " Distance 1 to left is ", potential_cell_left.roomLocation.x - RoomManager.player_location.x)
@@ -43,12 +43,12 @@ func choose_direction_and_move() -> void:
 					move.do_action()
 					
 			else: 
-				var potential_cell_up = RoomManager.get_current_room().get_cell(myCell.roomLocation.x, myCell.roomLocation.y - 1)
-				var potential_cell_down = RoomManager.get_current_room().get_cell(myCell.roomLocation.x, myCell.roomLocation.y + 1)
+				var potential_cell_up = RoomManager.get_current_room().get_cell(myCell.roomLocation.x, myCell.roomLocation.y + 1)
+				var potential_cell_down = RoomManager.get_current_room().get_cell(myCell.roomLocation.x, myCell.roomLocation.y - 1)
 				print("Skeleton location is ", myCell.roomLocation, " and Player location is ", RoomManager.player_location)
 				print("Distance 1 to up is ", potential_cell_up.roomLocation.y - RoomManager.player_location.y, " Distance 1 to down is ", potential_cell_down.roomLocation.x - RoomManager.player_location.x)
 
-				move.direction =  Vector2i(0,1) if potential_cell_up.roomLocation.y - RoomManager.player_location.y <= potential_cell_down.roomLocation.y - RoomManager.player_location.y else Vector2i(0, -1)
+				move.direction =  Vector2i(0,-1) if abs(potential_cell_down.roomLocation.y - RoomManager.player_location.y) <= abs(potential_cell_up.roomLocation.y - RoomManager.player_location.y) else Vector2i(0, 1)
 				var cell_to_move_to = RoomManager.get_current_room().get_cell(myCell.roomLocation.x + move.direction.x, myCell.roomLocation.y + move.direction.y)
 				if(cell_to_move_to == null || !cell_to_move_to.check_can_entity_enter(self)):
 					move.direction = Vector2i(0,0)

@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://jiex14oru4b4" path="res://Scenes/cell.tscn" id="3_5l1tn"]
 [ext_resource type="PackedScene" uid="uid://b5wywj5lhajbv" path="res://Scenes/blocked_space_empty.tscn" id="4_c32rj"]
 [ext_resource type="PackedScene" uid="uid://c6mei0oqojpna" path="res://Scenes/transition_entity.tscn" id="5_0vo5i"]
+[ext_resource type="PackedScene" uid="uid://24057h8ndbi4" path="res://Scenes/floor_bury_switch.tscn" id="6_5l1tn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3tvqv"]
 texture = ExtResource("2_0vo5i")
@@ -102,6 +103,7 @@ position = Vector2(84, 12)
 [node name="TransitionEntity" parent="Cell4" unique_id=1028845239 instance=ExtResource("5_0vo5i")]
 room_index = 4
 connected_location = Vector2(3, 6)
+is_locked = true
 
 [node name="Cell5" parent="." unique_id=1060079539 instance=ExtResource("3_5l1tn")]
 position = Vector2(108, 12)
@@ -154,8 +156,7 @@ position = Vector2(156, 36)
 [node name="Cell15" parent="." unique_id=1200068339 instance=ExtResource("3_5l1tn")]
 position = Vector2(12, 60)
 
-[node name="BlockedSpaceEmpty" parent="Cell15" unique_id=1640436598 instance=ExtResource("4_c32rj")]
-position = Vector2(-12, -60)
+[node name="BlockedSpaceEmpty" parent="Cell15" unique_id=824015647 instance=ExtResource("4_c32rj")]
 
 [node name="Cell16" parent="." unique_id=1255017437 instance=ExtResource("3_5l1tn")]
 position = Vector2(36, 60)
@@ -197,6 +198,9 @@ position = Vector2(60, 84)
 [node name="Cell25" parent="." unique_id=69082552 instance=ExtResource("3_5l1tn")]
 position = Vector2(84, 84)
 
+[node name="FloorBurySwitch" parent="Cell25" unique_id=658664210 instance=ExtResource("6_5l1tn")]
+connected_cell = 4
+
 [node name="Cell26" parent="." unique_id=222471247 instance=ExtResource("3_5l1tn")]
 position = Vector2(108, 84)
 
@@ -211,8 +215,7 @@ position = Vector2(156, 84)
 [node name="Cell29" parent="." unique_id=1542226078 instance=ExtResource("3_5l1tn")]
 position = Vector2(12, 108)
 
-[node name="BlockedSpaceEmpty" parent="Cell29" unique_id=204202115 instance=ExtResource("4_c32rj")]
-position = Vector2(-12, -108)
+[node name="BlockedSpaceEmpty" parent="Cell29" unique_id=357351365 instance=ExtResource("4_c32rj")]
 
 [node name="Cell30" parent="." unique_id=1645255929 instance=ExtResource("3_5l1tn")]
 position = Vector2(36, 108)
@@ -299,8 +302,7 @@ position = Vector2(108, 156)
 [node name="Cell48" parent="." unique_id=1312083379 instance=ExtResource("3_5l1tn")]
 position = Vector2(132, 156)
 
-[node name="BlockedSpaceEmpty" parent="Cell48" unique_id=942512053 instance=ExtResource("4_c32rj")]
-position = Vector2(-132, -156)
+[node name="BlockedSpaceEmpty" parent="Cell48" unique_id=2052405453 instance=ExtResource("4_c32rj")]
 
 [node name="Cell49" parent="." unique_id=364970960 instance=ExtResource("3_5l1tn")]
 position = Vector2(156, 156)

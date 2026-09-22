@@ -4,6 +4,8 @@ extends Entity
 @export var connected_location : Vector2
 @export var is_locked : bool 
 
+@onready var sprite_2d: Sprite2D = $Sprite2D
+
 var other_room : Room 
 
 func _ready() -> void:
@@ -14,6 +16,10 @@ func set_other_room() -> void:
 		other_room = RoomManager.rooms[room_index]
 		myCell.entity_enter.connect(change_room)
 
+func can_entity_enter(entering_entity: Entity) -> bool:
+	if self.is_locked == true:
+		return false
+	return true
 
 func transition_condition_met(entering_entity : Player) -> bool:
 	var possible_key

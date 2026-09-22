@@ -136,7 +136,6 @@ position = Vector2(156, 12)
 position = Vector2(12, 36)
 
 [node name="DartSpawnerEntity" parent="Cell8" unique_id=130212321 instance=ExtResource("6_pxqxu")]
-position = Vector2(200.51836, 67.288956)
 
 [node name="Cell9" parent="." unique_id=1948724904 instance=ExtResource("3_pxqxu")]
 position = Vector2(36, 36)
@@ -169,8 +168,7 @@ position = Vector2(156, 36)
 [node name="Cell15" parent="." unique_id=1200068339 instance=ExtResource("3_pxqxu")]
 position = Vector2(12, 60)
 
-[node name="BlockedSpaceEmpty" parent="Cell15" unique_id=1640436598 instance=ExtResource("4_tjj7i")]
-position = Vector2(-12, -60)
+[node name="BlockedSpaceEmpty" parent="Cell15" unique_id=1967498463 instance=ExtResource("4_tjj7i")]
 
 [node name="Cell16" parent="." unique_id=1255017437 instance=ExtResource("3_pxqxu")]
 position = Vector2(36, 60)
@@ -200,7 +198,7 @@ position = Vector2(156, 60)
 position = Vector2(12, 84)
 
 [node name="TransitionEntity" parent="Cell22" unique_id=823577213 instance=ExtResource("5_v36ha")]
-room_index = 11
+room_index = 10
 connected_location = Vector2(6, 3)
 
 [node name="Cell23" parent="." unique_id=20660574 instance=ExtResource("3_pxqxu")]
@@ -327,8 +325,7 @@ position = Vector2(108, 156)
 [node name="Cell48" parent="." unique_id=1312083379 instance=ExtResource("3_pxqxu")]
 position = Vector2(132, 156)
 
-[node name="BlockedSpaceEmpty" parent="Cell48" unique_id=942512053 instance=ExtResource("4_tjj7i")]
-position = Vector2(-132, -156)
+[node name="BlockedSpaceEmpty" parent="Cell48" unique_id=65752952 instance=ExtResource("4_tjj7i")]
 
 [node name="Cell49" parent="." unique_id=364970960 instance=ExtResource("3_pxqxu")]
 position = Vector2(156, 156)

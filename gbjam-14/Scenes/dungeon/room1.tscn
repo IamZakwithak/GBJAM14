@@ -137,8 +137,7 @@ position = Vector2(156, 36)
 [node name="Cell15" parent="." unique_id=1200068339 instance=ExtResource("3_g5loc")]
 position = Vector2(12, 60)
 
-[node name="BlockedSpaceEmpty" parent="Cell15" unique_id=1640436598 instance=ExtResource("4_0qajc")]
-position = Vector2(-12, -60)
+[node name="BlockedSpaceEmpty" parent="Cell15" unique_id=825253620 instance=ExtResource("4_0qajc")]
 
 [node name="Cell16" parent="." unique_id=1255017437 instance=ExtResource("3_g5loc")]
 position = Vector2(36, 60)
@@ -193,10 +192,10 @@ diggable = true
 position = Vector2(108, 84)
 diggable = true
 
-[node name="SkeletonEntity" parent="Cell26" unique_id=1810888900 instance=ExtResource("7_g5loc")]
-
 [node name="Cell27" parent="." unique_id=1196367126 instance=ExtResource("3_g5loc")]
 position = Vector2(132, 84)
+
+[node name="SkeletonEntity" parent="Cell27" unique_id=1810888900 instance=ExtResource("7_g5loc")]
 
 [node name="Cell28" parent="." unique_id=1349596911 instance=ExtResource("3_g5loc")]
 position = Vector2(156, 84)
@@ -208,8 +207,7 @@ connected_location = Vector2(0, 3)
 [node name="Cell29" parent="." unique_id=1542226078 instance=ExtResource("3_g5loc")]
 position = Vector2(12, 108)
 
-[node name="BlockedSpaceEmpty" parent="Cell29" unique_id=204202115 instance=ExtResource("4_0qajc")]
-position = Vector2(-12, -108)
+[node name="BlockedSpaceEmpty" parent="Cell29" unique_id=1281118095 instance=ExtResource("4_0qajc")]
 
 [node name="Cell30" parent="." unique_id=1645255929 instance=ExtResource("3_g5loc")]
 position = Vector2(36, 108)
@@ -227,8 +225,7 @@ position = Vector2(84, 108)
 [node name="Cell33" parent="." unique_id=1851508815 instance=ExtResource("3_g5loc")]
 position = Vector2(108, 108)
 
-[node name="BlockedSpaceEmpty" parent="Cell33" unique_id=307562816 instance=ExtResource("4_0qajc")]
-position = Vector2(-108, -108)
+[node name="BlockedSpaceEmpty" parent="Cell33" unique_id=108264402 instance=ExtResource("4_0qajc")]
 
 [node name="Cell34" parent="." unique_id=673038429 instance=ExtResource("3_g5loc")]
 position = Vector2(132, 108)
@@ -252,8 +249,7 @@ position = Vector2(36, 132)
 [node name="Cell38" parent="." unique_id=430911311 instance=ExtResource("3_g5loc")]
 position = Vector2(60, 132)
 
-[node name="BlockedSpaceEmpty" parent="Cell38" unique_id=1534945149 instance=ExtResource("4_0qajc")]
-position = Vector2(-60, -132)
+[node name="BlockedSpaceEmpty" parent="Cell38" unique_id=1331634350 instance=ExtResource("4_0qajc")]
 
 [node name="Cell39" parent="." unique_id=1145412234 instance=ExtResource("3_g5loc")]
 position = Vector2(84, 132)

@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://24057h8ndbi4"]
+
+[ext_resource type="Script" uid="uid://4i5lt7e7g22n" path="res://Scripts/Entities/Floor_Bury_Switch.gd" id="1_gff3y"]
+[ext_resource type="Texture2D" uid="uid://bw33lmjwaw52x" path="res://Assets/dungeon_tileset.png" id="2_2mioe"]
+
+[node name="FloorBurySwitch" type="Node2D" unique_id=658664210]
+script = ExtResource("1_gff3y")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1846925248]
+texture = ExtResource("2_2mioe")
+hframes = 14
+vframes = 7
+frame = 27

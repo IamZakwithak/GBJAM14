@@ -132,8 +132,7 @@ position = Vector2(156, 36)
 [node name="Cell15" parent="." unique_id=1200068339 instance=ExtResource("3_v6x5n")]
 position = Vector2(12, 60)
 
-[node name="BlockedSpaceEmpty" parent="Cell15" unique_id=1640436598 instance=ExtResource("4_iiabn")]
-position = Vector2(-12, -60)
+[node name="BlockedSpaceEmpty" parent="Cell15" unique_id=530620578 instance=ExtResource("4_iiabn")]
 
 [node name="Cell16" parent="." unique_id=1255017437 instance=ExtResource("3_v6x5n")]
 position = Vector2(36, 60)
@@ -153,6 +152,8 @@ position = Vector2(108, 60)
 
 [node name="Cell20" parent="." unique_id=1883810666 instance=ExtResource("3_v6x5n")]
 position = Vector2(132, 60)
+
+[node name="BlockedSpaceEmpty" parent="Cell20" unique_id=1442665978 instance=ExtResource("4_iiabn")]
 
 [node name="Cell21" parent="." unique_id=1976652902 instance=ExtResource("3_v6x5n")]
 position = Vector2(156, 60)
@@ -199,8 +200,7 @@ connected_location = Vector2(0, 3)
 [node name="Cell29" parent="." unique_id=1542226078 instance=ExtResource("3_v6x5n")]
 position = Vector2(12, 108)
 
-[node name="BlockedSpaceEmpty" parent="Cell29" unique_id=204202115 instance=ExtResource("4_iiabn")]
-position = Vector2(-12, -108)
+[node name="BlockedSpaceEmpty" parent="Cell29" unique_id=1186760526 instance=ExtResource("4_iiabn")]
 
 [node name="Cell30" parent="." unique_id=1645255929 instance=ExtResource("3_v6x5n")]
 position = Vector2(36, 108)
@@ -288,8 +288,7 @@ position = Vector2(108, 156)
 [node name="Cell48" parent="." unique_id=1312083379 instance=ExtResource("3_v6x5n")]
 position = Vector2(132, 156)
 
-[node name="BlockedSpaceEmpty" parent="Cell48" unique_id=942512053 instance=ExtResource("4_iiabn")]
-position = Vector2(-132, -156)
+[node name="BlockedSpaceEmpty" parent="Cell48" unique_id=1738551797 instance=ExtResource("4_iiabn")]
 
 [node name="Cell49" parent="." unique_id=364970960 instance=ExtResource("3_v6x5n")]
 position = Vector2(156, 156)

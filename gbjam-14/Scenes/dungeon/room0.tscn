@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://b5wywj5lhajbv" path="res://Scenes/blocked_space_empty.tscn" id="4_kyph1"]
 [ext_resource type="PackedScene" uid="uid://chf1nksskaewi" path="res://Scenes/player.tscn" id="5_o3u5f"]
 [ext_resource type="PackedScene" uid="uid://c6mei0oqojpna" path="res://Scenes/transition_entity.tscn" id="5_pm3mn"]
+[ext_resource type="PackedScene" uid="uid://dv7crv6h2soai" path="res://Scenes/pickup_item_tennis_ball.tscn" id="6_kyph1"]
+[ext_resource type="PackedScene" uid="uid://cqp1c5gt3q8xw" path="res://Scenes/win_game_switch.tscn" id="7_j38w1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3tvqv"]
 texture = ExtResource("2_pm3mn")
@@ -130,8 +132,7 @@ position = Vector2(156, 36)
 [node name="Cell15" parent="." unique_id=1200068339 instance=ExtResource("3_j38w1")]
 position = Vector2(12, 60)
 
-[node name="BlockedSpaceEmpty" parent="Cell15" unique_id=1640436598 instance=ExtResource("4_kyph1")]
-position = Vector2(-12, -60)
+[node name="BlockedSpaceEmpty" parent="Cell15" unique_id=1113879462 instance=ExtResource("4_kyph1")]
 
 [node name="Cell16" parent="." unique_id=1255017437 instance=ExtResource("3_j38w1")]
 position = Vector2(36, 60)
@@ -197,8 +198,7 @@ position = Vector2(156, 84)
 [node name="Cell29" parent="." unique_id=1542226078 instance=ExtResource("3_j38w1")]
 position = Vector2(12, 108)
 
-[node name="BlockedSpaceEmpty" parent="Cell29" unique_id=204202115 instance=ExtResource("4_kyph1")]
-position = Vector2(-12, -108)
+[node name="BlockedSpaceEmpty" parent="Cell29" unique_id=1073175923 instance=ExtResource("4_kyph1")]
 
 [node name="Cell30" parent="." unique_id=1645255929 instance=ExtResource("3_j38w1")]
 position = Vector2(36, 108)
@@ -211,6 +211,10 @@ position = Vector2(60, 108)
 [node name="Cell32" parent="." unique_id=1630900169 instance=ExtResource("3_j38w1")]
 position = Vector2(84, 108)
 diggable = true
+
+[node name="PickupItemTennisBall" parent="Cell32" unique_id=978163483 instance=ExtResource("6_kyph1")]
+interactable = true
+pickupable = true
 
 [node name="Cell33" parent="." unique_id=1851508815 instance=ExtResource("3_j38w1")]
 position = Vector2(108, 108)
@@ -243,6 +247,8 @@ diggable = true
 
 [node name="Player" parent="Cell39" unique_id=386189924 instance=ExtResource("5_o3u5f")]
 
+[node name="WinGameSwitch" parent="Cell39" unique_id=1670442376 instance=ExtResource("7_j38w1")]
+
 [node name="Cell40" parent="." unique_id=2097313101 instance=ExtResource("3_j38w1")]
 position = Vector2(108, 132)
 diggable = true
@@ -273,7 +279,10 @@ position = Vector2(60, 156)
 [node name="Cell46" parent="." unique_id=680218199 instance=ExtResource("3_j38w1")]
 position = Vector2(84, 156)
 
-[node name="BlockedSpaceEmpty" parent="Cell46" unique_id=660504908 instance=ExtResource("4_kyph1")]
+[node name="TransitionEntity" parent="Cell46" unique_id=1380067726 instance=ExtResource("5_pm3mn")]
+room_index = 1
+connected_location = Vector2(3, 6)
+is_locked = true
 
 [node name="Cell47" parent="." unique_id=1795773267 instance=ExtResource("3_j38w1")]
 position = Vector2(108, 156)
@@ -283,8 +292,7 @@ position = Vector2(108, 156)
 [node name="Cell48" parent="." unique_id=1312083379 instance=ExtResource("3_j38w1")]
 position = Vector2(132, 156)
 
-[node name="BlockedSpaceEmpty" parent="Cell48" unique_id=942512053 instance=ExtResource("4_kyph1")]
-position = Vector2(-132, -156)
+[node name="BlockedSpaceEmpty" parent="Cell48" unique_id=776773747 instance=ExtResource("4_kyph1")]
 
 [node name="Cell49" parent="." unique_id=364970960 instance=ExtResource("3_j38w1")]
 position = Vector2(156, 156)

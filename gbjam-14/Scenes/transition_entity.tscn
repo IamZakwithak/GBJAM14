@@ -1,6 +1,14 @@
 [gd_scene format=3 uid="uid://c6mei0oqojpna"]
 
 [ext_resource type="Script" uid="uid://c2w52i7i0swyt" path="res://Scripts/Entities/transition_entity.gd" id="1_dr1qp"]
+[ext_resource type="Texture2D" uid="uid://bw33lmjwaw52x" path="res://Assets/dungeon_tileset.png" id="2_cy5tx"]
 
 [node name="TransitionEntity" type="Node2D" unique_id=1028845239]
 script = ExtResource("1_dr1qp")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1425812338]
+z_index = 2
+texture = ExtResource("2_cy5tx")
+hframes = 14
+vframes = 7
+frame = 25

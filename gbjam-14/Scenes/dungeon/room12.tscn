@@ -5,6 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://jiex14oru4b4" path="res://Scenes/cell.tscn" id="4_4u7w5"]
 [ext_resource type="PackedScene" uid="uid://b5wywj5lhajbv" path="res://Scenes/blocked_space_empty.tscn" id="5_kt7h1"]
 [ext_resource type="PackedScene" uid="uid://cacp73d807kk3" path="res://Scenes/pickup_item_gem.tscn" id="5_lllpq"]
+[ext_resource type="PackedScene" uid="uid://3nfcc3xyjx22" path="res://Scenes/oil.tscn" id="6_o8y3s"]
+[ext_resource type="PackedScene" uid="uid://cpba6iyv7m1co" path="res://dart_spawner_entity.tscn" id="7_c62aj"]
 [ext_resource type="PackedScene" uid="uid://c6mei0oqojpna" path="res://Scenes/transition_entity.tscn" id="7_cr3b2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3tvqv"]
@@ -172,10 +174,12 @@ position = Vector2(60, 36)
 [node name="Cell11" parent="." unique_id=14415940 instance=ExtResource("4_4u7w5")]
 position = Vector2(84, 36)
 
+[node name="Oil" parent="Cell11" unique_id=321999121 instance=ExtResource("6_o8y3s")]
+
 [node name="Cell12" parent="." unique_id=2067954930 instance=ExtResource("4_4u7w5")]
 position = Vector2(108, 36)
 
-[node name="BlockedSpaceEmpty" parent="Cell12" unique_id=296867589 instance=ExtResource("5_kt7h1")]
+[node name="Oil" parent="Cell12" unique_id=632624109 instance=ExtResource("6_o8y3s")]
 
 [node name="Cell13" parent="." unique_id=49855693 instance=ExtResource("4_4u7w5")]
 position = Vector2(132, 36)
@@ -190,8 +194,7 @@ position = Vector2(156, 36)
 [node name="Cell15" parent="." unique_id=1200068339 instance=ExtResource("4_4u7w5")]
 position = Vector2(12, 60)
 
-[node name="BlockedSpaceEmpty" parent="Cell15" unique_id=1640436598 instance=ExtResource("5_kt7h1")]
-position = Vector2(-12, -60)
+[node name="DartSpawnerEntity" parent="Cell15" unique_id=130212321 instance=ExtResource("7_c62aj")]
 
 [node name="Cell16" parent="." unique_id=1255017437 instance=ExtResource("4_4u7w5")]
 position = Vector2(36, 60)
@@ -212,16 +215,22 @@ position = Vector2(108, 60)
 [node name="Cell20" parent="." unique_id=1883810666 instance=ExtResource("4_4u7w5")]
 position = Vector2(132, 60)
 
+[node name="Oil" parent="Cell20" unique_id=1286064634 instance=ExtResource("6_o8y3s")]
+
 [node name="Cell21" parent="." unique_id=1976652902 instance=ExtResource("4_4u7w5")]
 position = Vector2(156, 60)
 
-[node name="BlockedSpaceEmpty" parent="Cell21" unique_id=1978986771 instance=ExtResource("5_kt7h1")]
+[node name="DartSpawnerEntity" parent="Cell21" unique_id=469327249 instance=ExtResource("7_c62aj")]
 
 [node name="Cell22" parent="." unique_id=1661378465 instance=ExtResource("4_4u7w5")]
 position = Vector2(12, 84)
 
+[node name="BlockedSpaceEmpty" parent="Cell22" unique_id=143686556 instance=ExtResource("5_kt7h1")]
+
 [node name="Cell23" parent="." unique_id=20660574 instance=ExtResource("4_4u7w5")]
 position = Vector2(36, 84)
+
+[node name="Oil" parent="Cell23" unique_id=1102071513 instance=ExtResource("6_o8y3s")]
 
 [node name="Cell24" parent="." unique_id=184295922 instance=ExtResource("4_4u7w5")]
 position = Vector2(60, 84)
@@ -235,6 +244,8 @@ position = Vector2(108, 84)
 [node name="Cell27" parent="." unique_id=1196367126 instance=ExtResource("4_4u7w5")]
 position = Vector2(132, 84)
 
+[node name="Oil" parent="Cell27" unique_id=1035437164 instance=ExtResource("6_o8y3s")]
+
 [node name="Cell28" parent="." unique_id=1349596911 instance=ExtResource("4_4u7w5")]
 position = Vector2(156, 84)
 
@@ -246,8 +257,7 @@ is_locked = true
 [node name="Cell29" parent="." unique_id=1542226078 instance=ExtResource("4_4u7w5")]
 position = Vector2(12, 108)
 
-[node name="BlockedSpaceEmpty" parent="Cell29" unique_id=204202115 instance=ExtResource("5_kt7h1")]
-position = Vector2(-12, -108)
+[node name="DartSpawnerEntity" parent="Cell29" unique_id=2095784107 instance=ExtResource("7_c62aj")]
 
 [node name="Cell30" parent="." unique_id=1645255929 instance=ExtResource("4_4u7w5")]
 position = Vector2(36, 108)
@@ -268,10 +278,13 @@ position = Vector2(108, 108)
 [node name="Cell34" parent="." unique_id=673038429 instance=ExtResource("4_4u7w5")]
 position = Vector2(132, 108)
 
+[node name="Oil" parent="Cell34" unique_id=967541593 instance=ExtResource("6_o8y3s")]
+
 [node name="Cell35" parent="." unique_id=696004137 instance=ExtResource("4_4u7w5")]
 position = Vector2(156, 108)
 
-[node name="BlockedSpaceEmpty" parent="Cell35" unique_id=889701230 instance=ExtResource("5_kt7h1")]
+[node name="DartSpawnerEntity" parent="Cell35" unique_id=1808769627 instance=ExtResource("7_c62aj")]
+dart_spawn_direction = Vector2i(-1, 0)
 
 [node name="Cell36" parent="." unique_id=728120145 instance=ExtResource("4_4u7w5")]
 position = Vector2(12, 132)
@@ -290,6 +303,8 @@ position = Vector2(60, 132)
 
 [node name="Cell39" parent="." unique_id=1145412234 instance=ExtResource("4_4u7w5")]
 position = Vector2(84, 132)
+
+[node name="Oil" parent="Cell39" unique_id=598522769 instance=ExtResource("6_o8y3s")]
 
 [node name="Cell40" parent="." unique_id=2097313101 instance=ExtResource("4_4u7w5")]
 position = Vector2(108, 132)
@@ -332,8 +347,7 @@ position = Vector2(108, 156)
 [node name="Cell48" parent="." unique_id=1312083379 instance=ExtResource("4_4u7w5")]
 position = Vector2(132, 156)
 
-[node name="BlockedSpaceEmpty" parent="Cell48" unique_id=942512053 instance=ExtResource("5_kt7h1")]
-position = Vector2(-132, -156)
+[node name="BlockedSpaceEmpty" parent="Cell48" unique_id=433105905 instance=ExtResource("5_kt7h1")]
 
 [node name="Cell49" parent="." unique_id=364970960 instance=ExtResource("4_4u7w5")]
 position = Vector2(156, 156)
