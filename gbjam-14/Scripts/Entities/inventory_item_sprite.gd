@@ -1,5 +1,6 @@
 extends Sprite2D
 
+
 func _process(_delta:float) -> void:
 	var player_ref = get_tree().get_first_node_in_group("Player")
 	if is_instance_valid(player_ref.inventory_item):
