@@ -399,6 +399,8 @@ parameters/StateMachine/MoveState/BarkState/blend_position = Vector2(0.14486396,
 parameters/StateMachine/MoveState/RunState/blend_position = Vector2(-0.0008779764, -1.0091324)
 parameters/StateMachine/MoveState/StandState/blend_position = Vector2(0.004389763, 0.15068495)
 
+[node name="SFX_Misc" type="AudioStreamPlayer2D" parent="." unique_id=858695756]
+
 [node name="SFX_Footstep" type="AudioStreamPlayer2D" parent="." unique_id=1706732541]
 stream = ExtResource("3_vgqql")
 

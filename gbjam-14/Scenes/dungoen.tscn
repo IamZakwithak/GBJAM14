@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://f1ncuswm8est"]
 
 [ext_resource type="Script" uid="uid://drisiesox8e1k" path="res://dungoen.gd" id="1_wl3w2"]
-[ext_resource type="AudioStream" uid="uid://ce3486ry6cm5t" path="res://Audio/Dungeon_Quiet.wav" id="2_1u6eg"]
+[ext_resource type="AudioStream" uid="uid://fqtia57b158u" path="res://Audio/Dungeon_Quiet.wav" id="2_1u6eg"]
 [ext_resource type="PackedScene" uid="uid://dxemskt0yjehy" path="res://buried_item_entity.tscn" id="2_6qhvx"]
 [ext_resource type="PackedScene" uid="uid://cf4ookf2875nn" path="res://Scenes/dungeon/room0.tscn" id="2_jxry8"]
 [ext_resource type="PackedScene" uid="uid://b88ru0uhw0rx0" path="res://Scenes/Turn_Coin.tscn" id="3_6qhvx"]
