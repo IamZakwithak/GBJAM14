@@ -6,6 +6,7 @@ signal return_action_to_player
 signal room_changed
 signal dungeon_come_to_life
 signal dungeon_go_to_sleep
+signal game_over
 
 var camera : Camera2D
 var current_room : Room
@@ -16,11 +17,13 @@ var last_player_movement_direction : Vector2i = Vector2i.ZERO
 var player_location :Vector2 = Vector2.ZERO
 @export var default_dungeon_time = 0.5
 var special_timer = 0.0
+var game_over_screen : Sprite2D 
 # Called when the node enters the scene tree for the first time.
 
 func _ready() -> void:
 	player_took_action.connect(delay_to_dungeon_turn)
 	dungeon_come_to_life.connect(toggle_life_bool)
+	deferred_stuff.call_deferred()	
 	
 
 func get_current_room() -> Room: 
@@ -32,7 +35,17 @@ func delay_to_dungeon_turn () -> void:
 	var time_to_wait = special_timer if special_timer != 0.0 else default_dungeon_time
 	await get_tree().create_timer(special_timer).timeout
 	return_action_to_player.emit()
+	
+func deferred_stuff() -> void: 
+	game_over_screen = camera.get_child(0) as Sprite2D
+	reset_game()
 
 func toggle_life_bool() -> void: 
 	dungeonAlive = true
+
+func trigger_game_over() -> void: 
+	game_over_screen.visible = true
+
+func reset_game() -> void: 
+	game_over_screen.visible = false
 	

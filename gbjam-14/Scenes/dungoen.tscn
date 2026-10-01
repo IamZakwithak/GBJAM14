@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dxemskt0yjehy" path="res://buried_item_entity.tscn" id="2_6qhvx"]
 [ext_resource type="PackedScene" uid="uid://cf4ookf2875nn" path="res://Scenes/dungeon/room0.tscn" id="2_jxry8"]
 [ext_resource type="PackedScene" uid="uid://b88ru0uhw0rx0" path="res://Scenes/Turn_Coin.tscn" id="3_6qhvx"]
+[ext_resource type="Texture2D" uid="uid://dpegdfwlpxtii" path="res://Assets/GameOverScreen.png" id="3_cpgjk"]
 [ext_resource type="PackedScene" uid="uid://u0t2baiof7k5" path="res://Scenes/dungeon/room1.tscn" id="3_vrxpb"]
 [ext_resource type="PackedScene" uid="uid://ctxiuelty7hcd" path="res://Scenes/dungeon/room2.tscn" id="4_vrxpb"]
 [ext_resource type="PackedScene" uid="uid://b34aajr1iufll" path="res://Scenes/dungeon/room3.tscn" id="5_jms7k"]
@@ -29,6 +30,11 @@ buriedItemEntity = ExtResource("2_6qhvx")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1089095286]
 position = Vector2(4, 7)
+
+[node name="GameOverScreen" type="Sprite2D" parent="Camera2D" unique_id=1050932405]
+visible = false
+position = Vector2(-4, -7)
+texture = ExtResource("3_cpgjk")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=553217193]
 position = Vector2(4, 7)

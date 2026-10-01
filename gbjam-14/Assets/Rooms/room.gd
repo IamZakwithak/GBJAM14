@@ -9,6 +9,14 @@ var room_index : int
 func _ready() -> void:
 	for i in grid.size():
 		grid[i].roomLocation = Vector2(i % grid_width, i / grid_width)	
+		if(grid[i].occupyingEntity != null ):
+				RoomManager.game_over.connect(grid[i].occupyingEntity.toggle_visible.bind(false))
+		if(grid[i].pickupableEntity != null):
+				RoomManager.game_over.connect(grid[i].pickupableEntity.toggle_visible.bind(false))
+		if(grid[i].overlappedEntity != null):
+				RoomManager.game_over.connect(grid[i].overlappedEntity.toggle_visible.bind(false))
+
+
 
 func set_cell(cell_to_put: Cell, x : int,y : int) -> void :
 	var index = x + (y * grid_width)

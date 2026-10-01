@@ -16,3 +16,6 @@ func can_entity_enter(entering_entity: Entity) -> bool:
 	
 func take_turn() -> void: 
 	pass
+
+func toggle_visible(visible : bool) -> void: 
+	self.visible = visible

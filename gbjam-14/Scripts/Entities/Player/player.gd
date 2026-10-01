@@ -24,6 +24,7 @@ func _ready() -> void:
 	interact.performingPlayer = self
 	RoomManager.current_room = get_parent().get_parent()
 	RoomManager.return_action_to_player.connect(player_turn_again)
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _unhandled_input(event: InputEvent) -> void:
@@ -78,3 +79,8 @@ func player_turn_again() -> void:
 
 func _on_sfx_bark_finished() -> void:
 	isbarking = false
+
+func can_entity_enter(entering_entity: Entity) -> bool:
+	if entering_entity is SkeletonEntity || entering_entity is DartEntity : 
+		RoomManager.trigger_game_over()
+	return true

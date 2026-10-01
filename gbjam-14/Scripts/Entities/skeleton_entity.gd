@@ -13,14 +13,17 @@ func _ready() -> void:
 
 func toggle_skeleton_alive() -> void: 
 	if(myCell.myRoom.room_index == RoomManager.current_room.room_index):
-		if(!buried):
 			alive = RoomManager.dungeonAlive
 			if(alive):
 				$ActiveSkeletonSprite.visible = true
 				$InnertSkeletonSprite.visible = false
+				myCell.buriedEntity = null
+				myCell.occupyingEntity = self 
+				pickupable = false
 			else:
 				$ActiveSkeletonSprite.visible = false
 				$InnertSkeletonSprite.visible = true
+				pickupable = true
 
 
 
