@@ -34,9 +34,10 @@ func choose_direction_and_move() -> void:
 				var potential_cell_left = RoomManager.get_current_room().get_cell(myCell.roomLocation.x - 1, myCell.roomLocation.y)
 				var potential_cell_right = RoomManager.get_current_room().get_cell(myCell.roomLocation.x + 1, myCell.roomLocation.y)
 				
-				
-				
-				move.direction =  Vector2i(1,0) if abs(potential_cell_right.roomLocation.x - RoomManager.player_location.x) <= abs(potential_cell_left.roomLocation.x - RoomManager.player_location.x) else Vector2i(-1,0)
+				if abs(potential_cell_right.roomLocation.x - RoomManager.player_location.x) == abs(potential_cell_left.roomLocation.x - RoomManager.player_location.x):
+					move.direction = Vector2i(0,0)
+				else :
+					move.direction =  Vector2i(1,0) if abs(potential_cell_right.roomLocation.x - RoomManager.player_location.x) < abs(potential_cell_left.roomLocation.x - RoomManager.player_location.x) else Vector2i(-1,0)
 				var cell_to_move_to = RoomManager.get_current_room().get_cell(myCell.roomLocation.x + move.direction.x, myCell.roomLocation.y + move.direction.y )
 				print("Skeleton location is ", myCell.roomLocation, " and Player location is ", RoomManager.player_location)
 				print("Distance 1 to right is ", potential_cell_right.roomLocation.x - RoomManager.player_location.x, " Distance 1 to left is ", potential_cell_left.roomLocation.x - RoomManager.player_location.x)

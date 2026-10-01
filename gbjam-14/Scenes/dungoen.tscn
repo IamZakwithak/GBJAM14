@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cf4ookf2875nn" path="res://Scenes/dungeon/room0.tscn" id="2_jxry8"]
 [ext_resource type="PackedScene" uid="uid://b88ru0uhw0rx0" path="res://Scenes/Turn_Coin.tscn" id="3_6qhvx"]
 [ext_resource type="Texture2D" uid="uid://dpegdfwlpxtii" path="res://Assets/GameOverScreen.png" id="3_cpgjk"]
+[ext_resource type="PackedScene" uid="uid://7c4stq00n4iq" path="res://game_over_screen.tscn" id="3_imre1"]
 [ext_resource type="PackedScene" uid="uid://u0t2baiof7k5" path="res://Scenes/dungeon/room1.tscn" id="3_vrxpb"]
 [ext_resource type="PackedScene" uid="uid://ctxiuelty7hcd" path="res://Scenes/dungeon/room2.tscn" id="4_vrxpb"]
 [ext_resource type="PackedScene" uid="uid://b34aajr1iufll" path="res://Scenes/dungeon/room3.tscn" id="5_jms7k"]
@@ -27,6 +28,7 @@ script = ExtResource("1_wl3w2")
 rooms = [NodePath("Room0"), NodePath("Room1"), NodePath("Room2"), NodePath("Room3"), NodePath("Room4"), NodePath("Room5"), NodePath("Room6"), NodePath("Room7"), NodePath("Room8"), NodePath("Room10"), NodePath("Room11"), NodePath("Room12"), NodePath("Room13"), NodePath("Room14")]
 camera = NodePath("Camera2D")
 buriedItemEntity = ExtResource("2_6qhvx")
+game_over_scene = ExtResource("3_imre1")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1089095286]
 position = Vector2(4, 7)

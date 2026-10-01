@@ -83,4 +83,5 @@ func _on_sfx_bark_finished() -> void:
 func can_entity_enter(entering_entity: Entity) -> bool:
 	if entering_entity is SkeletonEntity || entering_entity is DartEntity : 
 		RoomManager.trigger_game_over()
+		#print("GAME OVER!!!")
 	return true

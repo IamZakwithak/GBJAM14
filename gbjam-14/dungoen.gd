@@ -3,6 +3,7 @@ extends Node2D
 @export var rooms : Array[Room]
 @export var camera : Camera2D
 @export var buriedItemEntity : PackedScene
+@export var game_over_scene : PackedScene
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	RoomManager.rooms = rooms
@@ -10,6 +11,7 @@ func _ready() -> void:
 	RoomManager.current_room = rooms[0]
 	RoomManager.camera.position = RoomManager.current_room.position + Vector2(84,84)
 	RoomManager.buried_item_entity = buriedItemEntity
+	RoomManager.game_over_scene = game_over_scene
 	init_room_indexes.call_deferred()
 
 func init_room_indexes() -> void: 

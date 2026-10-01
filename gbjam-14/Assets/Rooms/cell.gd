@@ -51,6 +51,8 @@ func reset_overlappable_entity() -> void:
 	if overlappedEntity != null:
 		occupyingEntity = overlappedEntity
 		overlappedEntity = null
+	elif occupyingEntity != null:
+		occupyingEntity = null
 		
 
 

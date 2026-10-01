@@ -18,6 +18,7 @@ var player_location :Vector2 = Vector2.ZERO
 @export var default_dungeon_time = 0.5
 var special_timer = 0.0
 var game_over_screen : Sprite2D 
+var game_over_scene : PackedScene
 # Called when the node enters the scene tree for the first time.
 
 func _ready() -> void:
@@ -44,7 +45,9 @@ func toggle_life_bool() -> void:
 	dungeonAlive = true
 
 func trigger_game_over() -> void: 
-	game_over_screen.visible = true
+	#game_over_screen.visible = true
+	if(current_room != null && current_room.get_tree() != null):
+		current_room.get_tree().change_scene_to_packed(game_over_scene)
 
 func reset_game() -> void: 
 	game_over_screen.visible = false
