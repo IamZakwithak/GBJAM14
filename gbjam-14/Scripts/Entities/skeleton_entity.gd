@@ -19,9 +19,14 @@ func toggle_skeleton_alive() -> void:
 			if(alive):
 				$ActiveSkeletonSprite.visible = true
 				$InnertSkeletonSprite.visible = false
-				myCell.buriedEntity = null
 				myCell.occupyingEntity = self 
+				myCell.buriedEntity = null
+				if(myCell.buriedEntitySprite != null):	
+					myCell.buriedEntitySprite.queue_free()
+					self.visible = true
+					skipFirstTurn = true
 				pickupable = false
+				buried = false
 			else:
 				$ActiveSkeletonSprite.visible = false
 				$InnertSkeletonSprite.visible = true
