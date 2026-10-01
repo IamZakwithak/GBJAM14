@@ -24,7 +24,6 @@ var game_over_scene : PackedScene
 func _ready() -> void:
 	player_took_action.connect(delay_to_dungeon_turn)
 	dungeon_come_to_life.connect(toggle_life_bool)
-	deferred_stuff.call_deferred()	
 	
 
 func get_current_room() -> Room: 
@@ -36,10 +35,6 @@ func delay_to_dungeon_turn () -> void:
 	var time_to_wait = special_timer if special_timer != 0.0 else default_dungeon_time
 	await get_tree().create_timer(special_timer).timeout
 	return_action_to_player.emit()
-	
-func deferred_stuff() -> void: 
-	game_over_screen = camera.get_child(0) as Sprite2D
-	reset_game()
 
 func toggle_life_bool() -> void: 
 	dungeonAlive = true
@@ -49,6 +44,4 @@ func trigger_game_over() -> void:
 	if(current_room != null && current_room.get_tree() != null):
 		current_room.get_tree().change_scene_to_packed(game_over_scene)
 
-func reset_game() -> void: 
-	game_over_screen.visible = false
 	
