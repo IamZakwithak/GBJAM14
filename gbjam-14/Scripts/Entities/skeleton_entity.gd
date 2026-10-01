@@ -3,6 +3,7 @@ class_name SkeletonEntity extends PickupItem
 var alive : bool = false
 var buried : bool = false
 var move : SkeletonMove
+var skipFirstTurn : bool = true
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	move = SkeletonMove.new()
@@ -10,7 +11,8 @@ func _ready() -> void:
 	RoomManager.dungeon_come_to_life.connect(toggle_skeleton_alive)
 	RoomManager.player_took_action.connect(choose_direction_and_move)
 	RoomManager.dungeon_go_to_sleep.connect(toggle_skeleton_alive)
-
+	RoomManager.change_room.connect(reset_skip_first_move)
+	
 func toggle_skeleton_alive() -> void: 
 	if(myCell.myRoom.room_index == RoomManager.current_room.room_index):
 			alive = RoomManager.dungeonAlive
@@ -28,6 +30,9 @@ func toggle_skeleton_alive() -> void:
 
 
 func choose_direction_and_move() -> void: 
+	if(skipFirstTurn):
+		skipFirstTurn = false
+		return
 	if(myCell.myRoom.room_index == RoomManager.current_room.room_index):	
 		if(alive && !buried):
 			if(RoomManager.last_player_movement_direction.x != 0) :
@@ -58,3 +63,5 @@ func choose_direction_and_move() -> void:
 					move.direction = Vector2i(0,0)
 				if(move.can_do_action()):
 					move.do_action()
+func reset_skip_first_move() -> void:
+	skipFirstTurn = true

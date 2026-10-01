@@ -44,6 +44,7 @@ func change_room(entering_entity: Player) -> void:
 		RoomManager.camera.position = Vector2(84,84)
 		if(RoomManager.dungeonAlive):
 			RoomManager.dungeon_come_to_life.emit()
+		RoomManager.change_room.emit()
 		
 
 		

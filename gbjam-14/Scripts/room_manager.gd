@@ -7,6 +7,7 @@ signal room_changed
 signal dungeon_come_to_life
 signal dungeon_go_to_sleep
 signal game_over
+signal change_room
 
 var camera : Camera2D
 var current_room : Room
