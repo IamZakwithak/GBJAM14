@@ -28,6 +28,7 @@ func dig_hole() -> void:
 		RoomManager.player_took_action.emit()
 		return
 	performingPlayer.myCell.buriedEntity = performingPlayer.inventory_item
+	performingPlayer.myCell.buriedEntity.myCell = performingPlayer.myCell
 	performingPlayer.inventory_item.drop_item_func()
 	if(performingPlayer.inventory_item is SkeletonEntity):
 		var skeleton_ref = performingPlayer.inventory_item as SkeletonEntity
