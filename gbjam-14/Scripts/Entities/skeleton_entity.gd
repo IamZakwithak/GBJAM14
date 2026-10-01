@@ -26,6 +26,7 @@ func toggle_skeleton_alive() -> void:
 				$ActiveSkeletonSprite.visible = false
 				$InnertSkeletonSprite.visible = true
 				pickupable = true
+				myCell.pickupableEntity = self
 
 
 
