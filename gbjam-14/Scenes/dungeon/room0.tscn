@@ -109,6 +109,7 @@ position = Vector2(12, 36)
 position = Vector2(36, 36)
 
 [node name="BlockedSpaceEmpty" parent="Cell9" unique_id=983418774 instance=ExtResource("4_kyph1")]
+blocksProjectiles = false
 
 [node name="Cell10" parent="." unique_id=365036152 instance=ExtResource("3_j38w1")]
 position = Vector2(60, 36)
@@ -123,6 +124,7 @@ position = Vector2(108, 36)
 position = Vector2(132, 36)
 
 [node name="BlockedSpaceEmpty" parent="Cell13" unique_id=203502472 instance=ExtResource("4_kyph1")]
+blocksProjectiles = false
 
 [node name="Cell14" parent="." unique_id=576877394 instance=ExtResource("3_j38w1")]
 position = Vector2(156, 36)
@@ -138,11 +140,13 @@ position = Vector2(12, 60)
 position = Vector2(36, 60)
 
 [node name="BlockedSpaceEmpty" parent="Cell16" unique_id=296566878 instance=ExtResource("4_kyph1")]
+blocksProjectiles = false
 
 [node name="Cell17" parent="." unique_id=277786365 instance=ExtResource("3_j38w1")]
 position = Vector2(60, 60)
 
 [node name="BlockedSpaceEmpty" parent="Cell17" unique_id=1209538424 instance=ExtResource("4_kyph1")]
+blocksProjectiles = false
 
 [node name="Cell18" parent="." unique_id=1186138036 instance=ExtResource("3_j38w1")]
 position = Vector2(84, 60)
@@ -156,6 +160,7 @@ position = Vector2(108, 60)
 position = Vector2(132, 60)
 
 [node name="BlockedSpaceEmpty" parent="Cell20" unique_id=1935649818 instance=ExtResource("4_kyph1")]
+blocksProjectiles = false
 
 [node name="Cell21" parent="." unique_id=1976652902 instance=ExtResource("3_j38w1")]
 position = Vector2(156, 60)
@@ -171,11 +176,13 @@ position = Vector2(12, 84)
 position = Vector2(36, 84)
 
 [node name="BlockedSpaceEmpty" parent="Cell23" unique_id=1724827505 instance=ExtResource("4_kyph1")]
+blocksProjectiles = false
 
 [node name="Cell24" parent="." unique_id=184295922 instance=ExtResource("3_j38w1")]
 position = Vector2(60, 84)
 
 [node name="BlockedSpaceEmpty" parent="Cell24" unique_id=548983354 instance=ExtResource("4_kyph1")]
+blocksProjectiles = false
 
 [node name="Cell25" parent="." unique_id=69082552 instance=ExtResource("3_j38w1")]
 position = Vector2(84, 84)
@@ -184,26 +191,29 @@ position = Vector2(84, 84)
 position = Vector2(108, 84)
 
 [node name="BlockedSpaceEmpty" parent="Cell26" unique_id=1746580838 instance=ExtResource("4_kyph1")]
+blocksProjectiles = false
 
 [node name="Cell27" parent="." unique_id=1196367126 instance=ExtResource("3_j38w1")]
 position = Vector2(132, 84)
 
 [node name="BlockedSpaceEmpty" parent="Cell27" unique_id=1569994751 instance=ExtResource("4_kyph1")]
+blocksProjectiles = false
 
 [node name="Cell28" parent="." unique_id=1349596911 instance=ExtResource("3_j38w1")]
 position = Vector2(156, 84)
 
-[node name="BlockedSpaceEmpty" parent="Cell28" unique_id=544504478 instance=ExtResource("4_kyph1")]
+[node name="BlockedSpaceEmpty" parent="Cell28" unique_id=1242728301 instance=ExtResource("4_kyph1")]
 
 [node name="Cell29" parent="." unique_id=1542226078 instance=ExtResource("3_j38w1")]
 position = Vector2(12, 108)
 
-[node name="BlockedSpaceEmpty" parent="Cell29" unique_id=1073175923 instance=ExtResource("4_kyph1")]
+[node name="BlockedSpaceEmpty" parent="Cell29" unique_id=149524268 instance=ExtResource("4_kyph1")]
 
 [node name="Cell30" parent="." unique_id=1645255929 instance=ExtResource("3_j38w1")]
 position = Vector2(36, 108)
 
-[node name="BlockedSpaceEmpty" parent="Cell30" unique_id=977822579 instance=ExtResource("4_kyph1")]
+[node name="BlockedSpaceEmpty" parent="Cell30" unique_id=1247926811 instance=ExtResource("4_kyph1")]
+blocksProjectiles = false
 
 [node name="Cell31" parent="." unique_id=1898870118 instance=ExtResource("3_j38w1")]
 position = Vector2(60, 108)
@@ -223,6 +233,7 @@ position = Vector2(108, 108)
 position = Vector2(132, 108)
 
 [node name="BlockedSpaceEmpty" parent="Cell34" unique_id=1582833520 instance=ExtResource("4_kyph1")]
+blocksProjectiles = false
 
 [node name="Cell35" parent="." unique_id=696004137 instance=ExtResource("3_j38w1")]
 position = Vector2(156, 108)
@@ -274,7 +285,7 @@ position = Vector2(36, 156)
 [node name="Cell45" parent="." unique_id=1288865282 instance=ExtResource("3_j38w1")]
 position = Vector2(60, 156)
 
-[node name="BlockedSpaceEmpty" parent="Cell45" unique_id=1662835536 instance=ExtResource("4_kyph1")]
+[node name="BlockedSpaceEmpty" parent="Cell45" unique_id=2062946435 instance=ExtResource("4_kyph1")]
 
 [node name="Cell46" parent="." unique_id=680218199 instance=ExtResource("3_j38w1")]
 position = Vector2(84, 156)
